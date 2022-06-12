@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JS on My Site</title>
+    <link>https://blog.promiseme.site/js/</link>
+    <description>Recent content in JS on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jun 2022 17:31:23 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>柯里化</title>
+      <link>https://blog.promiseme.site/js/%E6%9F%AF%E9%87%8C%E5%8C%96/</link>
+      <pubDate>Sun, 12 Jun 2022 17:31:23 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/js/%E6%9F%AF%E9%87%8C%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
