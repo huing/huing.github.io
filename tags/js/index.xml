@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on My Site</title>
+    <link>https://blog.promiseme.site/tags/js/</link>
+    <description>Recent content in js on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Jun 2022 11:41:34 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bind,apply,call区别</title>
+      <link>https://blog.promiseme.site/post/js/bindapplycall%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Mon, 13 Jun 2022 11:41:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/bindapplycall%E5%8C%BA%E5%88%AB/</guid>
+      <description>bind, apply, call 区别 1 2 3 4 5 const me = { a: 123 }; const he = { b: 456 }; function x() { console.log(this, arguments, this.a); } bind，返回函数的 copy 使用时要重新调用一次 参数形式， (this, arg1, arg2) 1 2 x.bind(me, 2, 3).bind(he)(); // bind</description>
+    </item>
+    
+    <item>
+      <title>数据类型及判断方法</title>
+      <link>https://blog.promiseme.site/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 13 Jun 2022 11:38:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</guid>
+      <description>js8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof true;</description>
+    </item>
+    
+  </channel>
+</rss>

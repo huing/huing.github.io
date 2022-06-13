@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css on My Site</title>
+    <link>https://blog.promiseme.site/tags/css/</link>
+    <description>Recent content in css on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 Jun 2022 17:32:26 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flex</title>
+      <link>https://blog.promiseme.site/post/css/flex/</link>
+      <pubDate>Sun, 12 Jun 2022 17:32:26 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/css/flex/</guid>
+      <description>line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 flex: 1 flex: 1 1 0% flex-grow 定义项目的放大比例，默认为 0，即</description>
+    </item>
+    
+  </channel>
+</rss>

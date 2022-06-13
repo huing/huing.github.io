@@ -5,6 +5,124 @@
     <link>https://blog.promiseme.site/tags/</link>
     <description>Recent content in Tags on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Jun 2022 11:41:34 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>js</title>
+      <link>https://blog.promiseme.site/tags/js/</link>
+      <pubDate>Mon, 13 Jun 2022 11:41:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://blog.promiseme.site/tags/css/</link>
+      <pubDate>Sun, 12 Jun 2022 17:32:26 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://blog.promiseme.site/tags/react/</link>
+      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>preview</title>
+      <link>https://blog.promiseme.site/tags/preview/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-3</title>
+      <link>https://blog.promiseme.site/tags/tag-3/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme preview</title>
+      <link>https://blog.promiseme.site/tags/theme-preview/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/theme-preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>English</title>
+      <link>https://blog.promiseme.site/tags/english/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-2</title>
+      <link>https://blog.promiseme.site/tags/tag-2/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-1</title>
+      <link>https://blog.promiseme.site/tags/tag-1/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文</title>
+      <link>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://blog.promiseme.site/tags/shortcodes/</link>
+      <pubDate>Tue, 30 Aug 2016 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Syntax Highlighting</title>
+      <link>https://blog.promiseme.site/tags/syntax-highlighting/</link>
+      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/syntax-highlighting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-5</title>
+      <link>https://blog.promiseme.site/tags/tag-5/</link>
+      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-5/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

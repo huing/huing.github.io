@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My Site</title>
-    <link>https://blog.promiseme.site/</link>
-    <description>Recent content on My Site</description>
+    <title>Posts on My Site</title>
+    <link>https://blog.promiseme.site/post/</link>
+    <description>Recent content in Posts on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jun 2022 11:54:42 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Jun 2022 11:54:42 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme preview</title>
       <link>https://blog.promiseme.site/post/even-preview/</link>
@@ -14,15 +14,6 @@
       
       <guid>https://blog.promiseme.site/post/even-preview/</guid>
       <description>Based on MarkdownPreview test.md. Markdown 1 2 3 4 5 6 7 8 # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 ### Duplicate Header ### Duplicate Header H1 H2 H3 H4 H5 H6 Duplicate Header Duplicate Header Paragraphs 1 2 3 4 This is a paragraph. I am still part of the paragraph. New paragraph. This is a paragraph. I am still part of the paragraph.</description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>https://blog.promiseme.site/about/</link>
-      <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/about/</guid>
-      <description>我的博客 Github 地址 github 邮箱地址</description>
     </item>
     
     <item>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>react on My Site</title>
+    <link>https://blog.promiseme.site/tags/react/</link>
+    <description>Recent content in react on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 Jun 2022 17:31:57 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React工程化</title>
+      <link>https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
+      <description>React 工程化</description>
+    </item>
+    
+  </channel>
+</rss>
