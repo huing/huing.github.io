@@ -133,14 +133,30 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>柯里化<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    <h2>Bind,apply,call区别<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
     </h2>
   </header>
   <div class="entry-content">
-    <p></p>
+    <p>bind, apply, call 区别 const me = { a: 123 }; const he = { b: 456 }; function x() { console.log(this, arguments, this.a); } bind，返回函数的 copy 使用时要重新调用一次 参数形式， (this, arg1, arg2)
+x.bind(me, 2, 3).bind(he)(); // bind只生效一次！ // {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123 apply，返回函数的调用的结果 参数形式， (this, [arg1, arg2])
+x.apply(me, [2, 3]); // {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123 call，返回函数的调用的结果 参数形式， (this, arg1, arg2)
+x.call(me, 2, 3); // {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123 </p>
   </div>
-  <footer class="entry-footer"><span title='2022-06-12 17:31:23 +0800 CST'>June 12, 2022</span></footer>
-  <a class="entry-link" aria-label="post link to 柯里化" href="https://blog.promiseme.site/js/%E6%9F%AF%E9%87%8C%E5%8C%96/"></a>
+  <footer class="entry-footer"><span title='2022-06-13 11:41:34 +0800 CST'>June 13, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Bind,apply,call区别" href="https://blog.promiseme.site/js/bindapplycall%E5%8C%BA%E5%88%AB/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>数据类型及判断方法<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>js8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型
+数据类型判断 1 typeof 可以判断值类型， 函数 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true; // boolean typeof function () {}; // function typeof 2n; // bigint es6新增数据类型 typeof Symbol(&#34;a&#34;); // symbol es6新增数据类型 typeof null; // object 被认为是对象的占位符,但从技术上来说，它仍然是原始值 typeof []; // object typeof {}; // object 2 instanceof 能判断对象类型 [] instanceof Array; //true [] instanceof Object; // true []....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-13 11:38:56 +0800 CST'>June 13, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to 数据类型及判断方法" href="https://blog.promiseme.site/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/"></a>
 </article>
     </main>
     
