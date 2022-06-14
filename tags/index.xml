@@ -6,7 +6,25 @@
     <description>Recent content in Tags on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jun 2022 11:41:34 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ts</title>
+      <link>https://blog.promiseme.site/tags/ts/</link>
+      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/ts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typescript</title>
+      <link>https://blog.promiseme.site/tags/typescript/</link>
+      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>js</title>
       <link>https://blog.promiseme.site/tags/js/</link>
@@ -76,24 +94,6 @@
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/tags/tag-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag-1</title>
-      <link>https://blog.promiseme.site/tags/tag-1/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/tags/tag-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>中文</title>
-      <link>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</guid>
       <description></description>
     </item>
     

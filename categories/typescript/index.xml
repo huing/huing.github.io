@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>typescript on My Site</title>
+    <link>https://blog.promiseme.site/categories/typescript/</link>
+    <description>Recent content in typescript on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript中const用法</title>
+      <link>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</guid>
+      <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:</description>
+    </item>
+    
+  </channel>
+</rss>

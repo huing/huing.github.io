@@ -6,7 +6,7 @@
     <description>Recent content in Posts on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jun 2022 11:54:42 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme preview</title>
       <link>https://blog.promiseme.site/post/even-preview/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://blog.promiseme.site/post/even-preview/</guid>
       <description>Based on MarkdownPreview test.md. Markdown 1 2 3 4 5 6 7 8 # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 ### Duplicate Header ### Duplicate Header H1 H2 H3 H4 H5 H6 Duplicate Header Duplicate Header Paragraphs 1 2 3 4 This is a paragraph. I am still part of the paragraph. New paragraph. This is a paragraph. I am still part of the paragraph.</description>
+    </item>
+    
+    <item>
+      <title>typescript中const用法</title>
+      <link>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</guid>
+      <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:</description>
     </item>
     
     <item>
@@ -78,15 +87,6 @@
       <guid>https://blog.promiseme.site/post/english-preview/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
-    </item>
-    
-    <item>
-      <title>[中文] 《长恨歌》</title>
-      <link>https://blog.promiseme.site/post/chinese-preview/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/post/chinese-preview/</guid>
-      <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
     </item>
     
     <item>
