@@ -126,67 +126,105 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js-sequence-diagrams/">JS Sequence Diagrams</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-03-04 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h2 id="usage">Usage</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Andrew-&gt;China: Says Hello
-</span></span><span class="line"><span class="cl">Note right of China: China thinks\nabout it
-</span></span><span class="line"><span class="cl">China--&gt;Andrew: How are you?
-</span></span><span class="line"><span class="cl">Andrew-&gt;&gt;China: I am good thanks!
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-    <div class="read-more">
-      <a href="/post/js-sequence-diagrams/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/syntax-highlighting/">Syntax Highlighting</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-08-30 </span>
+      <span class="post-time"> 2022-06-15 </span>
       <div class="post-category">
-          <a href="/categories/syntax-highlighting/"> Syntax Highlighting </a>
+          <a href="/categories/git/"> git </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      <div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">helloWorld</span> <span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Hello, World!&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+      git log &ndash;pretty=oneline &ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2
     </div>
     <div class="read-more">
-      <a href="/post/syntax-highlighting/" class="read-more-link">阅读更多</a>
+      <a href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/">typescript中const用法</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-14 </span>
+      <div class="post-category">
+          <a href="/categories/typescript/"> typescript </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] as const // const animals: readonly [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] type Animal = typeof animals[number] // type Animal = &#39;cat&#39; | &#39;dog&#39; | &#39;mouse&#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:
+    </div>
+    <div class="read-more">
+      <a href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%80%A7%E8%83%BD/cdn%E6%98%AF%E4%BB%80%E4%B9%88/">Cdn是什么</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-13 </span>
+      <div class="post-category">
+          <a href="/categories/%E6%80%A7%E8%83%BD/"> 性能 </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      内容分发网络 cdn Content Delivery Network cache-control
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%80%A7%E8%83%BD/cdn%E6%98%AF%E4%BB%80%E4%B9%88/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/js/bindapplycall%E5%8C%BA%E5%88%AB/">Bind,apply,call区别</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-13 </span>
+      <div class="post-category">
+          <a href="/categories/js/"> js </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      bind, apply, call 区别 1 2 3 4 5 const me = { a: 123 }; const he = { b: 456 }; function x() { console.log(this, arguments, this.a); } bind，返回函数的 copy 使用时要重新调用一次 参数形式， (this, arg1, arg2) 1 2 x.bind(me, 2, 3).bind(he)(); // bind
+    </div>
+    <div class="read-more">
+      <a href="/post/js/bindapplycall%E5%8C%BA%E5%88%AB/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/">数据类型及判断方法</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-13 </span>
+      <div class="post-category">
+          <a href="/categories/js/"> js </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      js8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true;
+    </div>
+    <div class="read-more">
+      <a href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -198,7 +236,10 @@
         <i class="iconfont icon-left"></i>
         <span class="prev-text">上一页</span>
       </a>
-    
+    <a class="next" href="/page/4/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         

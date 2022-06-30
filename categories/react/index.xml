@@ -6,14 +6,32 @@
     <description>Recent content in react on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 12 Jun 2022 17:31:57 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 22:53:05 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>useRef vs useState</title>
+      <link>https://blog.promiseme.site/post/react/useref-vs-usestate/</link>
+      <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/react/useref-vs-usestate/</guid>
+      <description>原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状</description>
+    </item>
+    
+    <item>
+      <title>常用快捷键</title>
+      <link>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option &amp;lt;- -&amp;gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换</description>
+    </item>
+    
     <item>
       <title>React工程化</title>
       <link>https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
       <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
-      <description>React 工程化</description>
+      <description>React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render</description>
     </item>
     
   </channel>

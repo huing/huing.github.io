@@ -6,22 +6,112 @@
     <description>Recent content in Posts on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 11:24:10 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Theme preview</title>
-      <link>https://blog.promiseme.site/post/even-preview/</link>
+      <link>https://blog.promiseme.site/post/example/even-preview/</link>
       <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/even-preview/</guid>
+      <guid>https://blog.promiseme.site/post/example/even-preview/</guid>
       <description>Based on MarkdownPreview test.md. Markdown 1 2 3 4 5 6 7 8 # H1 ## H2 ### H3 #### H4 ##### H5 ###### H6 ### Duplicate Header ### Duplicate Header H1 H2 H3 H4 H5 H6 Duplicate Header Duplicate Header Paragraphs 1 2 3 4 This is a paragraph. I am still part of the paragraph. New paragraph. This is a paragraph. I am still part of the paragraph.</description>
     </item>
     
     <item>
+      <title>H5流程理解</title>
+      <link>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/</guid>
+      <description>h5 在微信环境下运行的 html pc html 通过 jssdk 到小程序 WebView</description>
+    </item>
+    
+    <item>
+      <title>Clone正则</title>
+      <link>https://blog.promiseme.site/post/js/clone%E6%AD%A3%E5%88%99/</link>
+      <pubDate>Mon, 27 Jun 2022 19:35:49 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/clone%E6%AD%A3%E5%88%99/</guid>
+      <description>基本语法 1 2 3 4 5 \w 匹配一个单字字符 = [A-Za-z0-9_] + 匹配前面一个表达式 1 次或者多次。等价于 {1,} * 匹配前一个表达式 0 次或多次。等价于 {0,} $ 匹配输入的结束。如</description>
+    </item>
+    
+    <item>
+      <title>nextjs预渲染理解</title>
+      <link>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 27 Jun 2022 19:13:36 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</guid>
+      <description>静态生成 构建时 （build time） 生成 html 在每个页面请求时重用 可以被 cdn 缓存 服务器端渲染 在地址栏输入 url，发送 get 请求，生成 html 页面内容会随着每</description>
+    </item>
+    
+    <item>
+      <title>as vs Is</title>
+      <link>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</link>
+      <pubDate>Thu, 23 Jun 2022 16:50:50 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</guid>
+      <description>is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&amp;gt; void }; type Bird = { fly: () =&amp;gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {</description>
+    </item>
+    
+    <item>
+      <title>普通函数vs箭头函数</title>
+      <link>https://blog.promiseme.site/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 22 Jun 2022 22:49:19 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</guid>
+      <description>this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&amp;gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }</description>
+    </item>
+    
+    <item>
+      <title>Map类型</title>
+      <link>https://blog.promiseme.site/post/js/map%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 16 Jun 2022 23:20:39 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/map%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&amp;lt;string, string&amp;gt; const map1: Map&amp;lt;string, string&amp;gt; = new Map([ [&amp;#39;name&amp;#39;, &amp;#39;Tom&amp;#39;], [&amp;#39;country&amp;#39;, &amp;#39;Chile&amp;#39;], ]); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &amp;#39;Tom&amp;#39;, country: &amp;#39;Chile&amp;#39; }; const map2 =</description>
+    </item>
+    
+    <item>
+      <title>useRef vs useState</title>
+      <link>https://blog.promiseme.site/post/react/useref-vs-usestate/</link>
+      <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/react/useref-vs-usestate/</guid>
+      <description>原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状</description>
+    </item>
+    
+    <item>
+      <title>常用快捷键</title>
+      <link>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option &amp;lt;- -&amp;gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换</description>
+    </item>
+    
+    <item>
+      <title>终端命令</title>
+      <link>https://blog.promiseme.site/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 Jun 2022 10:50:52 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</guid>
+      <description>cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创</description>
+    </item>
+    
+    <item>
+      <title>Git常用命令</title>
+      <link>https://blog.promiseme.site/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 Jun 2022 10:11:31 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>git log &amp;ndash;pretty=oneline &amp;ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2</description>
+    </item>
+    
+    <item>
       <title>typescript中const用法</title>
-      <link>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</link>
+      <link>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</link>
       <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</guid>
       <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:</description>
     </item>
     
@@ -67,34 +157,52 @@
       <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
-      <description>React 工程化</description>
+      <description>React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render</description>
     </item>
     
     <item>
       <title>This is a hidden post.</title>
-      <link>https://blog.promiseme.site/post/hidden-post/</link>
+      <link>https://blog.promiseme.site/post/example/hidden-post/</link>
       <pubDate>Thu, 08 Mar 2018 17:40:19 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/hidden-post/</guid>
+      <guid>https://blog.promiseme.site/post/example/hidden-post/</guid>
       <description>&lt;p&gt;This post is hidden from the home page.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>[English] Creating a New Theme</title>
-      <link>https://blog.promiseme.site/post/english-preview/</link>
+      <link>https://blog.promiseme.site/post/example/english-preview/</link>
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/english-preview/</guid>
+      <guid>https://blog.promiseme.site/post/example/english-preview/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
+      <title>[日本語] 敬語体系</title>
+      <link>https://blog.promiseme.site/post/example/japanese-preview/</link>
+      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/example/japanese-preview/</guid>
+      <description>日本語の敬語体系は、一般に、大きく尊敬語・謙譲語・丁寧語に分類される。文化審議会国語分科会は、2007年2月に「敬語の指針」を答申し、これに</description>
+    </item>
+    
+    <item>
+      <title>[中文] 《长恨歌》</title>
+      <link>https://blog.promiseme.site/post/example/chinese-preview/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/example/chinese-preview/</guid>
+      <description>《长恨歌》是中国唐朝诗人白居易的一首长篇叙事诗。 第一段：贵妃受宠爱 汉皇重色思倾国，御宇多年求不得。杨家有女初长成，养在深闺人未识。 天生丽质难</description>
+    </item>
+    
+    <item>
       <title>Shortcodes</title>
-      <link>https://blog.promiseme.site/post/shortcodes/</link>
+      <link>https://blog.promiseme.site/post/example/shortcodes/</link>
       <pubDate>Tue, 30 Aug 2016 16:01:23 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/shortcodes/</guid>
+      <guid>https://blog.promiseme.site/post/example/shortcodes/</guid>
       <description>&lt;h1 id=&#34;admonition&#34;&gt;Admonition&lt;/h1&gt;
 &lt;!-- raw HTML omitted --&gt;
 &lt;p&gt;biu biu biu.&lt;/p&gt;
@@ -138,10 +246,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>JS Flowchart Diagrams</title>
-      <link>https://blog.promiseme.site/post/js-flowchart-diagrams/</link>
+      <link>https://blog.promiseme.site/post/example/js-flowchart-diagrams/</link>
       <pubDate>Wed, 04 Mar 2015 21:57:50 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/js-flowchart-diagrams/</guid>
+      <guid>https://blog.promiseme.site/post/example/js-flowchart-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -184,10 +292,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>JS Sequence Diagrams</title>
-      <link>https://blog.promiseme.site/post/js-sequence-diagrams/</link>
+      <link>https://blog.promiseme.site/post/example/js-sequence-diagrams/</link>
       <pubDate>Wed, 04 Mar 2015 21:57:45 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/js-sequence-diagrams/</guid>
+      <guid>https://blog.promiseme.site/post/example/js-sequence-diagrams/</guid>
       <description>&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -208,10 +316,10 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     
     <item>
       <title>Syntax Highlighting</title>
-      <link>https://blog.promiseme.site/post/syntax-highlighting/</link>
+      <link>https://blog.promiseme.site/post/example/syntax-highlighting/</link>
       <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/syntax-highlighting/</guid>
+      <guid>https://blog.promiseme.site/post/example/syntax-highlighting/</guid>
       <description>&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1

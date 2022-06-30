@@ -6,7 +6,70 @@
     <description>Recent content in js on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 13 Jun 2022 11:41:34 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 11:24:10 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>H5流程理解</title>
+      <link>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/</guid>
+      <description>h5 在微信环境下运行的 html pc html 通过 jssdk 到小程序 WebView</description>
+    </item>
+    
+    <item>
+      <title>Clone正则</title>
+      <link>https://blog.promiseme.site/post/js/clone%E6%AD%A3%E5%88%99/</link>
+      <pubDate>Mon, 27 Jun 2022 19:35:49 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/clone%E6%AD%A3%E5%88%99/</guid>
+      <description>基本语法 1 2 3 4 5 \w 匹配一个单字字符 = [A-Za-z0-9_] + 匹配前面一个表达式 1 次或者多次。等价于 {1,} * 匹配前一个表达式 0 次或多次。等价于 {0,} $ 匹配输入的结束。如</description>
+    </item>
+    
+    <item>
+      <title>nextjs预渲染理解</title>
+      <link>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 27 Jun 2022 19:13:36 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</guid>
+      <description>静态生成 构建时 （build time） 生成 html 在每个页面请求时重用 可以被 cdn 缓存 服务器端渲染 在地址栏输入 url，发送 get 请求，生成 html 页面内容会随着每</description>
+    </item>
+    
+    <item>
+      <title>as vs Is</title>
+      <link>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</link>
+      <pubDate>Thu, 23 Jun 2022 16:50:50 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</guid>
+      <description>is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&amp;gt; void }; type Bird = { fly: () =&amp;gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {</description>
+    </item>
+    
+    <item>
+      <title>普通函数vs箭头函数</title>
+      <link>https://blog.promiseme.site/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Wed, 22 Jun 2022 22:49:19 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/</guid>
+      <description>this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&amp;gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }</description>
+    </item>
+    
+    <item>
+      <title>Map类型</title>
+      <link>https://blog.promiseme.site/post/js/map%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Thu, 16 Jun 2022 23:20:39 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/map%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&amp;lt;string, string&amp;gt; const map1: Map&amp;lt;string, string&amp;gt; = new Map([ [&amp;#39;name&amp;#39;, &amp;#39;Tom&amp;#39;], [&amp;#39;country&amp;#39;, &amp;#39;Chile&amp;#39;], ]); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &amp;#39;Tom&amp;#39;, country: &amp;#39;Chile&amp;#39; }; const map2 =</description>
+    </item>
+    
+    <item>
+      <title>常用快捷键</title>
+      <link>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option &amp;lt;- -&amp;gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换</description>
+    </item>
+    
     <item>
       <title>Bind,apply,call区别</title>
       <link>https://blog.promiseme.site/post/js/bindapplycall%E5%8C%BA%E5%88%AB/</link>

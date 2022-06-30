@@ -6,13 +6,22 @@
     <description>Recent content in typescript on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 18:09:40 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用快捷键</title>
+      <link>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option &amp;lt;- -&amp;gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换</description>
+    </item>
+    
     <item>
       <title>typescript中const用法</title>
-      <link>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</link>
+      <link>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</link>
       <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/ts/const%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</guid>
       <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:</description>
     </item>
     

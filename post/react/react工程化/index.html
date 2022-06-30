@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="React 工程化" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="React工程化" />
-<meta property="og:description" content="React 工程化" />
+<meta property="og:description" content="React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.promiseme.site/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-12T17:31:57+08:00" />
 <meta property="article:modified_time" content="2022-06-12T17:31:57+08:00" />
 
 <meta itemprop="name" content="React工程化">
-<meta itemprop="description" content="React 工程化"><meta itemprop="datePublished" content="2022-06-12T17:31:57+08:00" />
+<meta itemprop="description" content="React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render"><meta itemprop="datePublished" content="2022-06-12T17:31:57+08:00" />
 <meta itemprop="dateModified" content="2022-06-12T17:31:57+08:00" />
-<meta itemprop="wordCount" content="4">
+<meta itemprop="wordCount" content="568">
 <meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React工程化"/>
-<meta name="twitter:description" content="React 工程化"/>
+<meta name="twitter:description" content="React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -148,6 +148,21 @@
 </div>
     <div class="post-content">
       <p>React 工程化</p>
+<p>Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler</p>
+<p>Reconciler（协调器）—— 负责找出变化的组件</p>
+<p>Renderer（渲染器）—— 负责将变化的组件渲染到页面上</p>
+<p>虚拟 DOM 在 react 中的正式称呼 Fiber（纤程）</p>
+<p>Fiber 并不是计算机术语中的新名词，他的中文翻译叫做纤程，与进程（Process）、线程（Thread）、协程（Coroutine）同为程序执行过程。</p>
+<p>在很多文章中将纤程理解为协程的一种实现。在 JS 中，协程的实现便是 Generator。</p>
+<p>所以，我们可以将纤程(Fiber)、协程(Generator)理解为代数效应思想在 JS 中的体现。</p>
+<p>React Fiber 可以理解为：</p>
+<p>React 内部实现的一套状态更新机制。支持任务不同优先级，可中断与恢复，并且恢复后可以复用之前的中间状态。</p>
+<p>其中每个任务更新单元为 React Element 对应的 Fiber 节点。</p>
+<p>当我们用 canvas 绘制动画，每一帧绘制前都会调用 ctx.clearRect 清除上一帧的画面。</p>
+<p>如果当前帧画面计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。</p>
+<p>为了解决这个问题，我们可以在内存中绘制当前帧动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。</p>
+<p>这种在内存中构建并直接替换的技术叫做双缓存 (opens new window)。</p>
+<p>React 使用“双缓存”来完成 Fiber 树的构建与替换——对应着 DOM 树的创建与更新。</p>
 
     </div>
 
@@ -176,7 +191,7 @@
             <span class="prev-text nav-default">Flex</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
-        <a class="next" href="/post/hidden-post/">
+        <a class="next" href="/post/example/hidden-post/">
             <span class="next-text nav-default">This is a hidden post.</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>

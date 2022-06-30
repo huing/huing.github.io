@@ -6,11 +6,47 @@
     <description>Recent content in Tags on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 11:24:10 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css</title>
+      <link>https://blog.promiseme.site/tags/css/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://blog.promiseme.site/tags/javascript/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://blog.promiseme.site/tags/js/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>https://blog.promiseme.site/tags/react/</link>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/react/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ts</title>
       <link>https://blog.promiseme.site/tags/ts/</link>
-      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/tags/ts/</guid>
       <description></description>
@@ -19,36 +55,18 @@
     <item>
       <title>typescript</title>
       <link>https://blog.promiseme.site/tags/typescript/</link>
-      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      <pubDate>Tue, 28 Jun 2022 11:24:10 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/tags/typescript/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>js</title>
-      <link>https://blog.promiseme.site/tags/js/</link>
-      <pubDate>Mon, 13 Jun 2022 11:41:34 +0800</pubDate>
+      <title>git</title>
+      <link>https://blog.promiseme.site/tags/git/</link>
+      <pubDate>Wed, 15 Jun 2022 10:11:31 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/tags/js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>https://blog.promiseme.site/tags/css/</link>
-      <pubDate>Sun, 12 Jun 2022 17:32:26 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>https://blog.promiseme.site/tags/react/</link>
-      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/tags/react/</guid>
+      <guid>https://blog.promiseme.site/tags/git/</guid>
       <description></description>
     </item>
     
@@ -94,6 +112,42 @@
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/tags/tag-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-4</title>
+      <link>https://blog.promiseme.site/tags/tag-4/</link>
+      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日本語</title>
+      <link>https://blog.promiseme.site/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
+      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag-1</title>
+      <link>https://blog.promiseme.site/tags/tag-1/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/tag-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文</title>
+      <link>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/tags/%E4%B8%AD%E6%96%87/</guid>
       <description></description>
     </item>
     

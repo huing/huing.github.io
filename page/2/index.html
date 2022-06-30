@@ -126,30 +126,47 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/css/flex/">Flex</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">普通函数vs箭头函数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-12 </span>
-      <div class="post-category">
-          <a href="/categories/css/"> css </a>
-          </div>
+      <span class="post-time"> 2022-06-22 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 flex: 1 flex: 1 1 0% flex-grow 定义项目的放大比例，默认为 0，即
+      this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }
     </div>
     <div class="read-more">
-      <a href="/post/css/flex/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/">React工程化</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/map%E7%B1%BB%E5%9E%8B/">Map类型</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-12 </span>
+      <span class="post-time"> 2022-06-16 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 =
+    </div>
+    <div class="read-more">
+      <a href="/post/js/map%E7%B1%BB%E5%9E%8B/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/react/useref-vs-usestate/">useRef vs useState</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-15 </span>
       <div class="post-category">
           <a href="/categories/react/"> react </a>
           </div>
@@ -158,147 +175,52 @@
   
   <div class="post-content">
     <div class="post-summary">
-      React 工程化
+      原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状
     </div>
     <div class="read-more">
-      <a href="/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/" class="read-more-link">阅读更多</a>
+      <a href="/post/react/useref-vs-usestate/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/english-preview/">[English] Creating a New Theme</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">常用快捷键</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-08-31 </span>
+      <span class="post-time"> 2022-06-15 </span>
       <div class="post-category">
-          <a href="/categories/english/"> English </a>
+          <a href="/categories/typescript/"> typescript </a>
+          <a href="/categories/react/"> react </a>
+          <a href="/categories/javascript/"> javascript </a>
           </div>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.
-We&rsquo;ll start with creating a new site with a very basic template.
+      iterm 1 2 3 4 command &lt;- -&gt; 左右切换 command t new tab command w close command q quit chrome command shift n &ndash; incognito command w close command option &lt;- -&gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换
     </div>
     <div class="read-more">
-      <a href="/post/english-preview/" class="read-more-link">阅读更多</a>
+      <a href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/shortcodes/">Shortcodes</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">终端命令</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2016-08-30 </span>
-      <div class="post-category">
-          <a href="/categories/shortcodes/"> shortcodes </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h1 id="admonition">Admonition</h1>
-<!-- raw HTML omitted -->
-<p>biu biu biu.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{% admonition note &#34;I&#39;m title!&#34; false %}}
-</span></span><span class="line"><span class="cl">biu biu biu.
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">{{% admonition type=&#34;note&#34; title=&#34;note&#34; details=&#34;true&#34; %}}
-</span></span><span class="line"><span class="cl">biu biu biu.
-</span></span><span class="line"><span class="cl">{{% /admonition %}}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">{{% admonition example %}}
-</span></span><span class="line"><span class="cl">Without title.
-</span></span><span class="line"><span class="cl">{{% /admonition %}}
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">{{% /admonition %}}
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
-    </div>
-    <div class="read-more">
-      <a href="/post/shortcodes/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js-flowchart-diagrams/">JS Flowchart Diagrams</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-03-04 </span>
+      <span class="post-time"> 2022-06-15 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      <h2 id="usage">Usage</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">st=&gt;start: Start|past:&gt;http://www.google.com[blank]
-</span></span><span class="line"><span class="cl">e=&gt;end: End:&gt;http://www.google.com
-</span></span><span class="line"><span class="cl">op1=&gt;operation: My Operation|past
-</span></span><span class="line"><span class="cl">op2=&gt;operation: Stuff|current
-</span></span><span class="line"><span class="cl">sub1=&gt;subroutine: My Subroutine|invalid
-</span></span><span class="line"><span class="cl">cond=&gt;condition: Yes
-</span></span><span class="line"><span class="cl">or No?|approved:&gt;http://www.google.com
-</span></span><span class="line"><span class="cl">c2=&gt;condition: Good idea|rejected
-</span></span><span class="line"><span class="cl">io=&gt;inputoutput: catch something...|request
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">st-&gt;op1(right)-&gt;cond
-</span></span><span class="line"><span class="cl">cond(yes, right)-&gt;c2
-</span></span><span class="line"><span class="cl">cond(no)-&gt;sub1(left)-&gt;op1
-</span></span><span class="line"><span class="cl">c2(yes)-&gt;io-&gt;e
-</span></span><span class="line"><span class="cl">c2(no)-&gt;op2-&gt;e
-</span></span></code></pre></td></tr></table>
-</div>
-</div>
+      cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创
     </div>
     <div class="read-more">
-      <a href="/post/js-flowchart-diagrams/" class="read-more-link">阅读更多</a>
+      <a href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

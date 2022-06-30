@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on My Site</title>
+    <link>https://blog.promiseme.site/categories/javascript/</link>
+    <description>Recent content in javascript on My Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Jun 2022 18:09:40 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用快捷键</title>
+      <link>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option &amp;lt;- -&amp;gt; 左右切换 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换</description>
+    </item>
+    
+  </channel>
+</rss>

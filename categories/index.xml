@@ -6,13 +6,40 @@
     <description>Recent content in Categories on My Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Jun 2022 10:35:51 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 22:53:05 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>react</title>
+      <link>https://blog.promiseme.site/categories/react/</link>
+      <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/categories/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://blog.promiseme.site/categories/javascript/</link>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/categories/javascript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>typescript</title>
       <link>https://blog.promiseme.site/categories/typescript/</link>
-      <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
+      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/categories/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://blog.promiseme.site/categories/git/</link>
+      <pubDate>Wed, 15 Jun 2022 10:11:31 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/categories/git/</guid>
       <description></description>
     </item>
     
@@ -40,15 +67,6 @@
       <pubDate>Sun, 12 Jun 2022 17:32:26 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/categories/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>react</title>
-      <link>https://blog.promiseme.site/categories/react/</link>
-      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
-      
-      <guid>https://blog.promiseme.site/categories/react/</guid>
       <description></description>
     </item>
     
@@ -85,6 +103,24 @@
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/categories/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>日本語</title>
+      <link>https://blog.promiseme.site/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
+      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/categories/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>中文</title>
+      <link>https://blog.promiseme.site/categories/%E4%B8%AD%E6%96%87/</link>
+      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/categories/%E4%B8%AD%E6%96%87/</guid>
       <description></description>
     </item>
     

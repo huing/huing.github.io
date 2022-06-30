@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>as vs Is - My Site</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="huing" /><meta name="description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&amp;gt; void }; type Bird = { fly: () =&amp;gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {" /><meta name="keywords" content="Hugo, theme, even, huing" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="as vs Is" />
+<meta property="og:description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-23T16:50:50+08:00" />
+<meta property="article:modified_time" content="2022-06-23T16:50:50+08:00" />
+
+<meta itemprop="name" content="as vs Is">
+<meta itemprop="description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {"><meta itemprop="datePublished" content="2022-06-23T16:50:50+08:00" />
+<meta itemprop="dateModified" content="2022-06-23T16:50:50+08:00" />
+<meta itemprop="wordCount" content="90">
+<meta itemprop="keywords" content="typescript,ts,react,css,javascript,js," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="as vs Is"/>
+<meta name="twitter:description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">as vs Is</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-06-23 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#is-类型谓词-type-predicates">is 类型谓词 type predicates</a></li>
+        <li><a href="#as-类型断言-type-assertions">as 类型断言 type assertions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h3 id="is-类型谓词-type-predicates">is 类型谓词 type predicates</h3>
+<h3 id="as-类型断言-type-assertions">as 类型断言 type assertions</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">type</span> <span class="nx">Fish</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">swim</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="nx">type</span> <span class="nx">Bird</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">fly</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span> <span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// | 联合类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">declare</span> <span class="kd">function</span> <span class="nx">getSmallPet</span><span class="p">()</span><span class="o">:</span> <span class="nx">Fish</span> <span class="o">|</span> <span class="nx">Bird</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">isFish</span><span class="p">(</span><span class="nx">pet</span><span class="o">:</span> <span class="nx">Fish</span> <span class="o">|</span> <span class="nx">Bird</span><span class="p">)</span><span class="o">:</span> <span class="nx">pet</span> <span class="nx">is</span> <span class="nx">Fish</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">(</span><span class="nx">pet</span> <span class="nx">as</span> <span class="nx">Fish</span><span class="p">).</span><span class="nx">swim</span> <span class="o">!==</span> <span class="kc">undefined</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="nx">pet</span> <span class="o">=</span> <span class="nx">getSmallPet</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nx">isFish</span><span class="p">(</span><span class="nx">pet</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pet</span><span class="p">.</span><span class="nx">swim</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pet</span><span class="p">.</span><span class="nx">fly</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">huing</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-06-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/typescript/">typescript</a>
+          <a href="/tags/ts/">ts</a>
+          <a href="/tags/react/">react</a>
+          <a href="/tags/css/">css</a>
+          <a href="/tags/javascript/">javascript</a>
+          <a href="/tags/js/">js</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">nextjs预渲染理解</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">
+            <span class="next-text nav-default">普通函数vs箭头函数</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://blog.promiseme.site/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>huing</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
