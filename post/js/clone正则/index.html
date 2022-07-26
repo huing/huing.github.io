@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Clone正则">
 <meta itemprop="description" content="基本语法 1 2 3 4 5 \w 匹配一个单字字符 = [A-Za-z0-9_] &#43; 匹配前面一个表达式 1 次或者多次。等价于 {1,} * 匹配前一个表达式 0 次或多次。等价于 {0,} $ 匹配输入的结束。如"><meta itemprop="datePublished" content="2022-06-27T19:35:49+08:00" />
 <meta itemprop="dateModified" content="2022-06-27T19:35:49+08:00" />
-<meta itemprop="wordCount" content="292">
+<meta itemprop="wordCount" content="321">
 <meta itemprop="keywords" content="typescript,ts,react,css,javascript,js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Clone正则"/>
 <meta name="twitter:description" content="基本语法 1 2 3 4 5 \w 匹配一个单字字符 = [A-Za-z0-9_] &#43; 匹配前面一个表达式 1 次或者多次。等价于 {1,} * 匹配前一个表达式 0 次或多次。等价于 {0,} $ 匹配输入的结束。如"/>
@@ -149,6 +149,7 @@
         <li><a href="#exec-返回">exec 返回</a></li>
         <li><a href="#克隆正则">克隆正则</a></li>
         <li><a href="#理解">理解</a></li>
+        <li><a href="#手机号中间四位显示">手机号中间四位显示*</a></li>
       </ul>
     </li>
   </ul>
@@ -241,6 +242,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="sr">/\w*$/</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="s1">&#39;/xyz/gim&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1">// [&#39;gim&#39;, index: 5, input: &#39;/xyz/gim&#39;, groups: undefined]
 </span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="手机号中间四位显示">手机号中间四位显示*</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// $n 代表第n个括号匹配的字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="s2">&#34;11122223333&#34;</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/(\d{3})\d{4}(\d{4})/</span><span class="p">,</span> <span class="s2">&#34;$1****$2&#34;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

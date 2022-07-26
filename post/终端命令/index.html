@@ -49,7 +49,7 @@
 <meta itemprop="name" content="终端命令">
 <meta itemprop="description" content="cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创"><meta itemprop="datePublished" content="2022-06-15T10:50:52+08:00" />
 <meta itemprop="dateModified" content="2022-06-15T10:50:52+08:00" />
-<meta itemprop="wordCount" content="287">
+<meta itemprop="wordCount" content="390">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="终端命令"/>
 <meta name="twitter:description" content="cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创"/>
@@ -186,6 +186,44 @@
 </span></span><span class="line"><span class="cl">解压缩：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录
 </span></span></code></pre></td></tr></table>
 </div>
+</div><p>本地移动文件或文件夹</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">mv</span> <span class="o">~</span><span class="err">/Downloads/MyFile.txt ~/Documents/Work/NewFileName.txt</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>本地拷贝文件或文件夹</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">cp</span> <span class="o">-</span><span class="nx">R</span> <span class="o">~</span><span class="err">/Documents/Expenses /Volumes/Data/Expenses</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建压缩 tar 归档</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">这里的v可以查看进程</span><span class="err">，</span><span class="nx">可以不带</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tar</span> <span class="o">-</span><span class="nx">czvf</span> <span class="nx">LotsOfFiles</span><span class="p">.</span><span class="nx">tgz</span> <span class="nx">LotsOfFiles</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解压缩 tar 归档</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">tar</span> <span class="o">-</span><span class="nx">xvf</span> <span class="nx">LotsOfFiles</span><span class="p">.</span><span class="nx">tgz</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div><p>查看进程</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -241,6 +279,33 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config user.name
 </span></span><span class="line"><span class="cl">git config user.email
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看全局 yarn link 列表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">ls</span> <span class="o">-</span><span class="nx">la</span> <span class="o">~</span><span class="err">/.config/yarn/link/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>查看当前项目 yarn link 列表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">ls</span> <span class="o">-</span><span class="nx">l</span> <span class="nx">node_modules</span> <span class="o">|</span> <span class="nx">grep</span> <span class="o">^</span><span class="nx">l</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>取消链接</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">yarn</span> <span class="nx">unlink</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><!-- raw HTML omitted -->
