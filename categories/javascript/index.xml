@@ -13,7 +13,7 @@
       <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>iterm 1 2 3 4 command &amp;lt;- -&amp;gt; 左右切换 command t new tab command w close command q quit chrome command shift n &amp;ndash; incognito command w close command option 左右键 command shift w close window [man 命令的名称] 可以查看命令的详细用法 1 2 man htop man ls 切换 app control +</description>
+      <description>iterm 左右切换 command + 左右键 new tab command + t close tab command + w 分屏左右切换 command + option + 左右键 分屏新建标签页 command + d 关闭 iterm command + q chrome 打开无痕模式 incognito command + shift + n 关闭标签页 command + w</description>
     </item>
     
   </channel>
