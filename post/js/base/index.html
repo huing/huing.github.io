@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Base - huing的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="huing" /><meta name="description" content="浅拷贝方法 1 2 3 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator 1 2 3 4 5 6 navigator.userAgent; // &amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&amp;#34; navigator.language; // &amp;#34;zh-CN&amp;#34; navigator.languages; // [&amp;#34;zh-CN&amp;#34;, &amp;#34;zh&amp;#34;, &amp;#34;fr-CA&amp;#34;, &amp;#34;fr&amp;#34;, &amp;#34;fr-CH&amp;#34;, &amp;#34;fr-FR&amp;#34;, &amp;#34;en&amp;#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟" /><meta name="keywords" content="Hugo, theme, even, huing" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.100.2 with theme even" />
+
+
+<link rel="canonical" href="https://blog.promiseme.site/post/js/base/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="Base" />
+<meta property="og:description" content="浅拷贝方法 1 2 3 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator 1 2 3 4 5 6 navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.promiseme.site/post/js/base/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-09-01T20:20:27+08:00" />
+<meta property="article:modified_time" content="2022-09-01T20:20:27+08:00" />
+
+<meta itemprop="name" content="Base">
+<meta itemprop="description" content="浅拷贝方法 1 2 3 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator 1 2 3 4 5 6 navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟"><meta itemprop="datePublished" content="2022-09-01T20:20:27+08:00" />
+<meta itemprop="dateModified" content="2022-09-01T20:20:27+08:00" />
+<meta itemprop="wordCount" content="2452">
+<meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Base"/>
+<meta name="twitter:description" content="浅拷贝方法 1 2 3 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator 1 2 3 4 5 6 navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Base</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-09-01 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h4 id="浅拷贝方法">浅拷贝方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">slice</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span><span class="nx">rest</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="获取浏览器信息-navigator">获取浏览器信息 navigator</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">navigator</span><span class="p">.</span><span class="nx">language</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// &#34;zh-CN&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">navigator</span><span class="p">.</span><span class="nx">languages</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="settimeout-实际延时比设定值更久的原因">setTimeOut 实际延时比设定值更久的原因</h4>
+<ul>
+<li>最小延迟时间</li>
+<li>时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数  setTimeout  接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout  消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。</li>
+</ul>
+<h4 id="字面量-literals">字面量 Literals</h4>
+<ul>
+<li>数组字面量 Array literals
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">fish</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;Lion&#34;</span><span class="p">,</span> <span class="p">,</span> <span class="s2">&#34;Angel&#34;</span><span class="p">];</span> <span class="c1">// fish[1] = undefined
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>布尔字面量 Boobean literals</li>
+<li>浮点数字面量 Floating-point literals</li>
+<li>整数 Integers</li>
+<li>对象字面量 Object literals</li>
+<li>RegExp literals</li>
+<li>字符串字面量 String literals</li>
+<li>模板字面量 Template literals</li>
+</ul>
+<h4 id="bom-浏览器对象模型">BOM 浏览器对象模型</h4>
+<h4 id="dom-虚拟对象模型">DOM 虚拟对象模型</h4>
+<ul>
+<li>parse stringify</li>
+<li>parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。</li>
+<li>JSON.parse()  方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象</li>
+<li>JSON.stringify()  方法是将一个 JavaScript 值(对象或者数组)转换为一个 JSON 字符串</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nb">Date</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">toString</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">()).</span><span class="nx">valueOf</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">Date</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">Wed</span> <span class="nx">Aug</span> <span class="mi">28</span> <span class="mi">2019</span> <span class="mi">14</span><span class="o">:</span><span class="mi">35</span><span class="o">:</span><span class="mi">22</span> <span class="nx">GMT</span><span class="o">+</span><span class="mi">0800</span> <span class="p">(</span><span class="nx">中国标准时间</span><span class="p">)</span> <span class="s2">&#34;Wed Aug 28 2019 14:35:22 GMT+0800 (中国标准时间)&#34;</span> <span class="mi">1566974122905</span> <span class="mi">1566974122905</span> <span class="mi">1566974122000</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="js-中--vs-">js 中 === vs ==</h4>
+<ul>
+<li>严格相等 ===</li>
+<li>宽松相等 ==</li>
+<li>Object.is(val1, val2)
+<img src="../../public/pCyqkLc.png" alt="equal"></li>
+</ul>
+<h4 id="js-浏览器的缓存机制">js 浏览器的缓存机制</h4>
+<ul>
+<li>浏览器缓存机制有两种，一种为强缓存，一种为协商缓存。</li>
+<li>对于强缓存，浏览器在第一次请求的时候，会直接下载资源，然后缓存在本地，第二次请求的时候，直接使用缓存。</li>
+<li>对于协商缓存，第一次请求缓存且保存缓存标识与时间，重复请求向服务器发送缓存标识和最后缓存时间，服务端进行校验，如果失效则使用缓存。</li>
+<li>协商缓存方案：
+<ul>
+<li>Exprires：服务端的响应头，第一次请求的时候，告诉客户端，该资源什么时候会过期。Exprires 的缺陷是必须保证服务端时间和客户端时间严格同步。</li>
+<li>Cache-control：max-age，表示该资源多少时间后过期，解决了客户端和服务端时间必须同步的问题。</li>
+<li>If-None-Match/ETag：缓存标识，对比缓存时使用它来标识一个缓存，第一次请求的时候，服务端会返回该标识给客户端，客户端在第二次请求的时候会带上该标识与服务端进行对比并返回 If-None-Match 标识是否表示匹配。</li>
+<li>Last-modified/If-Modified-Since：第一次请求的时候服务端返回 Last-modified 表明请求的资源上次的修改时间，第二次请求的时候客户端带上请求头 If-Modified-Since，表示资源上次的修改时间，服务端拿到这两个字段进行对比。</li>
+</ul>
+</li>
+</ul>
+<h4 id="js-浏览器渲染过程">js 浏览器渲染过程</h4>
+<ul>
+<li>首先浏览器主进程接管，开了一个下载线程。
+然后进行 HTTP 请求（DNS 查询、IP 寻址等等），中间会有三次捂手，等待响应，开始下载响应报文。
+将下载完的内容转交给 Renderer 进程管理。
+Renderer 进程开始解析 css rule tree 和 dom tree，这两个过程是并行的，所以一般我会把 link 标签放在页面顶部。
+解析绘制过程中，当浏览器遇到 link 标签或者 script、img 等标签，浏览器会去下载这些内容，遇到时候缓存的使用缓存，不适用缓存的重新下载资源。
+css rule tree 和 dom tree 生成完了之后，开始合成 render tree，这个时候浏览器会进行 layout，开始计算每一个节点的位置，然后进行绘制。
+绘制结束后，关闭 TCP 连接，过程有四次挥手。</li>
+</ul>
+<h4 id="事件循环">事件循环</h4>
+<ul>
+<li>首先，js 是单线程的，主要的任务是处理用户的交互，而用户的交互无非就是响应 DOM 的增删改，使用事件队列的形式，一次事件循环只处理一个事件响应，使得脚本执行相对连续，所以有了事件队列，用来储存待执行的事件，那么事件队列的事件从哪里被 push 进来的呢。那就是另外一个线程叫事件触发线程做的事情了，他的作用主要是在定时触发器线程、异步 HTTP 请求线程满足特定条件下的回调函数 push 到事件队列中，等待 js 引擎空闲的时候去执行，当然 js 引擎执行过程中有优先级之分，首先 js 引擎在一次事件循环中，会先执行 js 线程的主任务，然后会去查找是否有微任务 microtask（promise），如果有那就优先执行微任务，如果没有，在去查找宏任务 macrotask（setTimeout、setInterval）进行执行。</li>
+</ul>
+<h4 id="父组件调用子组件方法子组件向父组件传值方法">父组件调用子组件方法，子组件向父组件传值方法</h4>
+<ul>
+<li>子组件向父组件传值方法
+<ul>
+<li>把子组件的值当成参数，传递到父组件的作用域</li>
+</ul>
+</li>
+<li>父组件调用子组件方法</li>
+<li>props<a href="http://taobaofed.org/blog/2016/11/17/react-components-communication/">http://taobaofed.org/blog/2016/11/17/react-components-communication/</a></li>
+<li>Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span><span class="nx">Provider</span><span class="p">,</span> <span class="nx">Consumer</span><span class="p">}</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createContext</span><span class="p">(</span><span class="nx">defaultValue</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="cm">/* some value */</span><span class="p">}</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">Consumer</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span><span class="nx">value</span> <span class="p">=&gt;</span> <span class="cm">/* render something based on the context value */</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/Consumer&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="react-重复渲染-svg">React 重复渲染 SVG</h4>
+<ul>
+<li>无答案</li>
+</ul>
+<h4 id="react-是什么特点">React 是什么，特点</h4>
+<ul>
+<li>用于构建用户界面的 JavaScript 库</li>
+</ul>
+<ol>
+<li>声明式设计 −React 采用声明范式，可以轻松描述应用。</li>
+<li>高效 −React 通过对 DOM 的模拟，最大限度地减少与 DOM 的交互。</li>
+<li>灵活 −React 可以与已知的库或框架很好地配合。</li>
+<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ol>
+<h4 id="前端工程化">前端工程化</h4>
+<ul>
+<li>无解</li>
+</ul>
+<h4 id="虚拟-dom">虚拟 DOM</h4>
+<ul>
+<li>首先说说为什么要使用 Virturl DOM，因为操作真实 DOM 的耗费的性能代价太高，所以 react 内部使用 js 实现了一套 dom 结构，在每次操作在和真实 dom 之前，使用实现好的 diff 算法，对虚拟 dom 进行比较，递归找出有变化的 dom 节点，然后对其进行更新操作。为了实现虚拟 DOM，我们需要把每一种节点类型抽象成对象，每一种节点类型有自己的属性，也就是 prop，每次进行 diff 的时候，react 会先比较该节点类型，假如节点类型不一样，那么 react 会直接删除该节点，然后直接创建新的节点插入到其中，假如节点类型一样，那么会比较 prop 是否有更新，假如有 prop 不一样，那么 react 会判定该节点有更新，那么重渲染该节点，然后在对其子节点进行比较，一层一层往下，直到没有子节点。
+基于 diff 算法的同级对比，它主要分为四种类型的对比，分别为:
+<ol>
+<li>新建 create： 新的 vd 中有这个节点，旧的没有</li>
+<li>删除 remove： 新的 vd 中没有这个节点，旧的有</li>
+<li>替换 replace： 新的 vd 的 tagName 和旧的 tagName 不同</li>
+<li>更新 update： 除了上面三点外的不同，具体是比较 attributes 先，然后再比较 children</li>
+</ol>
+</li>
+</ul>
+<h4 id="为什么要写-superprops">为什么要写 super(props)</h4>
+<h4 id="为什么要写-jsx">为什么要写 jsx</h4>
+<h4 id="为什么要打包">为什么要打包</h4>
+<h4 id="函数组件和-class-组件区别">函数组件和 class 组件区别</h4>
+<h4 id="new-url">new URL()</h4>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">huing</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-09-01
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/js/">js</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/js/array/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Array</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/js/proxy/">
+            <span class="next-text nav-default">Proxy</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="https://blog.promiseme.site/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>huing</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

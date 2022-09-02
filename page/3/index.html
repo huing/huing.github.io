@@ -126,105 +126,95 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/">typescript中const用法</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/clone%E6%AD%A3%E5%88%99/">Clone正则</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-14 </span>
-      <div class="post-category">
-          <a href="/categories/typescript/"> typescript </a>
-          </div>
+      <span class="post-time"> 2022-06-27 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] as const // const animals: readonly [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] type Animal = typeof animals[number] // type Animal = &#39;cat&#39; | &#39;dog&#39; | &#39;mouse&#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:
+      基本语法 \w 匹配一个单字字符 = [A-Za-z0-9_] ? 匹配前面一个表达式 0 次或者 1 次。等价于 {0,1} 如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪（匹配尽
     </div>
     <div class="read-more">
-      <a href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/clone%E6%AD%A3%E5%88%99/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E6%80%A7%E8%83%BD/cdn%E6%98%AF%E4%BB%80%E4%B9%88/">Cdn是什么</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/">nextjs预渲染理解</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-13 </span>
-      <div class="post-category">
-          <a href="/categories/%E6%80%A7%E8%83%BD/"> 性能 </a>
-          </div>
+      <span class="post-time"> 2022-06-27 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      内容分发网络 cdn Content Delivery Network cache-control
+      静态生成 构建时 （build time） 生成 html 在每个页面请求时重用 可以被 cdn 缓存 服务器端渲染 在地址栏输入 url，发送 get 请求，生成 html 页面内容会随着每
     </div>
     <div class="read-more">
-      <a href="/post/%E6%80%A7%E8%83%BD/cdn%E6%98%AF%E4%BB%80%E4%B9%88/" class="read-more-link">阅读更多</a>
+      <a href="/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js/bindapplycall%E5%8C%BA%E5%88%AB/">Bind,apply,call区别</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/">类型断言类型谓词</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-13 </span>
-      <div class="post-category">
-          <a href="/categories/js/"> js </a>
-          </div>
+      <span class="post-time"> 2022-06-23 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      bind, apply, call 区别 1 2 3 4 5 const me = { a: 123 }; const he = { b: 456 }; function x() { console.log(this, arguments, this.a); } bind，返回函数的 copy 使用时要重新调用一次 参数形式， (this, arg1, arg2) 1 2 x.bind(me, 2, 3).bind(he)(); // bind
+      is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {
     </div>
     <div class="read-more">
-      <a href="/post/js/bindapplycall%E5%8C%BA%E5%88%AB/" class="read-more-link">阅读更多</a>
+      <a href="/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/">数据类型及判断方法</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">普通函数vs箭头函数</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-13 </span>
-      <div class="post-category">
-          <a href="/categories/js/"> js </a>
-          </div>
+      <span class="post-time"> 2022-06-22 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      js8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true;
+      this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有
     </div>
     <div class="read-more">
-      <a href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/css/flex/">Flex</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/map%E7%B1%BB%E5%9E%8B/">Map类型</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-12 </span>
-      <div class="post-category">
-          <a href="/categories/css/"> css </a>
-          </div>
+      <span class="post-time"> 2022-06-16 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 flex: 1 flex: 1 1 0% flex-grow 定义项目的放大比例，默认为 0，即
+      Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 =
     </div>
     <div class="read-more">
-      <a href="/post/css/flex/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/map%E7%B1%BB%E5%9E%8B/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

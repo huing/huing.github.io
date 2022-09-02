@@ -126,103 +126,95 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js/map%E7%B1%BB%E5%9E%8B/">Map类型</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/base/">Base</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-16 </span>
+      <span class="post-time"> 2022-09-01 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 =
+      浅拷贝方法 1 2 3 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator 1 2 3 4 5 6 navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟
     </div>
     <div class="read-more">
-      <a href="/post/js/map%E7%B1%BB%E5%9E%8B/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/base/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/react/useref-vs-usestate/">useRef vs useState</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/js/proxy/">Proxy</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
-      <div class="post-category">
-          <a href="/categories/react/"> react </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状
-    </div>
-    <div class="read-more">
-      <a href="/post/react/useref-vs-usestate/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">常用快捷键</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
-      <div class="post-category">
-          <a href="/categories/typescript/"> typescript </a>
-          <a href="/categories/react/"> react </a>
-          <a href="/categories/javascript/"> javascript </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      iterm 左右切换 command + 左右键 new tab command + t close tab command + w 分屏左右切换 command + option + 左右键 分屏新建标签页 command + d 关闭 iterm command + q chrome 打开无痕模式 incognito command + shift + n 关闭标签页 command + w
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">终端命令</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
+      <span class="post-time"> 2022-09-01 </span>
       
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创
+      接口代理 对象代理 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy 转发代理 1 2 3 4 5 6 let target = {}; let p = new Proxy(target, {}); p.a = 37; // 操作转发到目标 console.log(target.a); // 37. 操作已经被正确地转发
     </div>
     <div class="read-more">
-      <a href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
+      <a href="/post/js/proxy/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/ts/%E6%B3%9B%E5%9E%8B/">泛型</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
-      <div class="post-category">
-          <a href="/categories/git/"> git </a>
-          </div>
+      <span class="post-time"> 2022-08-31 </span>
+      
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      git log &ndash;pretty=oneline &ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2
+      泛型参数的默认类型 1 2 3 4 5 6 7 function createArray&lt;T = string&gt;(length: number, value: T): Array&lt;T&gt; { let result: T[] = []; for (let i = 0; i &lt; length; i++) { result[i] = value; } return result; } 1 2 3 map&lt;U&gt;(callbackfn: (value: T, index: number, array: T[]) =&gt; U, thisArg?: any): U[]; reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array:
     </div>
     <div class="read-more">
-      <a href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
+      <a href="/post/ts/%E6%B3%9B%E5%9E%8B/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/css/css%E5%80%BC%E4%B8%8E%E5%8D%95%E4%BD%8D/">Css值与单位</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-08-31 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      绝对长度单位 与任何东西都没有关系 cm mm pt: 点 px: 像素 相对长度单位 em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width
+    </div>
+    <div class="read-more">
+      <a href="/post/css/css%E5%80%BC%E4%B8%8E%E5%8D%95%E4%BD%8D/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/">H5流程理解</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-28 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      h5 在微信环境下运行的 html pc html 通过 jssdk 到小程序 WebView
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%80%A7%E8%83%BD/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>

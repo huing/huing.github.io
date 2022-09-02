@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&amp;gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&amp;gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="普通函数vs箭头函数" />
-<meta property="og:description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }" />
+<meta property="og:description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.promiseme.site/post/js/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-22T22:49:19+08:00" />
 <meta property="article:modified_time" content="2022-06-22T22:49:19+08:00" />
 
 <meta itemprop="name" content="普通函数vs箭头函数">
-<meta itemprop="description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }"><meta itemprop="datePublished" content="2022-06-22T22:49:19+08:00" />
+<meta itemprop="description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有"><meta itemprop="datePublished" content="2022-06-22T22:49:19+08:00" />
 <meta itemprop="dateModified" content="2022-06-22T22:49:19+08:00" />
-<meta itemprop="wordCount" content="60">
-<meta itemprop="keywords" content="typescript,ts,react,css,javascript,js," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="72">
+<meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="普通函数vs箭头函数"/>
-<meta name="twitter:description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments }; function funB(params) { // this 指向 函数内部 // 有 arguments console.log(arguments); }"/>
+<meta name="twitter:description" content="this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -156,26 +156,28 @@
       <h3 id="thisarguments-区别">this，arguments 区别</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">funA</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// this 指向 funA 的调用
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 没有 arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 不能new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 没有原型链
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">funB</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// this 指向 函数内部
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 有 arguments
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 有 arguments);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -198,17 +200,12 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/typescript/">typescript</a>
-          <a href="/tags/ts/">ts</a>
-          <a href="/tags/react/">react</a>
-          <a href="/tags/css/">css</a>
-          <a href="/tags/javascript/">javascript</a>
           <a href="/tags/js/">js</a>
           </div>
       <nav class="post-nav">
         <a class="prev" href="/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">as vs Is</span>
+            <span class="prev-text nav-default">类型断言类型谓词</span>
             <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/post/js/map%E7%B1%BB%E5%9E%8B/">

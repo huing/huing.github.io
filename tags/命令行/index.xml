@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>命令行 on huing的博客</title>
+    <link>https://blog.promiseme.site/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
+    <description>Recent content in 命令行 on huing的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 15 Jun 2022 10:50:52 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>终端命令</title>
+      <link>https://blog.promiseme.site/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 Jun 2022 10:50:52 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</guid>
+      <description>cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>as vs Is - huing的博客</title>
+  <title>类型断言类型谓词 - huing的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -39,19 +39,19 @@
 <link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 
-<meta property="og:title" content="as vs Is" />
+<meta property="og:title" content="类型断言类型谓词" />
 <meta property="og:description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-23T16:50:50+08:00" />
 <meta property="article:modified_time" content="2022-06-23T16:50:50+08:00" />
 
-<meta itemprop="name" content="as vs Is">
+<meta itemprop="name" content="类型断言类型谓词">
 <meta itemprop="description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {"><meta itemprop="datePublished" content="2022-06-23T16:50:50+08:00" />
 <meta itemprop="dateModified" content="2022-06-23T16:50:50+08:00" />
-<meta itemprop="wordCount" content="90">
-<meta itemprop="keywords" content="typescript,ts,react,css,javascript,js," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="as vs Is"/>
+<meta itemprop="wordCount" content="145">
+<meta itemprop="keywords" content="ts," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="类型断言类型谓词"/>
 <meta name="twitter:description" content="is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {"/>
 
 <!--[if lte IE 9]>
@@ -129,7 +129,7 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">as vs Is</h1>
+      <h1 class="post-title">类型断言类型谓词</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2022-06-23 </span>
@@ -147,6 +147,7 @@
       <ul>
         <li><a href="#is-类型谓词-type-predicates">is 类型谓词 type predicates</a></li>
         <li><a href="#as-类型断言-type-assertions">as 类型断言 type assertions</a></li>
+        <li><a href="#应用">应用</a></li>
       </ul>
     </li>
   </ul>
@@ -196,6 +197,31 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="应用">应用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">isNumber</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="o">?:</span> <span class="nx">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">value</span> <span class="nx">is</span> <span class="nx">number</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// or typeof value === &#34;number&#34; &amp;&amp; Number.isFinite(value)
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">return</span> <span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s2">&#34;number&#34;</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nb">Number</span><span class="p">.</span><span class="nb">isNaN</span><span class="p">(</span><span class="nx">value</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">isString</span> <span class="o">=</span> <span class="p">(</span><span class="nx">value</span><span class="o">?:</span> <span class="nx">any</span><span class="p">)</span><span class="o">:</span> <span class="nx">value</span> <span class="nx">is</span> <span class="nx">string</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="k">typeof</span> <span class="nx">value</span> <span class="o">===</span> <span class="s2">&#34;string&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
+</div>
 </div>
     </div>
 
@@ -216,12 +242,7 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/typescript/">typescript</a>
           <a href="/tags/ts/">ts</a>
-          <a href="/tags/react/">react</a>
-          <a href="/tags/css/">css</a>
-          <a href="/tags/javascript/">javascript</a>
-          <a href="/tags/js/">js</a>
           </div>
       <nav class="post-nav">
         <a class="prev" href="/post/%E6%80%A7%E8%83%BD/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/">

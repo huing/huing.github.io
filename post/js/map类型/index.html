@@ -49,8 +49,8 @@
 <meta itemprop="name" content="Map类型">
 <meta itemprop="description" content="Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 ="><meta itemprop="datePublished" content="2022-06-16T23:20:39+08:00" />
 <meta itemprop="dateModified" content="2022-06-16T23:20:39+08:00" />
-<meta itemprop="wordCount" content="144">
-<meta itemprop="keywords" content="javascript,js," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="137">
+<meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Map类型"/>
 <meta name="twitter:description" content="Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 ="/>
 
@@ -194,27 +194,22 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="objects-vs-maps">objects vs maps</h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:center">Map</th>
-<th style="text-align:right">Object</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>意外的键</td>
-<td style="text-align:center">显式插入的键。</td>
-<td style="text-align:right">原型链上的键名</td>
-</tr>
-<tr>
-<td>键的类型</td>
-<td style="text-align:center">任意值，包括函数、对象或任意基本类型。</td>
-<td style="text-align:right">必须是一个 String 或是 Symbol。</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li>
+<p>意外的键</p>
+<ul>
+<li>map: 显式插入的</li>
+<li>object: 原型链上的键名</li>
+</ul>
+</li>
+<li>
+<p>键的类型</p>
+<ul>
+<li>map: 任意值，包括函数、对象或任意基本类型</li>
+<li>object: 必须是一个 String 或是 Symbol</li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -235,7 +230,6 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/javascript/">javascript</a>
           <a href="/tags/js/">js</a>
           </div>
       <nav class="post-nav">
