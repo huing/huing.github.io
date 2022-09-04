@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 1 2 3 4 5 6 7 8 9 10 11 12 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="数据类型及判断方法" />
-<meta property="og:description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof" />
+<meta property="og:description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 1 2 3 4 5 6 7 8 9 10 11 12 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.promiseme.site/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-13T11:38:56+08:00" />
 <meta property="article:modified_time" content="2022-06-13T11:38:56+08:00" />
 
 <meta itemprop="name" content="数据类型及判断方法">
-<meta itemprop="description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof"><meta itemprop="datePublished" content="2022-06-13T11:38:56+08:00" />
+<meta itemprop="description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 1 2 3 4 5 6 7 8 9 10 11 12 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint"><meta itemprop="datePublished" content="2022-06-13T11:38:56+08:00" />
 <meta itemprop="dateModified" content="2022-06-13T11:38:56+08:00" />
-<meta itemprop="wordCount" content="412">
+<meta itemprop="wordCount" content="374">
 <meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="数据类型及判断方法"/>
-<meta name="twitter:description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof"/>
+<meta name="twitter:description" content="js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 1 2 3 4 5 6 7 8 9 10 11 12 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -146,8 +146,15 @@
     <li>
       <ul>
         <li><a href="#js-8-种数据类型">js 8 种数据类型</a></li>
-        <li><a href="#数据类型判断">数据类型判断</a></li>
+      </ul>
+    </li>
+    <li><a href="#数据类型判断方法">数据类型判断方法</a>
+      <ul>
+        <li><a href="#typeof-可以判断值类型函数">typeof <code>可以判断值类型，函数</code></a></li>
+        <li><a href="#instanceof-能判断对象类型">instanceof <code>能判断对象类型</code></a></li>
+        <li><a href="#objectprototypetostringcall-既能判断基本类型也能判断对象类型">Object.prototype.toString.call() <code>既能判断基本类型也能判断对象类型</code></a></li>
         <li><a href="#判断变量是否为数组">判断变量是否为数组</a></li>
+        <li><a href="#其他">其他</a></li>
       </ul>
     </li>
   </ul>
@@ -170,9 +177,8 @@
 </ul>
 </li>
 </ul>
-<p><strong><em>symbol,bigint 为 es6 新增数据类型</em></strong></p>
-<h3 id="数据类型判断">数据类型判断</h3>
-<h4 id="1-typeof-_可以判断值类型-函数_">1 typeof <strong><em>可以判断值类型， 函数</em></strong></h4>
+<h2 id="数据类型判断方法">数据类型判断方法</h2>
+<h3 id="typeof-可以判断值类型函数">typeof <code>可以判断值类型，函数</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -186,22 +192,24 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">typeof</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// number
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="s2">&#34;ss&#34;</span><span class="p">;</span> <span class="c1">// string
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="kc">undefined</span><span class="p">;</span> <span class="c1">// undefined
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="kc">true</span><span class="p">;</span> <span class="c1">// boolean
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span> <span class="c1">// function
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="mi">2</span><span class="nx">n</span><span class="p">;</span> <span class="c1">// bigint es6新增数据类型
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">);</span> <span class="c1">// symbol es6新增数据类型
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">typeof</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span> <span class="c1">// function
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="k">typeof</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// object 被认为是对象的占位符,但从技术上来说，它仍然是原始值
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="p">[];</span> <span class="c1">// object
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">typeof</span> <span class="p">{};</span> <span class="c1">// object
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="2-instanceof-_能判断对象类型_">2 instanceof <strong><em>能判断对象类型</em></strong></h4>
+</div><h3 id="instanceof-能判断对象类型">instanceof <code>能判断对象类型</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -228,12 +236,12 @@
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">People</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="kr">class</span> <span class="nx">Student</span> <span class="kr">extends</span> <span class="nx">People</span> <span class="p">{}</span>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">vortesnail</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Student</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vortesnail</span> <span class="k">instanceof</span> <span class="nx">People</span><span class="p">);</span> <span class="c1">// true
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">vortesnail</span> <span class="k">instanceof</span> <span class="nx">Student</span><span class="p">);</span> <span class="c1">// true
+</span></span><span class="line"><span class="cl"><span class="nx">vortesnail</span> <span class="k">instanceof</span> <span class="nx">People</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">vortesnail</span> <span class="k">instanceof</span> <span class="nx">Student</span><span class="p">;</span> <span class="c1">// true
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>其实现就是顺着原型链去找，如果能找到对应的 Xxxxx.prototype 即为 true。比如这里的 vortesnail 作为实例，顺着原型链能找到 Student.prototype 及 People.prototype，所以都为 true。</p>
-<h4 id="3-objectprototypetostringcall-_既能判断基本类型也能判断对象类型_">3 Object.prototype.toString.call() <strong><em>既能判断基本类型也能判断对象类型</em></strong></h4>
+</div><p>vortesnail 作为实例，顺着原型链能找到 Student.prototype 及 People.prototype，所以都为 true。</p>
+<h3 id="objectprototypetostringcall-既能判断基本类型也能判断对象类型">Object.prototype.toString.call() <code>既能判断基本类型也能判断对象类型</code></h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -250,14 +258,12 @@
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// 简写
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">({});</span> <span class="c1">// &#34;[object Object]&#34; {}.toString() 报错 没有原型链了吧
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">([]);</span> <span class="c1">// &#34;[object Array]&#34; [].toString() &#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// &#34;[object Number]&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">({});</span> <span class="c1">// &#34;[object Object]&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">([]);</span> <span class="c1">// &#34;[object Array]&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span> <span class="c1">// &#34;[object Number]&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span> <span class="c1">// &#34;[object String]&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span> <span class="c1">// &#34;[object Boolean]&#34;
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span> <span class="c1">// &#34;[object Undefined]&#34;
@@ -283,6 +289,17 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> <span class="c1">// true
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">;</span> <span class="c1">// true
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// &#34;[object Array]&#34;
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="其他">其他</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{}.</span><span class="nx">toString</span><span class="p">()</span> <span class="c1">// 报错 没有原型链了吧
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[].</span><span class="nx">toString</span><span class="p">()</span> <span class="c1">// &#34;&#34;
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>

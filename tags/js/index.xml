@@ -6,7 +6,16 @@
     <description>Recent content in js on huing的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Sep 2022 12:37:25 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 21:24:41 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>语义化标签</title>
+      <link>https://blog.promiseme.site/post/css/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/css/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
+      <description>有利 seo 方便其他设备解析 便于维护提高可读性 section, article, main, p, time, title,header,nav, aside, footer,</description>
+    </item>
+    
     <item>
       <title>创建一个不能修改的对象方法</title>
       <link>https://blog.promiseme.site/post/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</link>
@@ -67,7 +76,7 @@
       <pubDate>Thu, 01 Sep 2022 20:21:47 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/js/array/</guid>
-      <description>Array 方法 修改器方法 改变自身的值 push() 1 2 3 4 const sports = [&amp;#34;soccer&amp;#34;, &amp;#34;baseball&amp;#34;]; const total = sports.push(&amp;#34;football&amp;#34;, &amp;#34;swimming&amp;#34;); console.log(sports); // [&amp;#34;soccer&amp;#34;, &amp;#34;baseball&amp;#34;, &amp;#34;football&amp;#34;, &amp;#34;swimming&amp;#34;] console.log(total); // 4 pop() 从一个数组中删除并返回最后一个元素 1 [&amp;#34;a&amp;#34;].pop(); // &amp;#39;a&amp;#39; reverse() 颠倒数组中元素的位</description>
+      <description>Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，</description>
     </item>
     
     <item>
@@ -130,7 +139,7 @@
       <pubDate>Mon, 13 Jun 2022 11:38:56 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</guid>
-      <description>js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof</description>
+      <description>js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 1 2 3 4 5 6 7 8 9 10 11 12 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint</description>
     </item>
     
   </channel>

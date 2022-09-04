@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="Array 方法 修改器方法 改变自身的值 push() 1 2 3 4 const sports = [&amp;#34;soccer&amp;#34;, &amp;#34;baseball&amp;#34;]; const total = sports.push(&amp;#34;football&amp;#34;, &amp;#34;swimming&amp;#34;); console.log(sports); // [&amp;#34;soccer&amp;#34;, &amp;#34;baseball&amp;#34;, &amp;#34;football&amp;#34;, &amp;#34;swimming&amp;#34;] console.log(total); // 4 pop() 从一个数组中删除并返回最后一个元素 1 [&amp;#34;a&amp;#34;].pop(); // &amp;#39;a&amp;#39; reverse() 颠倒数组中元素的位" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -40,19 +40,19 @@
 
 
 <meta property="og:title" content="Array" />
-<meta property="og:description" content="Array 方法 修改器方法 改变自身的值 push() 1 2 3 4 const sports = [&#34;soccer&#34;, &#34;baseball&#34;]; const total = sports.push(&#34;football&#34;, &#34;swimming&#34;); console.log(sports); // [&#34;soccer&#34;, &#34;baseball&#34;, &#34;football&#34;, &#34;swimming&#34;] console.log(total); // 4 pop() 从一个数组中删除并返回最后一个元素 1 [&#34;a&#34;].pop(); // &#39;a&#39; reverse() 颠倒数组中元素的位" />
+<meta property="og:description" content="Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.promiseme.site/post/js/array/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-09-01T20:21:47+08:00" />
 <meta property="article:modified_time" content="2022-09-01T20:21:47+08:00" />
 
 <meta itemprop="name" content="Array">
-<meta itemprop="description" content="Array 方法 修改器方法 改变自身的值 push() 1 2 3 4 const sports = [&#34;soccer&#34;, &#34;baseball&#34;]; const total = sports.push(&#34;football&#34;, &#34;swimming&#34;); console.log(sports); // [&#34;soccer&#34;, &#34;baseball&#34;, &#34;football&#34;, &#34;swimming&#34;] console.log(total); // 4 pop() 从一个数组中删除并返回最后一个元素 1 [&#34;a&#34;].pop(); // &#39;a&#39; reverse() 颠倒数组中元素的位"><meta itemprop="datePublished" content="2022-09-01T20:21:47+08:00" />
+<meta itemprop="description" content="Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，"><meta itemprop="datePublished" content="2022-09-01T20:21:47+08:00" />
 <meta itemprop="dateModified" content="2022-09-01T20:21:47+08:00" />
-<meta itemprop="wordCount" content="658">
+<meta itemprop="wordCount" content="452">
 <meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Array"/>
-<meta name="twitter:description" content="Array 方法 修改器方法 改变自身的值 push() 1 2 3 4 const sports = [&#34;soccer&#34;, &#34;baseball&#34;]; const total = sports.push(&#34;football&#34;, &#34;swimming&#34;); console.log(sports); // [&#34;soccer&#34;, &#34;baseball&#34;, &#34;football&#34;, &#34;swimming&#34;] console.log(total); // 4 pop() 从一个数组中删除并返回最后一个元素 1 [&#34;a&#34;].pop(); // &#39;a&#39; reverse() 颠倒数组中元素的位"/>
+<meta name="twitter:description" content="Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -147,7 +147,8 @@
       <ul>
         <li><a href="#方法">方法</a></li>
         <li><a href="#属性">属性</a></li>
-        <li><a href="#方法-1">方法</a></li>
+        <li><a href="#生成数组方法">生成数组方法</a></li>
+        <li><a href="#判断变量是否为数组">判断变量是否为数组</a></li>
       </ul>
     </li>
   </ul>
@@ -159,35 +160,9 @@
 <h3 id="方法">方法</h3>
 <h4 id="修改器方法-改变自身的值">修改器方法 改变自身的值</h4>
 <ul>
-<li>push()</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">sports</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;soccer&#34;</span><span class="p">,</span> <span class="s2">&#34;baseball&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">total</span> <span class="o">=</span> <span class="nx">sports</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&#34;football&#34;</span><span class="p">,</span> <span class="s2">&#34;swimming&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sports</span><span class="p">);</span> <span class="c1">// [&#34;soccer&#34;, &#34;baseball&#34;, &#34;football&#34;, &#34;swimming&#34;]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span> <span class="c1">// 4
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>pop() 从一个数组中删除并返回最后一个元素</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">[</span><span class="s2">&#34;a&#34;</span><span class="p">].</span><span class="nx">pop</span><span class="p">();</span> <span class="c1">// &#39;a&#39;
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>reverse() 颠倒数组中元素的位置，并返回该数组的引用</li>
+<li>push() 将一个或多个元素添加到数组的末尾，并<code>返回该数组的新长度</code></li>
+<li>pop() 从一个数组中删除并<code>返回删除的元素值</code></li>
+<li>reverse() 颠倒数组中的元素，并返回该数组的引用，同时改变原数组</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -202,66 +177,14 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>shift() 删除数组最前面（头部）的元素</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;angel&#34;</span><span class="p">,</span> <span class="s2">&#34;clown&#34;</span><span class="p">,</span> <span class="s2">&#34;mandarin&#34;</span><span class="p">,</span> <span class="s2">&#34;surgeon&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span> <span class="c1">// &#39;angel&#39;
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">shift</span><span class="p">());</span> <span class="c1">// undefined
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<li>shift() 删除数组第一个元素，并返回删除的元素值</li>
 <li>sort()</li>
-<li>splice()  返回的是数组</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;angel&#34;</span><span class="p">,</span> <span class="s2">&#34;clown&#34;</span><span class="p">,</span> <span class="s2">&#34;mandarin&#34;</span><span class="p">,</span> <span class="s2">&#34;sturgeon&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;drum&#34;</span><span class="p">,</span> <span class="s2">&#34;guitar&#34;</span><span class="p">));</span> <span class="c1">// []
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&#34;drum&#34;</span><span class="p">,</span> <span class="s2">&#34;guitar&#34;</span><span class="p">));</span> <span class="c1">// [&#39;drum&#39;]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [&#39;angel&#39;, &#39;clown&#39;, &#39;drum&#39;, &#39;guitar&#39;, &#39;guitar&#39;, &#39;mandarin&#39;, &#39;sturgeon&#39;]
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
+<li>splice()  删除或新增元素，返回修改后的数组，改变原数组</li>
 <li>unshift() 添加元素到数组的头部 返回 length 属性值</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">// 6
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 3, 4, 5, 6]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">arr2</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">arr2</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span> <span class="c1">// [2, 1, 4, 5, 6]
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><h4 id="访问方法-返回新数组">访问方法 返回新数组</h4>
+<h4 id="访问方法-返回新数组">访问方法 返回新数组</h4>
 <ul>
-<li>concat() 将数组和/或值连接成新数组</li>
+<li>concat() 将数组和/或值连接成新数组，对于对象引用的值修改会修改原数组</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -278,24 +201,20 @@
 </div><ul>
 <li>includes()</li>
 <li>join()</li>
-<li>slice()</li>
+<li>slice() [begin, end) 对于对象引用的值修改会修改原数组</li>
+<li>toString()</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">slice</span><span class="p">(</span><span class="nx">begin</span><span class="p">,</span> <span class="nx">end</span><span class="p">);</span> <span class="c1">// [begin, end)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;ant&#34;</span><span class="p">,</span> <span class="s2">&#34;bison&#34;</span><span class="p">,</span> <span class="s2">&#34;camel&#34;</span><span class="p">,</span> <span class="s2">&#34;duck&#34;</span><span class="p">,</span> <span class="s2">&#34;elephant&#34;</span><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span> <span class="c1">// [&#39;camel&#39;, &#39;duck&#39;, &#39;elephant&#39;]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">animals</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span> <span class="c1">// [&#39;bison&#39;, &#39;camel&#39;, &#39;duck&#39;]
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="p">{}.</span><span class="nx">toString</span><span class="p">()</span> <span class="c1">// 报错 没有原型链了吧
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">[].</span><span class="nx">toString</span><span class="p">()</span> <span class="c1">// &#34;&#34;
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>toString()</li>
 <li>toLocaleString()</li>
 <li>indexOf()</li>
 <li>lastIndexOf()</li>
@@ -307,34 +226,6 @@
 <li>every()</li>
 <li>some()</li>
 <li>filter() 返回一个新数组</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">words</span> <span class="o">=</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;spray&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;limit&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;elite&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;exuberant&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;destruction&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;present&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">words</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">word</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">word</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span> <span class="c1">// [&#39;exuberant&#39;, &#39;destruction&#39;, &#39;present&#39;]
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
 <li>find()</li>
 <li>findIndex()</li>
 <li>keys()</li>
@@ -344,86 +235,14 @@
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">[</span><span class="s2">&#34;1&#34;</span><span class="p">,</span> <span class="s2">&#34;2.1&#34;</span><span class="p">,</span> <span class="s2">&#34;3&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">str</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">str</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1">// [1, 2, 3]
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">[(</span><span class="s2">&#34;1&#34;</span><span class="p">,</span> <span class="s2">&#34;2.1&#34;</span><span class="p">,</span> <span class="s2">&#34;3&#34;</span><span class="p">)].</span><span class="nx">map</span><span class="p">(</span><span class="nb">Number</span><span class="p">);</span> <span class="c1">// [1, 2.1, 3]
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">[</span><span class="s2">&#34;1&#34;</span><span class="p">,</span> <span class="s2">&#34;2&#34;</span><span class="p">,</span> <span class="s2">&#34;3&#34;</span><span class="p">,</span> <span class="s2">&#34;4&#34;</span><span class="p">,</span> <span class="s2">&#34;5&#34;</span><span class="p">,</span> <span class="s2">&#34;6&#34;</span><span class="p">,</span> <span class="s2">&#34;7&#34;</span><span class="p">,</span> <span class="s2">&#34;8&#34;</span><span class="p">,</span> <span class="s2">&#34;9&#34;</span><span class="p">,</span> <span class="s2">&#34;10&#34;</span><span class="p">].</span><span class="nx">map</span><span class="p">(</span><span class="nb">parseInt</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// [1, NaN, NaN, NaN, NaN, NaN, NaN, NaN, NaN, 9]
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>reduce()</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">1</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">2</span> <span class="p">},</span> <span class="p">{</span> <span class="nx">x</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}];</span>
-</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">arr</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">el</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">el</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">),</span> <span class="o">-</span><span class="kc">Infinity</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">// 3
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">Fun</span><span class="p">(</span><span class="nx">min</span><span class="p">,</span> <span class="nx">max</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">max</span><span class="p">)</span> <span class="o">-</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">ceil</span><span class="p">(</span><span class="nx">min</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="nx">min</span>
-</span></span><span class="line"><span class="cl">  <span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">Fun2</span><span class="p">()</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">numArr</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">numArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">Fun</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">numArr</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="nx">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">Fun2</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">sort</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">acc</span><span class="p">.</span><span class="nx">length</span> <span class="o">||</span> <span class="nx">acc</span><span class="p">[</span><span class="nx">acc</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">!==</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// !acc.includes(cur)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">acc</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">cur</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span> <span class="p">[])</span>
-</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
 <li>reduceRight()</li>
 <li>values()</li>
 </ul>
@@ -432,7 +251,7 @@
 <li>Array.prototype.constructor</li>
 <li>Array.prototype.length</li>
 </ul>
-<h3 id="方法-1">方法</h3>
+<h3 id="生成数组方法">生成数组方法</h3>
 <ul>
 <li>Array.from()</li>
 </ul>
@@ -444,19 +263,6 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">(</span><span class="s2">&#34;foo&#34;</span><span class="p">);</span> <span class="c1">// [&#34;f&#34;, &#34;o&#34;, &#34;o&#34;];
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Array</span><span class="p">.</span><span class="nx">from</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">x</span><span class="p">);</span> <span class="c1">// [2, 4, 6];
-</span></span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>Array.isArray()</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]);</span> <span class="c1">// true
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">({</span> <span class="nx">foo</span><span class="o">:</span> <span class="mi">123</span> <span class="p">});</span> <span class="c1">// false
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -472,7 +278,10 @@
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Array</span><span class="p">.</span><span class="k">of</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span> <span class="c1">// [undefined]
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><ul>
+<li>Array.apply</li>
+</ul>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
@@ -480,6 +289,21 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">elem</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">index</span><span class="p">);</span> <span class="c1">// [0, 1, 2, 3]
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="判断变量是否为数组">判断变量是否为数组</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">arr</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">arr</span> <span class="k">instanceof</span> <span class="nb">Array</span><span class="p">;</span> <span class="c1">// true
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">toString</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// &#34;[object Array]&#34;
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div>
