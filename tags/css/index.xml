@@ -6,7 +6,34 @@
     <description>Recent content in css on huing的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 31 Aug 2022 23:12:58 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Sep 2022 12:37:25 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>创建一个不能修改的对象方法</title>
+      <link>https://blog.promiseme.site/post/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 04 Sep 2022 12:37:25 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Consumer</title>
+      <link>https://blog.promiseme.site/post/react/consumer/</link>
+      <pubDate>Sun, 04 Sep 2022 12:35:59 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/react/consumer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ref实现父组件调用子组件方法</title>
+      <link>https://blog.promiseme.site/post/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同： 当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性</description>
+    </item>
+    
     <item>
       <title>Css值与单位</title>
       <link>https://blog.promiseme.site/post/css/css%E5%80%BC%E4%B8%8E%E5%8D%95%E4%BD%8D/</link>

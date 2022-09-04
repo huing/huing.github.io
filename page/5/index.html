@@ -126,6 +126,63 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">终端命令</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-15 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创
+    </div>
+    <div class="read-more">
+      <a href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-15 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      git log &ndash;pretty=oneline &ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2
+    </div>
+    <div class="read-more">
+      <a href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/">const常量断言用法</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-14 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] as const // const animals: readonly [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] type Animal = typeof animals[number] // type Animal = &#39;cat&#39; | &#39;dog&#39; | &#39;mouse&#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:
+    </div>
+    <div class="read-more">
+      <a href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/%E6%80%A7%E8%83%BD/cdn%E6%98%AF%E4%BB%80%E4%B9%88/">Cdn是什么</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-06-13 </span>
@@ -162,63 +219,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/">数据类型及判断方法</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-13 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date symbol,bigint 为 es6 新增数据类型 数据类型判断 1 typeof 可以判断值类型， 函数 1 2 3 4 5 6 7 8 9 10 11 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof
-    </div>
-    <div class="read-more">
-      <a href="/post/js/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/css/flex/">Flex</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-12 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 flex: 1 flex: 1 1 0% flex-grow 定义项目的放大比例，默认为 0，即
-    </div>
-    <div class="read-more">
-      <a href="/post/css/flex/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/">React工程化</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-12 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      React 工程化 Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler Reconciler（协调器）—— 负责找出变化的组件 Render
-    </div>
-    <div class="read-more">
-      <a href="/post/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -226,7 +226,10 @@
         <i class="iconfont icon-left"></i>
         <span class="prev-text">上一页</span>
       </a>
-    
+    <a class="next" href="/page/6/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         
