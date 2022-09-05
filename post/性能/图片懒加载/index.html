@@ -50,7 +50,7 @@
 <meta itemprop="description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 /* * 利用window 自带方法 交叉观察者 * * */ const io = new IntersectionObserver(entries =&gt; { // console.log(&#34;entries&#34;, entries); entries.forEach(entry =&gt; { if (entry.isIntersecting) { const image = entry.target; const data_src = image.getAttribute(&#34;data-src&#34;); image.setAttribute(&#34;src&#34;, data_src || &#34;&#34;);"><meta itemprop="datePublished" content="2022-09-02T22:14:54+08:00" />
 <meta itemprop="dateModified" content="2022-09-02T22:14:54+08:00" />
 <meta itemprop="wordCount" content="84">
-<meta itemprop="keywords" content="性能," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="图片懒加载"/>
 <meta name="twitter:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 /* * 利用window 自带方法 交叉观察者 * * */ const io = new IntersectionObserver(entries =&gt; { // console.log(&#34;entries&#34;, entries); entries.forEach(entry =&gt; { if (entry.isIntersecting) { const image = entry.target; const data_src = image.getAttribute(&#34;data-src&#34;); image.setAttribute(&#34;src&#34;, data_src || &#34;&#34;);"/>
 
@@ -133,7 +133,9 @@
 
       <div class="post-meta">
         <span class="post-time"> 2022-09-02 </span>
-        
+        <div class="post-category">
+            <a href="/categories/%E6%80%A7%E8%83%BD/"> 性能 </a>
+            </div>
         
       </div>
     </header>
@@ -210,9 +212,7 @@
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/%E6%80%A7%E8%83%BD/">性能</a>
-          </div>
+      
       <nav class="post-nav">
         <a class="prev" href="/post/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
             <i class="iconfont icon-left"></i>

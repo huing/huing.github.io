@@ -6,7 +6,7 @@
     <description>Recent content on huing的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Sep 2022 21:24:41 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2022 21:33:26 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
       <link>https://blog.promiseme.site/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://blog.promiseme.site/about/</guid>
       <description>我的博客 Github 地址 github 邮箱地址</description>
+    </item>
+    
+    <item>
+      <title>Sql语法</title>
+      <link>https://blog.promiseme.site/post/sql%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 05 Sep 2022 21:33:26 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/sql%E8%AF%AD%E6%B3%95/</guid>
+      <description>精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;</description>
     </item>
     
     <item>
@@ -76,7 +85,7 @@
       <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
       
       <guid>https://blog.promiseme.site/post/js/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</guid>
-      <description></description>
+      <description>基于原型链的继承 继承属性 // 让我们从一个函数里创建一个对象 o，它自身拥有属性 a 和 b 的： let f = function () { this.a = 1; this.b = 2; }; /_ 这么写也一样 function f() { this.a = 1; this.b =</description>
     </item>
     
     <item>

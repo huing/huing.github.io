@@ -50,7 +50,7 @@
 <meta itemprop="description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 /* * 柯里化 相加 * */ function add(...argus) { // arguments是个对象 // let args = Array.prototype.slice.call(arguments); const args = argus; const inner = function (...innerArgs) { args.push(...innerArgs); return inner;"><meta itemprop="datePublished" content="2022-09-02T21:18:10+08:00" />
 <meta itemprop="dateModified" content="2022-09-02T21:18:10+08:00" />
 <meta itemprop="wordCount" content="120">
-<meta itemprop="keywords" content="js," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="函数柯里化实现"/>
 <meta name="twitter:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 /* * 柯里化 相加 * */ function add(...argus) { // arguments是个对象 // let args = Array.prototype.slice.call(arguments); const args = argus; const inner = function (...innerArgs) { args.push(...innerArgs); return inner;"/>
 
@@ -133,7 +133,9 @@
 
       <div class="post-meta">
         <span class="post-time"> 2022-09-02 </span>
-        
+        <div class="post-category">
+            <a href="/categories/js/"> js </a>
+            </div>
         
       </div>
     </header>
@@ -222,9 +224,7 @@
   
 </div>
 <footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/js/">js</a>
-          </div>
+      
       <nav class="post-nav">
         <a class="prev" href="/post/js/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/">
             <i class="iconfont icon-left"></i>
