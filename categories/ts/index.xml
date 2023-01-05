@@ -9,65 +9,65 @@
     <lastBuildDate>Sun, 04 Sep 2022 21:24:41 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/ts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>语义化标签</title>
-      <link>https://blog.promiseme.site/post/css/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
+      <link>https://blog.promiseme.site/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/css/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
+      <guid>https://blog.promiseme.site/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
       <description>有利 seo 方便其他设备解析 便于维护提高可读性 section, article, main, p, time, title,header,nav, aside, footer,</description>
     </item>
     
     <item>
       <title>创建一个不能修改的对象方法</title>
-      <link>https://blog.promiseme.site/post/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</link>
+      <link>https://blog.promiseme.site/post/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sun, 04 Sep 2022 12:37:25 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://blog.promiseme.site/post/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Consumer</title>
-      <link>https://blog.promiseme.site/post/react/consumer/</link>
+      <link>https://blog.promiseme.site/post/consumer/</link>
       <pubDate>Sun, 04 Sep 2022 12:35:59 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/react/consumer/</guid>
-      <description></description>
+      <guid>https://blog.promiseme.site/post/consumer/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 export const themes = { light: { color: &amp;#34;#000000&amp;#34;, background: &amp;#34;#eeeeee&amp;#34;, }, dark: { color:</description>
     </item>
     
     <item>
       <title>Ref实现父组件调用子组件方法</title>
-      <link>https://blog.promiseme.site/post/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <link>https://blog.promiseme.site/post/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://blog.promiseme.site/post/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同： 当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性</description>
     </item>
     
     <item>
       <title>泛型</title>
-      <link>https://blog.promiseme.site/post/ts/%E6%B3%9B%E5%9E%8B/</link>
+      <link>https://blog.promiseme.site/post/%E6%B3%9B%E5%9E%8B/</link>
       <pubDate>Wed, 31 Aug 2022 23:49:45 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/ts/%E6%B3%9B%E5%9E%8B/</guid>
+      <guid>https://blog.promiseme.site/post/%E6%B3%9B%E5%9E%8B/</guid>
       <description>泛型参数的默认类型 1 2 3 4 5 6 7 function createArray&amp;lt;T = string&amp;gt;(length: number, value: T): Array&amp;lt;T&amp;gt; { let result: T[] = []; for (let i = 0; i &amp;lt; length; i++) { result[i] = value; } return result; } 1 2 3 map&amp;lt;U&amp;gt;(callbackfn: (value: T, index: number, array: T[]) =&amp;gt; U, thisArg?: any): U[]; reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array:</description>
     </item>
     
     <item>
       <title>类型断言类型谓词</title>
-      <link>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</link>
+      <link>https://blog.promiseme.site/post/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</link>
       <pubDate>Thu, 23 Jun 2022 16:50:50 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/ts/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</guid>
+      <guid>https://blog.promiseme.site/post/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/</guid>
       <description>is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&amp;gt; void }; type Bird = { fly: () =&amp;gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {</description>
     </item>
     
     <item>
       <title>const常量断言用法</title>
-      <link>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</link>
+      <link>https://blog.promiseme.site/post/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</link>
       <pubDate>Tue, 14 Jun 2022 10:35:51 +0800</pubDate>
       
-      <guid>https://blog.promiseme.site/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</guid>
-      <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:</description>
+      <guid>https://blog.promiseme.site/post/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/</guid>
+      <description>索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] as const // const animals: readonly [&amp;#39;cat&amp;#39;, &amp;#39;dog&amp;#39;, &amp;#39;mouse&amp;#39;] type Animal = typeof animals[number] // type Animal = &amp;#39;cat&amp;#39; | &amp;#39;dog&amp;#39; | &amp;#39;mouse&amp;#39; 数组对象转 type 1 2 3 4 5 6 7 8 const animals =</description>
     </item>
     
   </channel>

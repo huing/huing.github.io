@@ -6,7 +6,16 @@
     <description>Recent content in 命令行 on huing的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jun 2022 10:50:52 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 10:50:52 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Failed to connect to raw.githubusercontent.com:443</title>
+      <link>https://blog.promiseme.site/post/git443/</link>
+      <pubDate>Wed, 07 Dec 2022 10:50:52 +0800</pubDate>
+      
+      <guid>https://blog.promiseme.site/post/git443/</guid>
+      <description>报错 Failed to connect to raw.githubusercontent.com:443</description>
+    </item>
+    
     <item>
       <title>终端命令</title>
       <link>https://blog.promiseme.site/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</link>

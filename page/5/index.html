@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.100.2 with theme even" />
+<meta name="generator" content="Hugo 0.109.0 with theme even" />
 
 
 <link rel="canonical" href="https://blog.promiseme.site/" />
@@ -45,7 +45,6 @@
 <meta property="og:description" content="huing&#39;s blog." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.promiseme.site/" />
-
 <meta itemprop="name" content="huing的博客">
 <meta itemprop="description" content="huing&#39;s blog."><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="huing的博客"/>
@@ -126,7 +125,70 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/react/useref-vs-usestate/">useRef vs useState</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/post/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/">类型断言类型谓词</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-23 </span>
+      <div class="post-category">
+          <a href="/categories/ts/"> ts </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      is 类型谓词 type predicates as 类型断言 type assertions 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 type Fish = { swim: () =&gt; void }; type Bird = { fly: () =&gt; void }; // | 联合类型 declare function getSmallPet(): Fish | Bird; function isFish(pet: Fish | Bird): pet is Fish {
+    </div>
+    <div class="read-more">
+      <a href="/post/%E7%B1%BB%E5%9E%8B%E6%96%AD%E8%A8%80%E7%B1%BB%E5%9E%8B%E8%B0%93%E8%AF%8D/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/">普通函数vs箭头函数</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-22 </span>
+      <div class="post-category">
+          <a href="/categories/js/"> js </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      this，arguments 区别 1 2 3 4 5 6 7 8 9 10 const funA = () =&gt; { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有
+    </div>
+    <div class="read-more">
+      <a href="/post/%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/map%E7%B1%BB%E5%9E%8B/">Map类型</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2022-06-16 </span>
+      <div class="post-category">
+          <a href="/categories/js/"> js </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Map 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#39;name&#39;, &#39;Tom&#39;], [&#39;country&#39;, &#39;Chile&#39;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#39;Tom&#39;, country: &#39;Chile&#39; }; const map2 =
+    </div>
+    <div class="read-more">
+      <a href="/post/map%E7%B1%BB%E5%9E%8B/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/useref-vs-usestate/">useRef vs useState</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2022-06-15 </span>
       <div class="post-category">
@@ -140,7 +202,7 @@
       原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状
     </div>
     <div class="read-more">
-      <a href="/post/react/useref-vs-usestate/" class="read-more-link">阅读更多</a>
+      <a href="/post/useref-vs-usestate/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -162,69 +224,6 @@
     </div>
     <div class="read-more">
       <a href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/">终端命令</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
-      <div class="post-category">
-          <a href="/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/"> 命令行 </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      cp -r dir1/ dir2 移动文件 mv file.jpg file2.jpg 重命名 mvdir dir1 dir2 移动或重命名一个目录 cd filename 转到目录 pwd 显示当前路径 mkdir dirname 创建一个目录 rm -r dir 删除目录 dircmp dir1 dir2 比较两个目录的内容 touch src/index.js 创
-    </div>
-    <div class="read-more">
-      <a href="/post/%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Git常用命令</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-15 </span>
-      <div class="post-category">
-          <a href="/categories/git/"> git </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      git log &ndash;pretty=oneline &ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2
-    </div>
-    <div class="read-more">
-      <a href="/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/">const常量断言用法</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-06-14 </span>
-      <div class="post-category">
-          <a href="/categories/ts/"> ts </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      索引访问类型 Indexed Access Types 常量断言 const assertions 数组转 type 1 2 3 4 5 const animals = [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] as const // const animals: readonly [&#39;cat&#39;, &#39;dog&#39;, &#39;mouse&#39;] type Animal = typeof animals[number] // type Animal = &#39;cat&#39; | &#39;dog&#39; | &#39;mouse&#39; 数组对象转 type 1 2 3 4 5 const animals = [ { species:
-    </div>
-    <div class="read-more">
-      <a href="/post/ts/const%E5%B8%B8%E9%87%8F%E6%96%AD%E8%A8%80%E7%94%A8%E6%B3%95/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
@@ -267,7 +266,7 @@
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>huing</span>
+    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>huing</span>
   </span>
 </div>
 
@@ -283,7 +282,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.191509a5c8442abdb6eb5020a332fd59bdd83a7e78a2d2241108df9113504292.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 
