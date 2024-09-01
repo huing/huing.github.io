@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>useRef vs useState - huing的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="huing" /><meta name="description" content="原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状" /><meta name="keywords" content="Hugo, theme, even, huing" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.133.1 with theme even" />
+
+
+<link rel="canonical" href="https://blog.promiseme.site/post/useref-vs-usestate/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="https://blog.promiseme.site/post/useref-vs-usestate/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="useRef vs useState">
+  <meta property="og:description" content="原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2022-06-15T22:53:05+08:00">
+    <meta property="article:modified_time" content="2022-06-15T22:53:05+08:00">
+
+  <meta itemprop="name" content="useRef vs useState">
+  <meta itemprop="description" content="原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状">
+  <meta itemprop="datePublished" content="2022-06-15T22:53:05+08:00">
+  <meta itemprop="dateModified" content="2022-06-15T22:53:05+08:00">
+  <meta itemprop="wordCount" content="274">
+  <meta itemprop="keywords" content="React">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="useRef vs useState">
+  <meta name="twitter:description" content="原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">huing的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">huing的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">useRef vs useState</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-06-15 </span>
+        <div class="post-category">
+            <a href="/categories/react/"> react </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+    <div class="post-content">
+      <!-- raw HTML omitted -->
+<blockquote>
+<p>原文地址 <a href="https://blog.logrocket.com/usestate-vs-useref/">https://blog.logrocket.com/usestate-vs-useref/</a></p>
+</blockquote>
+<blockquote>
+<p>useHooks 实现 <a href="https://usehooks.com/">https://usehooks.com/</a></p>
+</blockquote>
+<p>useRef</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">inputRef</span> <span class="o">=</span> <span class="nx">useRef</span><span class="p">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>useState</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">[</span><span class="nx">count</span><span class="p">,</span> <span class="nx">setCount</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>let variable</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">let prevCount;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function)</li>
+<li>状态更新组件重新渲染 (Every state change re-renders the App component),子组件也会触发更新</li>
+<li>useRef 返回对象，包含属性 current,存真实的值，值更新不会触发组件更新</li>
+<li>let 定义的变量在每次 render 时被覆盖，最终只有初始值</li>
+</ol>
+<p>总结：</p>
+<ol>
+<li>在渲染周期（render cycles）和 ui 更新（UI updates）期间 两者都保存更新的值，useState 重新渲染</li>
+<li>useRef 的 current 属性是可变的，useState 的 state 需要 setState 更新赋值</li>
+<li>两者都被认为是数据 hook,useRef 可以直接访问 react 组件或者 dom 元素</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">huing</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-06-15
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/map%E7%B1%BB%E5%9E%8B/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Map类型</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+            <span class="next-text nav-default">常用快捷键</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links"> 
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io"
+      >Hugo</a
+    > 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 -
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even"
+      >Even</a
+    >
+  </span>
+
+  
+
+  <span class="copyright-year"> &copy; 2017 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span
+    ><span
+      ></span
+    >
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
