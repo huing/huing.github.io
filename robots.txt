@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://blog.promiseme.site/sitemap.xml
+Sitemap: https://huing.github.io/sitemap.xml
