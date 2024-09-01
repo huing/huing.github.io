@@ -324,6 +324,12 @@
   </url>
   
   <url>
+    <loc>https://blog.promiseme.site/post/host/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.promiseme.site/post/isvalidelement/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

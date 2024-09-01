@@ -4,7 +4,8 @@
     <title>Tags on huing的博客</title>
     <link>https://blog.promiseme.site/tags/</link>
     <description>Recent content in Tags on huing的博客</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language><atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <atom:link href="https://blog.promiseme.site/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

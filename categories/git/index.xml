@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>git on huing的博客</title>
+    <title>Git on huing的博客</title>
     <link>https://blog.promiseme.site/categories/git/</link>
-    <description>Recent content in git on huing的博客</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Git on huing的博客</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Jun 2022 10:11:31 +0800</lastBuildDate><atom:link href="https://blog.promiseme.site/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 10:11:31 +0800</lastBuildDate>
+    <atom:link href="https://blog.promiseme.site/categories/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git常用命令</title>
       <link>https://blog.promiseme.site/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Wed, 15 Jun 2022 10:11:31 +0800</pubDate>
-      
       <guid>https://blog.promiseme.site/post/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
       <description>git log &amp;ndash;pretty=oneline &amp;ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2</description>
     </item>
-    
   </channel>
 </rss>
