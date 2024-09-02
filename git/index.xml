@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gits on huing的博客</title>
+    <link>https://huing.github.io/git/</link>
+    <description>Recent content in Gits on huing的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:03:20 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基本命令</title>
+      <link>https://huing.github.io/git/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 03 Sep 2024 07:03:20 +0800</pubDate>
+      <guid>https://huing.github.io/git/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+      <description>git log &amp;ndash;pretty=oneline &amp;ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2</description>
+    </item>
+  </channel>
+</rss>

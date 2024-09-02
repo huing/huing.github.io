@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScripts on huing的博客</title>
+    <link>https://huing.github.io/javascript/</link>
+    <description>Recent content in JavaScripts on huing的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:01:20 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>接口请求</title>
+      <link>https://huing.github.io/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</link>
+      <pubDate>Tue, 03 Sep 2024 07:01:20 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</guid>
+      <description>ajax fetch keep-alive navigator.setbean</description>
+    </item>
+    <item>
+      <title>DOM</title>
+      <link>https://huing.github.io/javascript/dom/</link>
+      <pubDate>Tue, 03 Sep 2024 07:00:28 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>基本语法</title>
+      <link>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Tue, 03 Sep 2024 06:59:04 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>es6+ 变量提升 时间冒泡捕获 作用域 原型</description>
+    </item>
+  </channel>
+</rss>

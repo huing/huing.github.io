@@ -6,7 +6,7 @@
     <description>Recent content on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Dec 2022 10:11:31 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2024 07:38:03 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于</title>
@@ -16,18 +16,291 @@
       <description>我的博客 Github 地址 github 邮箱地址</description>
     </item>
     <item>
+      <title>记录</title>
+      <link>https://huing.github.io/%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:38:03 +0800</pubDate>
+      <guid>https://huing.github.io/%E8%AE%B0%E5%BD%95/</guid>
+      <description>web assembly 是啥</description>
+    </item>
+    <item>
+      <title>跨端解决方案</title>
+      <link>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:34:42 +0800</pubDate>
+      <guid>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>原生</title>
+      <link>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%94%9F/</link>
+      <pubDate>Tue, 03 Sep 2024 07:33:27 +0800</pubDate>
+      <guid>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%94%9F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>调试</title>
+      <link>https://huing.github.io/react-native/%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:27 +0800</pubDate>
+      <guid>https://huing.github.io/react-native/%E8%B0%83%E8%AF%95/</guid>
+      <description>chrome devtools android simulator ios simulator</description>
+    </item>
+    <item>
+      <title>最佳实践</title>
+      <link>https://huing.github.io/react-native/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:22 +0800</pubDate>
+      <guid>https://huing.github.io/react-native/%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>语法</title>
+      <link>https://huing.github.io/react-native/%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:12 +0800</pubDate>
+      <guid>https://huing.github.io/react-native/%E8%AF%AD%E6%B3%95/</guid>
+      <description>hybrid 是啥 weex</description>
+    </item>
+    <item>
+      <title>渲染</title>
+      <link>https://huing.github.io/%E6%B8%B2%E6%9F%93/</link>
+      <pubDate>Tue, 03 Sep 2024 07:27:41 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%B8%B2%E6%9F%93/</guid>
+      <description>side rendering csr ssr esr rsr nextjs(react) nuxtjs(vue)</description>
+    </item>
+    <item>
+      <title>其他</title>
+      <link>https://huing.github.io/%E6%80%A7%E8%83%BD/%E5%85%B6%E4%BB%96/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:57 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%80%A7%E8%83%BD/%E5%85%B6%E4%BB%96/</guid>
+      <description>RAIL 模型 Lighthouse 指标 DevTools PWA Service Worker</description>
+    </item>
+    <item>
+      <title>骨架屏</title>
+      <link>https://huing.github.io/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:40 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>性能指标</title>
+      <link>https://huing.github.io/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:29 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://huing.github.io/typescript/</link>
+      <pubDate>Tue, 03 Sep 2024 07:23:39 +0800</pubDate>
+      <guid>https://huing.github.io/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>测试</title>
+      <link>https://huing.github.io/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:18:00 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%B5%8B%E8%AF%95/</guid>
+      <description>单元测试 集成测试 E2E 测试 jest enzyme puppeteer</description>
+    </item>
+    <item>
+      <title>源码</title>
+      <link>https://huing.github.io/vue/%E6%BA%90%E7%A0%81/</link>
+      <pubDate>Tue, 03 Sep 2024 07:13:19 +0800</pubDate>
+      <guid>https://huing.github.io/vue/%E6%BA%90%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Router</title>
+      <link>https://huing.github.io/vue/router/</link>
+      <pubDate>Tue, 03 Sep 2024 07:13:07 +0800</pubDate>
+      <guid>https://huing.github.io/vue/router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Router</title>
+      <link>https://huing.github.io/react/router/</link>
+      <pubDate>Tue, 03 Sep 2024 07:12:07 +0800</pubDate>
+      <guid>https://huing.github.io/react/router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>源码</title>
+      <link>https://huing.github.io/react/%E6%BA%90%E7%A0%81/</link>
+      <pubDate>Tue, 03 Sep 2024 07:11:40 +0800</pubDate>
+      <guid>https://huing.github.io/react/%E6%BA%90%E7%A0%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS优化方案</title>
+      <link>https://huing.github.io/css/%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:09:50 +0800</pubDate>
+      <guid>https://huing.github.io/css/%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/</guid>
+      <description>styled component css modules</description>
+    </item>
+    <item>
+      <title>CSS预处理</title>
+      <link>https://huing.github.io/css/%E9%A2%84%E5%A4%84%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 07:09:50 +0800</pubDate>
+      <guid>https://huing.github.io/css/%E9%A2%84%E5%A4%84%E7%90%86/</guid>
+      <description>sass postcss</description>
+    </item>
+    <item>
+      <title>自动化构建</title>
+      <link>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:38 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</guid>
+      <description>npm script</description>
+    </item>
+    <item>
+      <title>模块化打包</title>
+      <link>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:23 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</guid>
+      <description>webpack rollup parcel</description>
+    </item>
+    <item>
+      <title>包管理</title>
+      <link>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 07:04:57 +0800</pubDate>
+      <guid>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <description>npm yarn npx pnpm</description>
+    </item>
+    <item>
+      <title>基础入门</title>
+      <link>https://huing.github.io/node/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 03 Sep 2024 07:04:42 +0800</pubDate>
+      <guid>https://huing.github.io/node/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</guid>
+      <description>文件读写 fs 路径查找 path 网络 http</description>
+    </item>
+    <item>
+      <title>基本命令</title>
+      <link>https://huing.github.io/git/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 03 Sep 2024 07:03:20 +0800</pubDate>
+      <guid>https://huing.github.io/git/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+      <description>git log &amp;ndash;pretty=oneline &amp;ndash;graph git reflog 记录命令历史 git checkout 1 2 3 git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch 1 2</description>
+    </item>
+    <item>
+      <title>接口请求</title>
+      <link>https://huing.github.io/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</link>
+      <pubDate>Tue, 03 Sep 2024 07:01:20 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</guid>
+      <description>ajax fetch keep-alive navigator.setbean</description>
+    </item>
+    <item>
+      <title>DOM</title>
+      <link>https://huing.github.io/javascript/dom/</link>
+      <pubDate>Tue, 03 Sep 2024 07:00:28 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/dom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>表单</title>
+      <link>https://huing.github.io/html/%E8%A1%A8%E5%8D%95/</link>
+      <pubDate>Tue, 03 Sep 2024 06:59:34 +0800</pubDate>
+      <guid>https://huing.github.io/html/%E8%A1%A8%E5%8D%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>基本语法</title>
+      <link>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Tue, 03 Sep 2024 06:59:04 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description>es6+ 变量提升 时间冒泡捕获 作用域 原型</description>
+    </item>
+    <item>
+      <title>Layout</title>
+      <link>https://huing.github.io/css/layout/</link>
+      <pubDate>Tue, 03 Sep 2024 06:57:14 +0800</pubDate>
+      <guid>https://huing.github.io/css/layout/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flex</title>
+      <link>https://huing.github.io/css/flex/</link>
+      <pubDate>Tue, 03 Sep 2024 06:56:19 +0800</pubDate>
+      <guid>https://huing.github.io/css/flex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>动画</title>
+      <link>https://huing.github.io/css/%E5%8A%A8%E7%94%BB/</link>
+      <pubDate>Tue, 03 Sep 2024 06:55:44 +0800</pubDate>
+      <guid>https://huing.github.io/css/%E5%8A%A8%E7%94%BB/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>基本语法</title>
+      <link>https://huing.github.io/css/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Tue, 03 Sep 2024 06:55:26 +0800</pubDate>
+      <guid>https://huing.github.io/css/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>常用标签</title>
+      <link>https://huing.github.io/html/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 03 Sep 2024 06:54:08 +0800</pubDate>
+      <guid>https://huing.github.io/html/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebView</title>
+      <link>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/webview/</link>
+      <pubDate>Tue, 03 Sep 2024 06:53:19 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/webview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HeadlessBrowser</title>
+      <link>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/headlessbrowser/</link>
+      <pubDate>Tue, 03 Sep 2024 06:50:51 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/headlessbrowser/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>side rendering</title>
+      <link>https://huing.github.io/post/side-rendering/</link>
+      <pubDate>Tue, 03 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/post/side-rendering/</guid>
+      <description>csr&#xA;ssr&#xA;esr&#xA;rsr&#xA;isp&#xA;nsp</description>
+    </item>
+    <item>
+      <title>浏览器工作原理</title>
+      <link>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</guid>
+      <description>K8 引擎</description>
+    </item>
+    <item>
+      <title>协议HTTPS</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E5%8D%8F%E8%AE%AEhttps/</link>
+      <pubDate>Tue, 03 Sep 2024 06:47:02 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E5%8D%8F%E8%AE%AEhttps/</guid>
+      <description>HTTP/HTTPS</description>
+    </item>
+    <item>
+      <title>网络是如何连接的</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</link>
+      <pubDate>Tue, 03 Sep 2024 06:45:36 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</guid>
+      <description>isp nsp</description>
+    </item>
+    <item>
+      <title>DNS原理</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/dns%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:44:37 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/dns%E5%8E%9F%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CDN原理</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:43:54 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>npm命令</title>
       <link>https://huing.github.io/post/npm%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 29 Dec 2022 10:11:31 +0800</pubDate>
       <guid>https://huing.github.io/post/npm%E5%91%BD%E4%BB%A4/</guid>
       <description>login 1 npm login change version 1 npm version 1.0.0-beta.0 publish 1 npm publish --tag beta use 1 npm install — save libraryname@beta.num</description>
-    </item>
-    <item>
-      <title>Failed to connect to raw.githubusercontent.com:443</title>
-      <link>https://huing.github.io/post/git443/</link>
-      <pubDate>Wed, 07 Dec 2022 10:50:52 +0800</pubDate>
-      <guid>https://huing.github.io/post/git443/</guid>
-      <description>报错 Failed to connect to raw.githubusercontent.com:443</description>
     </item>
     <item>
       <title>vite安装vue2和vue3</title>
@@ -182,13 +455,6 @@
       <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
       <guid>https://huing.github.io/post/useref-vs-usestate/</guid>
       <description>原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状</description>
-    </item>
-    <item>
-      <title>常用快捷键</title>
-      <link>https://huing.github.io/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
-      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
-      <guid>https://huing.github.io/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>iterm 左右切换 command + 左右键 new tab command + t close tab command + w 分屏左右切换 command + option + 左右键 分屏新建标签页 command + d 关闭 iterm command + q chrome 打开无痕模式 incognito command + shift + n 关闭标签页 command + w</description>
     </item>
     <item>
       <title>终端命令</title>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>互联网s on huing的博客</title>
+    <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/</link>
+    <description>Recent content in 互联网s on huing的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 06:47:02 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>协议HTTPS</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E5%8D%8F%E8%AE%AEhttps/</link>
+      <pubDate>Tue, 03 Sep 2024 06:47:02 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E5%8D%8F%E8%AE%AEhttps/</guid>
+      <description>HTTP/HTTPS</description>
+    </item>
+    <item>
+      <title>网络是如何连接的</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</link>
+      <pubDate>Tue, 03 Sep 2024 06:45:36 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</guid>
+      <description>isp nsp</description>
+    </item>
+    <item>
+      <title>DNS原理</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/dns%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:44:37 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/dns%E5%8E%9F%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CDN原理</title>
+      <link>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:43:54 +0800</pubDate>
+      <guid>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

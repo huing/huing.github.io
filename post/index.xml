@@ -6,21 +6,21 @@
     <description>Recent content in Posts on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 29 Dec 2022 10:11:31 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2024 06:49:36 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>side rendering</title>
+      <link>https://huing.github.io/post/side-rendering/</link>
+      <pubDate>Tue, 03 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/post/side-rendering/</guid>
+      <description>csr&#xA;ssr&#xA;esr&#xA;rsr&#xA;isp&#xA;nsp</description>
+    </item>
     <item>
       <title>npm命令</title>
       <link>https://huing.github.io/post/npm%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Thu, 29 Dec 2022 10:11:31 +0800</pubDate>
       <guid>https://huing.github.io/post/npm%E5%91%BD%E4%BB%A4/</guid>
       <description>login 1 npm login change version 1 npm version 1.0.0-beta.0 publish 1 npm publish --tag beta use 1 npm install — save libraryname@beta.num</description>
-    </item>
-    <item>
-      <title>Failed to connect to raw.githubusercontent.com:443</title>
-      <link>https://huing.github.io/post/git443/</link>
-      <pubDate>Wed, 07 Dec 2022 10:50:52 +0800</pubDate>
-      <guid>https://huing.github.io/post/git443/</guid>
-      <description>报错 Failed to connect to raw.githubusercontent.com:443</description>
     </item>
     <item>
       <title>vite安装vue2和vue3</title>
@@ -175,13 +175,6 @@
       <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
       <guid>https://huing.github.io/post/useref-vs-usestate/</guid>
       <description>原文地址 https://blog.logrocket.com/usestate-vs-useref/ useHooks 实现 https://usehooks.com/ useRef 1 const inputRef = useRef(); useState 1 const [count, setCount] = useState(0); let variable 1 let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状</description>
-    </item>
-    <item>
-      <title>常用快捷键</title>
-      <link>https://huing.github.io/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
-      <pubDate>Wed, 15 Jun 2022 18:09:40 +0800</pubDate>
-      <guid>https://huing.github.io/post/%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
-      <description>iterm 左右切换 command + 左右键 new tab command + t close tab command + w 分屏左右切换 command + option + 左右键 分屏新建标签页 command + d 关闭 iterm command + q chrome 打开无痕模式 incognito command + shift + n 关闭标签页 command + w</description>
     </item>
     <item>
       <title>终端命令</title>
