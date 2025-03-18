@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>渲染 - huing的博客</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="huing" /><meta name="description" content="side rendering ssr ssr 是什么 ssg esr rsr nextjs(react) nuxtjs(vue) bff 网关 k8s v8s 服务器，镜像，容器 无服务器（Serverless） RPC 远程过程调用（英语：Remote Procedure Call，RPC）是" /><meta name="keywords" content="Hugo, theme, even, huing" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.133.1 with theme even" />
+
+
+<link rel="canonical" href="https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B8%B2%E6%9F%93/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:url" content="https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B8%B2%E6%9F%93/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="渲染">
+  <meta property="og:description" content="side rendering ssr ssr 是什么 ssg esr rsr nextjs(react) nuxtjs(vue) bff 网关 k8s v8s 服务器，镜像，容器 无服务器（Serverless） RPC 远程过程调用（英语：Remote Procedure Call，RPC）是">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="浏览器">
+    <meta property="article:published_time" content="2024-09-03T07:27:41+08:00">
+    <meta property="article:modified_time" content="2024-09-03T07:27:41+08:00">
+
+  <meta itemprop="name" content="渲染">
+  <meta itemprop="description" content="side rendering ssr ssr 是什么 ssg esr rsr nextjs(react) nuxtjs(vue) bff 网关 k8s v8s 服务器，镜像，容器 无服务器（Serverless） RPC 远程过程调用（英语：Remote Procedure Call，RPC）是">
+  <meta itemprop="datePublished" content="2024-09-03T07:27:41+08:00">
+  <meta itemprop="dateModified" content="2024-09-03T07:27:41+08:00">
+  <meta itemprop="wordCount" content="829">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="渲染">
+  <meta name="twitter:description" content="side rendering ssr ssr 是什么 ssg esr rsr nextjs(react) nuxtjs(vue) bff 网关 k8s v8s 服务器，镜像，容器 无服务器（Serverless） RPC 远程过程调用（英语：Remote Procedure Call，RPC）是">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">huing的博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">关于</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">huing的博客</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">关于</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>side rendering</p>
+<p><img src="/assets/csr.png" alt="csr" title="csr"></p>
+<p><img src="/assets/ssr.png" alt="ssr" title="ssr"> ssr
+ssr 是什么</p>
+<p><img src="/assets/ssg.png" alt="ssg" title="ssg"> ssg</p>
+<p><img src="/assets/isr.png" alt="isr" title="isr"></p>
+<p><img src="/assets/%E5%BE%AE%E6%9C%8D%E5%8A%A1.png" alt="微服务" title="微服务"></p>
+<p><img src="/assets/bff.png" alt="bff" title="bff"></p>
+<p><img src="/assets/docker.png" alt="docker" title="docker"></p>
+<p>esr</p>
+<p>rsr</p>
+<p>nextjs(react)</p>
+<p>nuxtjs(vue)</p>
+<p>bff
+网关</p>
+<p>k8s
+v8s</p>
+<p>服务器，镜像，容器</p>
+<p>无服务器（Serverless）</p>
+<p>RPC 远程过程调用（英语：Remote Procedure Call，RPC）是一个计算机通信协议。该协议允许运行于一台计算机的程序调用另一个地址空间（通常为一个开放网络的一台计算机）的子程序，而程序员就像调用本地程序一样，无需额外地为这个交互作用编程（无需关注细节）。RPC 是一种服务器-客户端（Client/Server）模式，经典实现是一个通过发送请求-接受回应进行信息交互的系统</p>
+<h2 id="云计算的三种模式">云计算的三种模式</h2>
+<p>云计算模式所具备的 5 个基本特征（按需自助服务、广泛的网络访问、资源共享、快速的可伸缩性和可度量的服务）、3 种服务模式 SaaS（软件即服务）、PaaS（平台即服务）和 IaaS（基础设施即服务）和 4 种部署方式（私有云、社区云、公有云和混合云），而云服务则是在这个云平台上发布出来的供用户使用的产品服务</p>
+<h3 id="iaasinfrastructure-as-a-server">IaaS（Infrastructure as a server）</h3>
+<p>基础设施即服务</p>
+<h3 id="paasplatform-as-a-server">PaaS（Platform as a Server）</h3>
+<p>平台即服务</p>
+<h3 id="saassoftware-as-a-server">SaaS（Software as a Server）</h3>
+<p>软件即服务</p>
+<h3 id="区别和关系">区别和关系</h3>
+<ul>
+<li>云计算(Cloud Computing) 是一种概念和技术，提供按需的计算资源和服务。</li>
+<li>云服务(Cloud Service) 是云计算的具体实现形式，包括 IaaS、PaaS 和 SaaS 等不同类型的云服务。</li>
+<li>云函数(Cloud Function) 是一种特定的云服务类型，属于&quot;无服务器计算&quot;(Serverless) 模型，适用于事件驱动的任务。</li>
+</ul>
+<p>云计算（概念和技术模型）
+├── 云服务（具体实现形式）
+│ ├── IaaS
+│ ├── PaaS
+│ └── SaaS
+└── 云函数（特定服务类型）
+└── Serverless 的一种实现</p>
+<h2 id="dsl-domain-specific-language">DSL (Domain Specific Language)</h2>
+<p>特定领域语言</p>
+<h2 id="isp-internet-service-provider">ISP (Internet Service Provider)</h2>
+<p>互联网服务提供商</p>
+<ul>
+<li>为个人和企业提供互联网接入服务的公司或组织</li>
+<li>例如：中国电信、中国联通、中国移动等</li>
+<li>主要提供宽带接入、域名解析、电子邮件等基础互联网服务</li>
+</ul>
+<h2 id="nsp-network-service-provider">NSP (Network Service Provider)</h2>
+<p>网络服务提供商</p>
+<ul>
+<li>主要为 ISP 提供网络基础设施和骨干网络服务</li>
+<li>运营和维护大规模的网络基础设施</li>
+<li>负责处理跨区域、跨国的网络通信</li>
+</ul>
+
+  </div>
+</article>
+        </div>
+        
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links"> <a
+    href="https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B8%B2%E6%9F%93/"
+    type="application/rss+xml"
+    class="iconfont icon-rss"
+    title="rss"
+  ></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io"
+      >Hugo</a
+    > 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 -
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even"
+      >Even</a
+    >
+  </span>
+
+  
+
+  <span class="copyright-year"> &copy; 2020 - 2025<span class="heart"><i class="iconfont icon-heart"></i></span
+    ><span
+      >huing</span
+    >
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

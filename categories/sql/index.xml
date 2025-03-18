@@ -13,7 +13,7 @@
       <link>https://huing.github.io/post/sql%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Mon, 05 Sep 2022 21:33:26 +0800</pubDate>
       <guid>https://huing.github.io/post/sql%E8%AF%AD%E6%B3%95/</guid>
-      <description>精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;</description>
+      <description>精确匹配 id 1 SELECT * FROM menu WHERE id = 569; 模糊匹配 1 SELECT * FROM menu WHERE path LIKE &amp;#39;%teacher%&amp;#39;; 定义变量 1 2 SET @path = &amp;#39;teacher&amp;#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&amp;#39;%&amp;#39;, @path, &amp;#39;%&amp;#39;); 连表查询 1 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL 1 SELECT *</description>
     </item>
   </channel>
 </rss>

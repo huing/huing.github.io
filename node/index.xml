@@ -13,7 +13,7 @@
       <link>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
       <pubDate>Tue, 03 Sep 2024 07:04:57 +0800</pubDate>
       <guid>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
-      <description>npm yarn npx pnpm</description>
+      <description>npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp</description>
     </item>
     <item>
       <title>基础入门</title>

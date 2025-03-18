@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -42,7 +42,7 @@
 <meta property="og:url" content="https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
   <meta property="og:site_name" content="huing的博客">
   <meta property="og:title" content="基本语法">
-  <meta property="og:description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型">
+  <meta property="og:description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="javascript">
@@ -50,13 +50,13 @@
     <meta property="article:modified_time" content="2024-09-03T06:59:04+08:00">
 
   <meta itemprop="name" content="基本语法">
-  <meta itemprop="description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型">
+  <meta itemprop="description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其">
   <meta itemprop="datePublished" content="2024-09-03T06:59:04+08:00">
   <meta itemprop="dateModified" content="2024-09-03T06:59:04+08:00">
-  <meta itemprop="wordCount" content="16">
+  <meta itemprop="wordCount" content="824">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="基本语法">
-  <meta name="twitter:description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型">
+  <meta name="twitter:description" content="es6&#43; 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,12 +132,321 @@
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    <p>es6+</p>
-<p>变量提升</p>
-<p>时间冒泡捕获</p>
-<p>作用域</p>
-<p>原型</p>
-
+    <h3 id="es6">es6+</h3>
+<h3 id="变量提升">变量提升</h3>
+<h3 id="时间冒泡捕获">时间冒泡捕获</h3>
+<h3 id="作用域">作用域</h3>
+<h3 id="原型">原型</h3>
+<h3 id="闭包">闭包</h3>
+<p>闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其他作用域中被调用时也能保持对这些变量的访问权限。换句话说，闭包让你可以从内部函数访问外部函数的作用域。</p>
+<h4 id="闭包的基本示例">闭包的基本示例</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">outer</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&#34;Hello&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">inner</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">message</span><span class="p">);</span> <span class="c1">// 可以访问 outer 函数中的变量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">inner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">fn</span> <span class="o">=</span> <span class="nx">outer</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">fn</span><span class="p">();</span> <span class="c1">// 输出: &#34;Hello&#34;
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="闭包的主要应用场景">闭包的主要应用场景</h4>
+<ol>
+<li><strong>数据私有化</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">counter</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">increment</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">getCount</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">count</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">myCounter</span> <span class="o">=</span> <span class="nx">counter</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myCounter</span><span class="p">.</span><span class="nx">increment</span><span class="p">());</span> <span class="c1">// 1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myCounter</span><span class="p">.</span><span class="nx">increment</span><span class="p">());</span> <span class="c1">// 2
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myCounter</span><span class="p">.</span><span class="nx">getCount</span><span class="p">());</span> <span class="c1">// 2
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li><strong>函数工厂</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">multiply</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">multiplyByTwo</span> <span class="o">=</span> <span class="nx">multiply</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">multiplyByTwo</span><span class="p">(</span><span class="mi">4</span><span class="p">));</span> <span class="c1">// 8
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><strong>模块化模式</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">privateVariable</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kd">function</span> <span class="nx">privateMethod</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">privateVariable</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">publicMethod</span><span class="o">:</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">privateVariable</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">privateMethod</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">})();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li><strong>事件处理和回调</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 防抖：事件触发后延迟执行，若在延迟期间重复触发则重置延迟
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">timer</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">),</span> <span class="nx">delay</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 节流：事件触发后在一段时间内只执行一次
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">throttle</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kd">let</span> <span class="nx">lastTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">now</span> <span class="o">=</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">now</span> <span class="o">-</span> <span class="nx">lastTime</span> <span class="o">&gt;=</span> <span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">lastTime</span> <span class="o">=</span> <span class="nx">now</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="5">
+<li><strong>柯里化（Currying）</strong></li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">curry</span><span class="p">(</span><span class="nx">fn</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="kd">function</span> <span class="nx">curried</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nx">args</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">moreArgs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="nx">curried</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">args</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">moreArgs</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * 柯里化 相加
+</span></span></span><span class="line"><span class="cl"><span class="cm"> * */</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">add</span><span class="p">(...</span><span class="nx">argus</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// arguments是个对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// let args = Array.prototype.slice.call(arguments);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kr">const</span> <span class="nx">args</span> <span class="o">=</span> <span class="nx">argus</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">const</span> <span class="nx">inner</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(...</span><span class="nx">innerArgs</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">args</span><span class="p">.</span><span class="nx">push</span><span class="p">(...</span><span class="nx">innerArgs</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">inner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inner</span><span class="p">.</span><span class="nx">toString</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">args</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">inner</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nx">args</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">cur</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">acc</span> <span class="o">+</span> <span class="nx">cur</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">};</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="nx">inner</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// const result = add(1)(2)(3)(4)(5);
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)(</span><span class="mi">5</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">result</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 15
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 15
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="使用闭包需要注意的点">使用闭包需要注意的点</h4>
+<ol>
+<li><strong>内存管理</strong>：闭包会保持对外部变量的引用，可能导致内存无法及时释放</li>
+<li><strong>this 指向</strong>：在闭包中使用 this 时需要特别注意其指向</li>
+<li><strong>性能考虑</strong>：过度使用闭包可能会影响性能</li>
+</ol>
+<p>闭包是 JavaScript 中非常强大的特性，合理使用可以实现很多优雅的编程模式和解决方案。但同时也需要注意内存管理等问题，避免造成内存泄漏。</p>
+<h3 id="普通函数-vs-箭头函数">普通函数 vs 箭头函数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">funA</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// this 指向 funA 的调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 没有 arguments
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 不能new
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 没有原型链
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">funB</span><span class="p">(</span><span class="nx">params</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// this 指向 函数内部
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// 有 arguments;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
   </div>
 </article>
         </div>
@@ -175,7 +484,7 @@
 
   
 
-  <span class="copyright-year"> &copy; 2020 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span
+  <span class="copyright-year"> &copy; 2020 - 2025<span class="heart"><i class="iconfont icon-heart"></i></span
     ><span
       >huing</span
     >

@@ -13,7 +13,7 @@
       <link>https://huing.github.io/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
       <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
       <guid>https://huing.github.io/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
-      <description>有利 seo 方便其他设备解析 便于维护提高可读性 section, article, main, p, time, title,header,nav, aside, footer,</description>
+      <description>有利 seo 方便其他设备解析 便于维护提高可读性 section, article, main, p, time, title,header,nav, aside, footer, WebAssembly: WebAssembly 是一种新的编码方式，可以在现代的 Web 浏览器中运行——它是一种低级的类汇编语言，具有</description>
     </item>
     <item>
       <title>创建一个不能修改的对象方法</title>
@@ -35,20 +35,6 @@
       <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
       <guid>https://huing.github.io/post/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同： 当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性</description>
-    </item>
-    <item>
-      <title>Css值与单位</title>
-      <link>https://huing.github.io/post/css%E5%80%BC%E4%B8%8E%E5%8D%95%E4%BD%8D/</link>
-      <pubDate>Wed, 31 Aug 2022 23:12:58 +0800</pubDate>
-      <guid>https://huing.github.io/post/css%E5%80%BC%E4%B8%8E%E5%8D%95%E4%BD%8D/</guid>
-      <description>绝对长度单位 与任何东西都没有关系 cm mm pt: 点 px: 像素 相对长度单位 em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width</description>
-    </item>
-    <item>
-      <title>Flex</title>
-      <link>https://huing.github.io/post/flex/</link>
-      <pubDate>Sun, 12 Jun 2022 17:32:26 +0800</pubDate>
-      <guid>https://huing.github.io/post/flex/</guid>
-      <description>line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 flex: 1 flex: 1 1 0% flex-grow 定义项目的放大比例，默认为 0，即</description>
     </item>
   </channel>
 </rss>

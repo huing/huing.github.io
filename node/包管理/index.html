@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="npm yarn npx pnpm" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -42,7 +42,7 @@
 <meta property="og:url" content="https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/">
   <meta property="og:site_name" content="huing的博客">
   <meta property="og:title" content="包管理">
-  <meta property="og:description" content="npm yarn npx pnpm">
+  <meta property="og:description" content="npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="node">
@@ -50,13 +50,13 @@
     <meta property="article:modified_time" content="2024-09-03T07:04:57+08:00">
 
   <meta itemprop="name" content="包管理">
-  <meta itemprop="description" content="npm yarn npx pnpm">
+  <meta itemprop="description" content="npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp">
   <meta itemprop="datePublished" content="2024-09-03T07:04:57+08:00">
   <meta itemprop="dateModified" content="2024-09-03T07:04:57+08:00">
-  <meta itemprop="wordCount" content="4">
+  <meta itemprop="wordCount" content="311">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="包管理">
-  <meta name="twitter:description" content="npm yarn npx pnpm">
+  <meta name="twitter:description" content="npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,6 +136,42 @@
 <p>yarn</p>
 <p>npx</p>
 <p>pnpm</p>
+<h2 id="packagejson-配置">package.json 配置</h2>
+<h3 id="入口文件字段">入口文件字段</h3>
+<ul>
+<li>
+<p><strong>main</strong>: CommonJS 规范的入口文件</p>
+<ul>
+<li>Node.js 默认使用的入口点</li>
+<li>通常指向 <code>dist/index.js</code> 或 <code>lib/index.js</code></li>
+<li>使用 <code>require()</code> 导入时使用此入口</li>
+</ul>
+</li>
+<li>
+<p><strong>module</strong>: ES Module 规范的入口文件</p>
+<ul>
+<li>现代打包工具（webpack、rollup等）优先使用</li>
+<li>通常指向 <code>.mjs</code> 或含 ES modules 的 <code>.js</code> 文件</li>
+<li>使用 <code>import</code> 语句导入时使用此入口</li>
+<li>支持 tree-shaking</li>
+</ul>
+</li>
+<li>
+<p><strong>umd</strong>: Universal Module Definition 入口文件</p>
+<ul>
+<li>兼容 AMD、CommonJS 和全局变量方式</li>
+<li>适用于浏览器直接通过 <code>&lt;script&gt;</code> 标签引用</li>
+<li>通常指向打包后的单一文件，如 <code>dist/index.umd.js</code></li>
+</ul>
+</li>
+</ul>
+<p>主要区别说明：</p>
+<ul>
+<li>main 是最传统的 CommonJS 格式入口，主要用于 Node.js 环境</li>
+<li>module 是现代 ES Module 格式入口，支持静态导入导出，便于打包工具进行 tree-shaking 优化</li>
+<li>umd 是通用格式，主要用于浏览器环境，可以同时支持多种模块系统</li>
+</ul>
+<p>这三种格式的存在使得同一个包可以在不同环境下都能正常使用，开发者可以根据具体使用场景选择最适合的版本。</p>
 
   </div>
 </article>
@@ -174,7 +210,7 @@
 
   
 
-  <span class="copyright-year"> &copy; 2020 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span
+  <span class="copyright-year"> &copy; 2020 - 2025<span class="heart"><i class="iconfont icon-heart"></i></span
     ><span
       >huing</span
     >

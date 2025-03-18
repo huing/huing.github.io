@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;" /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="精确匹配 id 1 SELECT * FROM menu WHERE id = 569; 模糊匹配 1 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 1 2 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 1 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL 1 SELECT *" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -42,7 +42,7 @@
 <meta property="og:url" content="https://huing.github.io/post/sql%E8%AF%AD%E6%B3%95/">
   <meta property="og:site_name" content="huing的博客">
   <meta property="og:title" content="Sql语法">
-  <meta property="og:description" content="精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;">
+  <meta property="og:description" content="精确匹配 id 1 SELECT * FROM menu WHERE id = 569; 模糊匹配 1 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 1 2 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 1 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL 1 SELECT *">
   <meta property="og:locale" content="zh_cn">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -50,14 +50,14 @@
     <meta property="article:modified_time" content="2022-09-05T21:33:26+08:00">
 
   <meta itemprop="name" content="Sql语法">
-  <meta itemprop="description" content="精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;">
+  <meta itemprop="description" content="精确匹配 id 1 SELECT * FROM menu WHERE id = 569; 模糊匹配 1 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 1 2 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 1 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL 1 SELECT *">
   <meta itemprop="datePublished" content="2022-09-05T21:33:26+08:00">
   <meta itemprop="dateModified" content="2022-09-05T21:33:26+08:00">
-  <meta itemprop="wordCount" content="236">
+  <meta itemprop="wordCount" content="279">
   <meta itemprop="keywords" content="Sql">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sql语法">
-  <meta name="twitter:description" content="精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL;">
+  <meta name="twitter:description" content="精确匹配 id 1 SELECT * FROM menu WHERE id = 569; 模糊匹配 1 SELECT * FROM menu WHERE path LIKE &#39;%teacher%&#39;; 定义变量 1 2 SET @path = &#39;teacher&#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&#39;%&#39;, @path, &#39;%&#39;); 连表查询 1 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL 1 SELECT *">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -166,45 +166,114 @@
 </div>
     <div class="post-content">
       <h2 id="精确匹配-id">精确匹配 id</h2>
-<pre><code>SELECT * FROM menu WHERE id = 569;
-</code></pre>
-<h2 id="模糊匹配">模糊匹配</h2>
-<pre><code>SELECT * FROM menu WHERE path LIKE '%teacher%';
-</code></pre>
-<h2 id="定义变量">定义变量</h2>
-<pre><code>SET @path = 'teacher';
-SELECT * FROM menu WHERE path LIKE CONCAT('%', @path, '%');
-</code></pre>
-<h2 id="连表查询">连表查询</h2>
-<pre><code>SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541;
-</code></pre>
-<h2 id="is-null">IS NULL</h2>
-<pre><code>SELECT * FROM classes WHERE person_avg IS NULL;
-</code></pre>
-<h2 id="把查询到的结果插入表中">把查询到的结果插入表中</h2>
-<pre><code>INSERT INTO menu
-SELECT * FROM menu_copy WHERE is_deleted = 0 GROUP BY name;
-</code></pre>
-<h2 id="找到所有的菜单并插入菜单表">找到所有的菜单并插入菜单表</h2>
-<pre><code>INSERT INTO menu (
-SELECT*FROM menu_copy WHERE parent_id=0 AND is_deleted=0 UNION ALL
-SELECT*FROM menu_copy WHERE parent_id&lt;&gt; 0 AND is_deleted=0 GROUP BY NAME);
-</code></pre>
-<h2 id="删除-name--监控中心-并且-id--389">删除 name = 监控中心 并且 id != 389</h2>
-<pre><code>DELETE FROM menu WHERE name = '监控中心' AND id &lt;&gt; 389;
-</code></pre>
-<h2 id="删除多条数据">删除多条数据</h2>
-<pre><code>DELETE FROM menu WHERE id IN (
-SELECT id FROM (
-SELECT id FROM menu WHERE NAME='大区管理' AND id&lt;&gt; 391) AS t);
-</code></pre>
-<h2 id="更新多条数据">更新多条数据</h2>
-<pre><code>UPDATE menu
-SET parent_id=391 WHERE parent_id IN (
-SELECT id FROM (
-SELECT id FROM menu WHERE name='大区管理' AND id&lt;&gt; 391) AS t);
-</code></pre>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">id</span> <span class="o">=</span> <span class="mi">569</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="模糊匹配">模糊匹配</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">path</span> <span class="nx">LIKE</span> <span class="s1">&#39;%teacher%&#39;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="定义变量">定义变量</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">SET</span> <span class="err">@</span><span class="nx">path</span> <span class="o">=</span> <span class="s1">&#39;teacher&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">path</span> <span class="nx">LIKE</span> <span class="nx">CONCAT</span><span class="p">(</span><span class="s1">&#39;%&#39;</span><span class="p">,</span> <span class="err">@</span><span class="nx">path</span><span class="p">,</span> <span class="s1">&#39;%&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="连表查询">连表查询</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span><span class="nx">a</span><span class="p">.</span><span class="nx">NAME</span><span class="p">,</span><span class="nx">b</span><span class="p">.</span><span class="nx">num</span> <span class="nx">FROM</span> <span class="nx">classes</span> <span class="nx">a</span> <span class="nx">LEFT</span> <span class="nx">JOIN</span> <span class="nx">classes_detail</span> <span class="nx">b</span> <span class="nx">ON</span> <span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="o">=</span><span class="nx">b</span><span class="p">.</span><span class="nx">id</span> <span class="nx">WHERE</span> <span class="nx">a</span><span class="p">.</span><span class="nx">id</span><span class="o">=</span><span class="mi">2541</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="is-null">IS NULL</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">classes</span> <span class="nx">WHERE</span> <span class="nx">person_avg</span> <span class="nx">IS</span> <span class="nx">NULL</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="把查询到的结果插入表中">把查询到的结果插入表中</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">menu</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="o">*</span> <span class="nx">FROM</span> <span class="nx">menu_copy</span> <span class="nx">WHERE</span> <span class="nx">is_deleted</span> <span class="o">=</span> <span class="mi">0</span> <span class="nx">GROUP</span> <span class="nx">BY</span> <span class="nx">name</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="找到所有的菜单并插入菜单表">找到所有的菜单并插入菜单表</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">INSERT</span> <span class="nx">INTO</span> <span class="nx">menu</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span><span class="o">*</span><span class="nx">FROM</span> <span class="nx">menu_copy</span> <span class="nx">WHERE</span> <span class="nx">parent_id</span><span class="o">=</span><span class="mi">0</span> <span class="nx">AND</span> <span class="nx">is_deleted</span><span class="o">=</span><span class="mi">0</span> <span class="nx">UNION</span> <span class="nx">ALL</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span><span class="o">*</span><span class="nx">FROM</span> <span class="nx">menu_copy</span> <span class="nx">WHERE</span> <span class="nx">parent_id</span><span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="nx">AND</span> <span class="nx">is_deleted</span><span class="o">=</span><span class="mi">0</span> <span class="nx">GROUP</span> <span class="nx">BY</span> <span class="nx">NAME</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="删除-name--监控中心-并且-id--389">删除 name = 监控中心 并且 id != 389</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">DELETE</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;监控中心&#39;</span> <span class="nx">AND</span> <span class="nx">id</span> <span class="o">&lt;&gt;</span> <span class="mi">389</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="删除多条数据">删除多条数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">DELETE</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">id</span> <span class="nx">IN</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="nx">id</span> <span class="nx">FROM</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="nx">id</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">NAME</span><span class="o">=</span><span class="s1">&#39;大区管理&#39;</span> <span class="nx">AND</span> <span class="nx">id</span><span class="o">&lt;&gt;</span> <span class="mi">391</span><span class="p">)</span> <span class="nx">AS</span> <span class="nx">t</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="更新多条数据">更新多条数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">UPDATE</span> <span class="nx">menu</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SET</span> <span class="nx">parent_id</span><span class="o">=</span><span class="mi">391</span> <span class="nx">WHERE</span> <span class="nx">parent_id</span> <span class="nx">IN</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="nx">id</span> <span class="nx">FROM</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl"><span class="nx">SELECT</span> <span class="nx">id</span> <span class="nx">FROM</span> <span class="nx">menu</span> <span class="nx">WHERE</span> <span class="nx">name</span><span class="o">=</span><span class="s1">&#39;大区管理&#39;</span> <span class="nx">AND</span> <span class="nx">id</span><span class="o">&lt;&gt;</span> <span class="mi">391</span><span class="p">)</span> <span class="nx">AS</span> <span class="nx">t</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">
@@ -273,7 +342,7 @@ SELECT id FROM menu WHERE name='大区管理' AND id&lt;&gt; 391) AS t);
 
   
 
-  <span class="copyright-year"> &copy; 2020 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span
+  <span class="copyright-year"> &copy; 2020 - 2025<span class="heart"><i class="iconfont icon-heart"></i></span
     ><span
       >huing</span
     >

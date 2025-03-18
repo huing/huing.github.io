@@ -20,14 +20,21 @@
       <link>https://huing.github.io/javascript/dom/</link>
       <pubDate>Tue, 03 Sep 2024 07:00:28 +0800</pubDate>
       <guid>https://huing.github.io/javascript/dom/</guid>
-      <description></description>
+      <description>DOM 是文档对象模型，是 HTML 和 XML 文档的编程接口。 DOM 将文档解析为一个由节点和对象（包含属性和方法的对象）组成的结构化树。 DOM 是 HTML 和 XML 文档的编程接口。</description>
     </item>
     <item>
       <title>基本语法</title>
       <link>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Tue, 03 Sep 2024 06:59:04 +0800</pubDate>
       <guid>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
-      <description>es6+ 变量提升 时间冒泡捕获 作用域 原型</description>
+      <description>es6+ 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其</description>
+    </item>
+    <item>
+      <title>Promise实现</title>
+      <link>https://huing.github.io/javascript/promise%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/promise%E5%AE%9E%E7%8E%B0/</guid>
+      <description>promise 实现 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 class Commitment { static PENDING = &amp;#34;待定&amp;#34;; static</description>
     </item>
   </channel>
 </rss>

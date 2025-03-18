@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>归档 - huing的博客</title>
+  <title>基本语法 - huing的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="huing&#39;s blog." /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -27,8 +27,6 @@
 
 
 <link rel="canonical" href="https://huing.github.io/css/" />
-  <link href="https://huing.github.io/css/index.xml" rel="alternate" type="application/rss+xml" title="huing的博客" />
-  <link href="https://huing.github.io/css/index.xml" rel="feed" type="application/rss+xml" title="huing的博客" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,18 +41,21 @@
 
 <meta property="og:url" content="https://huing.github.io/css/">
   <meta property="og:site_name" content="huing的博客">
-  <meta property="og:title" content="CSSes">
-  <meta property="og:description" content="huing&#39;s blog.">
+  <meta property="og:title" content="基本语法">
+  <meta property="og:description" content="line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2024-09-03T06:55:26+08:00">
+    <meta property="article:modified_time" content="2024-09-03T06:55:26+08:00">
 
-  <meta itemprop="name" content="CSSes">
-  <meta itemprop="description" content="huing&#39;s blog.">
-  <meta itemprop="datePublished" content="2024-09-03T07:09:50+08:00">
-  <meta itemprop="dateModified" content="2024-09-03T07:09:50+08:00">
+  <meta itemprop="name" content="基本语法">
+  <meta itemprop="description" content="line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm">
+  <meta itemprop="datePublished" content="2024-09-03T06:55:26+08:00">
+  <meta itemprop="dateModified" content="2024-09-03T06:55:26+08:00">
+  <meta itemprop="wordCount" content="214">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="CSSes">
-  <meta name="twitter:description" content="huing&#39;s blog.">
+  <meta name="twitter:title" content="基本语法">
+  <meta name="twitter:description" content="line-height 如何继承 line-height 具体值 30px 子元素继承该值 line-height 比例 1.5 子元素继承该比例 line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值 css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -128,84 +129,58 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
-<section id="archive" class="archive">
-      <div class="collection-title">
-        <h2 class="archive-year">2024</h2>
-      </div>
+          <article class="post">
+  <div class="post-content">
+    <h3 id="line-height-如何继承">line-height 如何继承</h3>
+<p>line-height 具体值 30px 子元素继承该值</p>
+<p>line-height 比例 1.5 子元素继承该比例</p>
+<p>line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值</p>
+<h3 id="css-值与单位">css 值与单位</h3>
+<ol>
+<li>绝对长度单位 <code>与任何东西都没有关系</code></li>
+</ol>
+<ul>
+<li>cm</li>
+<li>mm</li>
+<li>pt: 点</li>
+<li>px: 像素</li>
+</ul>
+<ol start="2">
+<li>相对长度单位</li>
+</ol>
+<ul>
+<li>em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width</li>
+<li>rem: 根元素的字体大小
+<ul>
+<li>设置 html 字体的大小为百分比</li>
+<li>用 js 动态设置 html 字体大小</li>
+<li>浏览器默认字体大小 16px,最小 12px,css3 并未提及</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>字重</p>
+<p>100 - Thin
+200 - Extra Light (Ultra Light)
+300 - Light
+400 - Normal
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)</p>
+</li>
+</ol>
 
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/%E9%A2%84%E5%A4%84%E7%90%86/" class="archive-post-link">
-          CSS预处理
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/%E4%BC%98%E5%8C%96%E6%96%B9%E6%A1%88/" class="archive-post-link">
-          CSS优化方案
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/layout/" class="archive-post-link">
-          Layout
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/flex/" class="archive-post-link">
-          Flex
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/%E5%8A%A8%E7%94%BB/" class="archive-post-link">
-          动画
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/css/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="archive-post-link">
-          基本语法
-        </a>
-      </span>
-    </div></section>
-
-<nav class="pagination">
-  
-  
-</nav>
+  </div>
+</article>
         </div>
         
+
+
+
+
 
       </div>
     </main>
@@ -235,7 +210,7 @@
 
   
 
-  <span class="copyright-year"> &copy; 2020 - 2024<span class="heart"><i class="iconfont icon-heart"></i></span
+  <span class="copyright-year"> &copy; 2020 - 2025<span class="heart"><i class="iconfont icon-heart"></i></span
     ><span
       >huing</span
     >
