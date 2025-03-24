@@ -9,14 +9,35 @@
   </url>
   
   <url>
-    <loc>https://huing.github.io/ai/</loc>
-    <lastmod>2025-02-06T15:38:52+08:00</lastmod>
+    <loc>https://huing.github.io/javascript/clonedeep/</loc>
+    <lastmod>2025-03-23T11:53:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://huing.github.io/</loc>
+    <lastmod>2025-03-23T11:53:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huing.github.io/javascript/</loc>
+    <lastmod>2025-03-23T11:53:04+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huing.github.io/javascript/eventbus/</loc>
+    <lastmod>2025-03-19T09:34:28+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://huing.github.io/ai/</loc>
     <lastmod>2025-02-06T15:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -235,13 +256,6 @@
   <url>
     <loc>https://huing.github.io/post/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-09-03T07:03:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/</loc>
-    <lastmod>2024-09-03T07:01:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
