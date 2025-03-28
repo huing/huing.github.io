@@ -6,8 +6,15 @@
     <description>Recent content in Ts on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 Sep 2022 12:35:59 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Dec 2024 16:50:50 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/categories/ts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript</title>
+      <link>https://huing.github.io/typescript/</link>
+      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
+      <guid>https://huing.github.io/typescript/</guid>
+      <description>基础类型 布尔值（boolean） 可选类型 true/false 1 let booleanExample: boolean = false; 数字（number） 可选类型 number 1 let numberExample: number = 6; 字符串（string） 可选类型 string 1 2 let stringExample: string =</description>
+    </item>
     <item>
       <title>Consumer</title>
       <link>https://huing.github.io/post/consumer/</link>
@@ -21,13 +28,6 @@
       <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
       <guid>https://huing.github.io/post/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同： 当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性</description>
-    </item>
-    <item>
-      <title>ts类型</title>
-      <link>https://huing.github.io/post/ts%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Thu, 23 Jun 2022 16:50:50 +0800</pubDate>
-      <guid>https://huing.github.io/post/ts%E7%B1%BB%E5%9E%8B/</guid>
-      <description>基础类型 布尔值（boolean） 可选类型 true/false 1 let booleanExample: boolean = false; 数字（number） 可选类型 number 1 let numberExample: number = 6; 字符串（string） 可选类型 string 1 2 let stringExample: string =</description>
     </item>
   </channel>
 </rss>

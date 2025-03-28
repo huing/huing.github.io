@@ -6,8 +6,22 @@
     <description>Recent content in JavaScripts on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 23 Mar 2025 11:53:04 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 14:11:14 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stack</title>
+      <link>https://huing.github.io/javascript/stack/</link>
+      <pubDate>Mon, 24 Mar 2025 14:11:14 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/stack/</guid>
+      <description>Queue 先进先出 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 class Queue { constructor() { this.items = []; // 用于存储队列元素的数</description>
+    </item>
+    <item>
+      <title>Canvas</title>
+      <link>https://huing.github.io/javascript/canvas/</link>
+      <pubDate>Sun, 23 Mar 2025 11:53:04 +0800</pubDate>
+      <guid>https://huing.github.io/javascript/canvas/</guid>
+      <description>canvas 画图 WebGL 飞书表格 性能</description>
+    </item>
     <item>
       <title>CloneDeep</title>
       <link>https://huing.github.io/javascript/clonedeep/</link>

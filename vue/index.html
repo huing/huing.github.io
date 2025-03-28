@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>归档 - huing的博客</title>
+  <title>Vue - huing的博客</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="huing" /><meta name="description" content="huing&#39;s blog." /><meta name="keywords" content="Hugo, theme, even, huing" />
+<meta name="author" content="huing" /><meta name="description" content="vue-router 路由守卫 路由原理 1 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新 vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么 架构设计 Vuex 基于模块化设计，使用 mutations" /><meta name="keywords" content="Hugo, theme, even, huing" />
 
 
 
@@ -27,8 +27,6 @@
 
 
 <link rel="canonical" href="https://huing.github.io/vue/" />
-  <link href="https://huing.github.io/vue/index.xml" rel="alternate" type="application/rss+xml" title="huing的博客" />
-  <link href="https://huing.github.io/vue/index.xml" rel="feed" type="application/rss+xml" title="huing的博客" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,18 +41,21 @@
 
 <meta property="og:url" content="https://huing.github.io/vue/">
   <meta property="og:site_name" content="huing的博客">
-  <meta property="og:title" content="Vues">
-  <meta property="og:description" content="huing&#39;s blog.">
+  <meta property="og:title" content="Vue">
+  <meta property="og:description" content="vue-router 路由守卫 路由原理 1 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新 vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么 架构设计 Vuex 基于模块化设计，使用 mutations">
   <meta property="og:locale" content="zh_cn">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2025-03-25T09:35:37+08:00">
+    <meta property="article:modified_time" content="2025-03-25T09:35:37+08:00">
 
-  <meta itemprop="name" content="Vues">
-  <meta itemprop="description" content="huing&#39;s blog.">
-  <meta itemprop="datePublished" content="2024-09-03T07:13:19+08:00">
-  <meta itemprop="dateModified" content="2024-09-03T07:13:19+08:00">
+  <meta itemprop="name" content="Vue">
+  <meta itemprop="description" content="vue-router 路由守卫 路由原理 1 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新 vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么 架构设计 Vuex 基于模块化设计，使用 mutations">
+  <meta itemprop="datePublished" content="2025-03-25T09:35:37+08:00">
+  <meta itemprop="dateModified" content="2025-03-25T09:35:37+08:00">
+  <meta itemprop="wordCount" content="517">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Vues">
-  <meta name="twitter:description" content="huing&#39;s blog.">
+  <meta name="twitter:title" content="Vue">
+  <meta name="twitter:description" content="vue-router 路由守卫 路由原理 1 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新 vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么 架构设计 Vuex 基于模块化设计，使用 mutations">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -128,40 +129,146 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          
-<section id="archive" class="archive">
-      <div class="collection-title">
-        <h2 class="archive-year">2024</h2>
-      </div>
+          <article class="post">
+  <div class="post-content">
+    <h3 id="vue-router-路由守卫-路由原理">vue-router 路由守卫 路由原理</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">beforeEnter</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span> <span class="nx">from</span><span class="p">,</span> <span class="nx">next</span><span class="p">)</span> <span class="p">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>vue 响应式数据 原理 数组更新</p>
+<h3 id="vuex-和-pinia-响应式数据原理区别">vuex 和 pinia 响应式数据原理区别</h3>
+<p>vuex 和 pinia 区别是什么</p>
+<ol>
+<li>架构设计</li>
+</ol>
+<ul>
+<li>Vuex 基于模块化设计，使用 mutations、actions、modules 等概念</li>
+<li>Pinia 采用更简单的 Store 设计，没有 mutations，直接使用 actions 进行状态修改</li>
+<li>Pinia 的 Store 可以直接定义，不需要像 Vuex 那样创建复杂的模块树</li>
+</ul>
+<ol start="2">
+<li>TypeScript 支持</li>
+</ol>
+<ul>
+<li>Pinia 是用 TypeScript 编写的，提供了更好的类型推导和类型安全</li>
+<li>Vuex 对 TypeScript 的支持相对较弱，需要额外的类型声明</li>
+</ul>
+<ol start="3">
+<li>开发体验</li>
+</ol>
+<ul>
+<li>Pinia 支持多个 Store，可以相互独立</li>
+<li>Pinia 的 devtools 调试体验更好</li>
+<li>Pinia 代码更简洁，不需要写 mutations</li>
+<li>Pinia 支持自动代码分割（code splitting）</li>
+</ul>
+<ol start="4">
+<li>性能</li>
+</ol>
+<ul>
+<li>Pinia 体积更小，打包后约 1KB</li>
+<li>Pinia 没有嵌套模块，扁平化设计使得性能更好</li>
+</ul>
+<ol start="5">
+<li>Vue 版本支持</li>
+</ol>
+<ul>
+<li>Pinia 同时支持 Vue 2 和 Vue 3</li>
+<li>Vuex 4 只支持 Vue 3，Vuex 3 只支持 Vue 2</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Vuex 示例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vuex</span><span class="p">.</span><span class="nx">Store</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">state</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">count</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">mutations</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">increment</span><span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">incrementAsync</span><span class="p">({</span> <span class="nx">commit</span> <span class="p">})</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">commit</span><span class="p">(</span><span class="s2">&#34;increment&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// Pinia 示例
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">useCounterStore</span> <span class="o">=</span> <span class="nx">defineStore</span><span class="p">(</span><span class="s2">&#34;counter&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">state</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">count</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">increment</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">async</span> <span class="nx">incrementAsync</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">count</span><span class="o">++</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>总的来说，Pinia 是更现代化的状态管理方案，提供了更好的开发体验和类型支持。Vue 官方也推荐使用 Pinia 作为新项目的状态管理方案</p>
+<h2 id="suspense">Suspense</h2>
+<p><code>&lt;Suspense&gt;</code> 是一个内置组件，用来在组件树中协调对异步依赖的处理</p>
 
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/vue/%E6%BA%90%E7%A0%81/" class="archive-post-link">
-          源码
-        </a>
-      </span>
-    </div>
-
-    <div class="archive-post">
-      <span class="archive-post-time">
-        09-03
-      </span>
-      <span class="archive-post-title">
-        <a href="/vue/router/" class="archive-post-link">
-          Router
-        </a>
-      </span>
-    </div></section>
-
-<nav class="pagination">
-  
-  
-</nav>
+  </div>
+</article>
         </div>
         
+
+
+
+
 
       </div>
     </main>

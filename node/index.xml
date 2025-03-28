@@ -6,14 +6,21 @@
     <description>Recent content in Nodes on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Sep 2024 07:04:57 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 25 Mar 2025 09:40:20 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Npm</title>
+      <link>https://huing.github.io/node/npm/</link>
+      <pubDate>Tue, 25 Mar 2025 09:40:20 +0800</pubDate>
+      <guid>https://huing.github.io/node/npm/</guid>
+      <description>npm update 是一个命令，用于更新当前项目中的依赖包。当执行 npm update 时，npm 会检查当前项目中的依赖包是否存在新版本，如果有新版本，则更新到最新版本。</description>
+    </item>
     <item>
       <title>包管理</title>
       <link>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</link>
       <pubDate>Tue, 03 Sep 2024 07:04:57 +0800</pubDate>
       <guid>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
-      <description>npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 module: ES Module 规范的入口文件 现代打包工具（webp</description>
+      <description>npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件 Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 type 的两个类型 module: ES Module 规范的入口文件 现代打包工</description>
     </item>
     <item>
       <title>基础入门</title>

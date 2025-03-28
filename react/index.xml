@@ -6,20 +6,20 @@
     <description>Recent content in Reacts on huing的博客</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 03 Sep 2024 07:12:07 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Mar 2025 07:57:28 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/react/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Router</title>
-      <link>https://huing.github.io/react/router/</link>
-      <pubDate>Tue, 03 Sep 2024 07:12:07 +0800</pubDate>
-      <guid>https://huing.github.io/react/router/</guid>
-      <description></description>
+      <title>React的diff算法</title>
+      <link>https://huing.github.io/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 28 Mar 2025 07:57:28 +0800</pubDate>
+      <guid>https://huing.github.io/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</guid>
+      <description>什么是虚拟 dom Virtual DOM 则是一种由 Javascript 类库基于浏览器 API 实现的概念 虚拟 dom 就是用 js 对象来描述 dom 结构。 diff 算法 仅右移 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21</description>
     </item>
     <item>
-      <title>源码</title>
-      <link>https://huing.github.io/react/%E6%BA%90%E7%A0%81/</link>
-      <pubDate>Tue, 03 Sep 2024 07:11:40 +0800</pubDate>
-      <guid>https://huing.github.io/react/%E6%BA%90%E7%A0%81/</guid>
+      <title>React-Router</title>
+      <link>https://huing.github.io/react/react-router/</link>
+      <pubDate>Tue, 03 Sep 2024 07:12:07 +0800</pubDate>
+      <guid>https://huing.github.io/react/react-router/</guid>
       <description></description>
     </item>
   </channel>

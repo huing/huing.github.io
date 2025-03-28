@@ -37,13 +37,6 @@
       <description>login 1 npm login change version 1 npm version 1.0.0-beta.0 publish 1 npm publish --tag beta use 1 npm install — save libraryname@beta.num</description>
     </item>
     <item>
-      <title>vite安装vue2和vue3</title>
-      <link>https://huing.github.io/post/vite%E5%AE%89%E8%A3%85/</link>
-      <pubDate>Wed, 07 Dec 2022 10:50:52 +0800</pubDate>
-      <guid>https://huing.github.io/post/vite%E5%AE%89%E8%A3%85/</guid>
-      <description>vite 安装 vue2 和 vue3 原文 &amp;lt;https://github.com/vuejs/create-vue 1 npm create vue@3 1 npm create vue@2</description>
-    </item>
-    <item>
       <title>Sql语法</title>
       <link>https://huing.github.io/post/sql%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Mon, 05 Sep 2022 21:33:26 +0800</pubDate>
@@ -133,13 +126,6 @@
       <pubDate>Mon, 27 Jun 2022 19:13:36 +0800</pubDate>
       <guid>https://huing.github.io/post/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</guid>
       <description>静态生成 构建时 （build time） 生成 html 在每个页面请求时重用 可以被 cdn 缓存 服务器端渲染 在地址栏输入 url，发送 get 请求，生成 html 页面内容会随着每</description>
-    </item>
-    <item>
-      <title>ts类型</title>
-      <link>https://huing.github.io/post/ts%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Thu, 23 Jun 2022 16:50:50 +0800</pubDate>
-      <guid>https://huing.github.io/post/ts%E7%B1%BB%E5%9E%8B/</guid>
-      <description>基础类型 布尔值（boolean） 可选类型 true/false 1 let booleanExample: boolean = false; 数字（number） 可选类型 number 1 let numberExample: number = 6; 字符串（string） 可选类型 string 1 2 let stringExample: string =</description>
     </item>
     <item>
       <title>Map类型</title>
