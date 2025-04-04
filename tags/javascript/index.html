@@ -249,7 +249,7 @@ navigator.setbean</p>
   <div class="entry-content">
     <p>promise 实现 class Commitment { static PENDING = &#34;待定&#34;; static FULFILLED = &#34;成功&#34;; static REJECTED = &#34;拒绝&#34;; private status: &#34;PENDING&#34; | &#34;FULFILLED&#34; | &#34;REJECTED&#34;; private result: any; constructor(func: (resolve: (value: any) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void) { this.status = &#34;PENDING&#34;; this.result = undefined; try { func(this.resolve.bind(this), this.reject.bind(this)); } catch (e) { this.reject(e); } } resolve(value: any) { if (this.status === &#34;PENDING&#34;) { this.status = &#34;FULFILLED&#34;; this.result = value; } } reject(reason?...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-09-02 21:59:01 +0800 CST'>2022-09-02</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;387 words&nbsp;·&nbsp;huing</footer>
+  <footer class="entry-footer"><span title='2022-09-02 21:59:01 +0800 CST'>2022-09-02</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;389 words&nbsp;·&nbsp;huing</footer>
   <a class="entry-link" aria-label="post link to Promise实现" href="https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/"></a>
 </article>
 
