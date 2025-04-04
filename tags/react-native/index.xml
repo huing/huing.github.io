@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>React-Native on huing的博客</title>
+    <link>https://huing.github.io/tags/react-native/</link>
+    <description>Recent content in React-Native on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:31:27 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/react-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>调试</title>
+      <link>https://huing.github.io/posts/react-native/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:27 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react-native/</guid>
+      <description>chrome devtools
+android simulator
+ios simulator
+hybrid 是啥
+weex</description>
+    </item>
+  </channel>
+</rss>

@@ -1,589 +1,342 @@
-<?xml-stylesheet type="text/xsl" href="https://huing.github.io/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://huing.github.io/about/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://huing.github.io/</loc>
+    <lastmod>2025-04-03T14:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/</loc>
+    <lastmod>2025-04-03T14:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/tags/</loc>
+    <lastmod>2025-04-03T14:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
+    <lastmod>2025-04-03T14:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E9%87%8D%E6%8E%92%E9%87%8D%E7%BB%98/</loc>
+    <lastmod>2025-04-03T14:02:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/tags/javascript/</loc>
+    <lastmod>2025-04-03T13:50:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/</loc>
+    <lastmod>2025-04-03T13:50:59+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2025-04-03T10:11:08+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</loc>
+    <lastmod>2025-04-03T10:10:53+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</loc>
+    <lastmod>2025-04-03T07:43:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/tags/react/</loc>
     <lastmod>2025-03-28T07:57:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/react/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2025-03-28T07:57:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-03-28T07:57:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/node/</loc>
-    <lastmod>2025-03-25T09:40:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/node/npm/</loc>
-    <lastmod>2025-03-25T09:40:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/vue/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/vue/</loc>
     <lastmod>2025-03-25T09:35:37+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/vue/</loc>
+    <lastmod>2025-03-25T09:35:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/stack/</loc>
     <lastmod>2025-03-24T14:11:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/stack/</loc>
-    <lastmod>2025-03-24T14:11:14+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/canvas/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/html/canvas/</loc>
     <lastmod>2025-03-23T11:53:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/clonedeep/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/html/</loc>
     <lastmod>2025-03-23T11:53:04+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/eventbus/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/eventbus/</loc>
     <lastmod>2025-03-19T09:34:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/ai/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/llm/ai/</loc>
     <lastmod>2025-02-06T15:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/llm/</loc>
+    <lastmod>2025-02-06T15:38:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/typescript/</loc>
     <lastmod>2024-12-23T16:50:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/ts/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/typescript/</loc>
     <lastmod>2024-12-23T16:50:50+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/typescript/</loc>
-    <lastmod>2024-12-23T16:50:50+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/typescript/</loc>
-    <lastmod>2024-12-23T16:50:50+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/</loc>
-    <lastmod>2024-12-05T10:59:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/tailwindcss%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2024-12-05T10:59:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%A6%82%E4%BD%95%E6%8A%8Axmind%E8%BD%AC%E6%88%90md/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%A6%82%E4%BD%95%E6%8A%8Axmind%E8%BD%AC%E6%88%90md/</loc>
     <lastmod>2024-12-04T16:14:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/html/webapi/</loc>
+    <lastmod>2024-10-30T13:30:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/isvalidelement/</loc>
+    <lastmod>2024-09-06T06:49:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2024-09-03T07:34:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2024-09-03T07:34:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%94%9F/</loc>
-    <lastmod>2024-09-03T07:33:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/react-native/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/react-native/</loc>
     <lastmod>2024-09-03T07:31:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react-native/</loc>
+    <lastmod>2024-09-03T07:31:27+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%98%AF%E5%95%A5/</loc>
     <lastmod>2024-09-03T07:27:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B8%B2%E6%9F%93/</loc>
-    <lastmod>2024-09-03T07:27:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%80%A7%E8%83%BD/%E5%85%B6%E4%BB%96/</loc>
-    <lastmod>2024-09-03T07:24:57+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%80%A7%E8%83%BD/</loc>
-    <lastmod>2024-09-03T07:24:57+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/%E6%80%A7%E8%83%BD/</loc>
     <lastmod>2024-09-03T07:24:40+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2024-09-03T07:24:40+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</loc>
     <lastmod>2024-09-03T07:24:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8B%E8%AF%95/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/</loc>
     <lastmod>2024-09-03T07:18:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/react/react-router/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2024-09-03T07:18:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/react-router/</loc>
     <lastmod>2024-09-03T07:12:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</loc>
     <lastmod>2024-09-03T07:07:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</loc>
-    <lastmod>2024-09-03T07:07:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</loc>
     <lastmod>2024-09-03T07:07:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/node/%E5%8C%85%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2024-09-03T07:04:57+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/node/%E5%9F%BA%E7%A1%80%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2024-09-03T07:04:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2024-09-03T07:03:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</loc>
     <lastmod>2024-09-03T07:01:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/dom/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/html/dom%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2024-09-03T07:00:28+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/html/</loc>
-    <lastmod>2024-09-03T06:59:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/html/%E8%A1%A8%E5%8D%95/</loc>
-    <lastmod>2024-09-03T06:59:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2024-09-03T06:59:04+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/css/</loc>
+  </url><url>
+    <loc>https://huing.github.io/tags/css/</loc>
     <lastmod>2024-09-03T06:55:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/html/%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2024-09-03T06:54:08+08:00</lastmod>
+  </url><url>
+    <loc>https://huing.github.io/posts/css/</loc>
+    <lastmod>2024-09-03T06:55:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/webview/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/webview/</loc>
     <lastmod>2024-09-03T06:53:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/headlessbrowser/</loc>
-    <lastmod>2024-09-03T06:50:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E6%B5%8F%E8%A7%88%E5%99%A8/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/host/</loc>
     <lastmod>2024-09-03T06:49:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/</loc>
-    <lastmod>2024-09-03T06:47:02+08:00</lastmod>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2024-09-03T06:49:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E5%8D%8F%E8%AE%AEhttps/</loc>
-    <lastmod>2024-09-03T06:47:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</loc>
     <lastmod>2024-09-03T06:45:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/dns%E5%8E%9F%E7%90%86/</loc>
-    <lastmod>2024-09-03T06:44:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</loc>
     <lastmod>2024-09-03T06:43:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/npm%E5%91%BD%E4%BB%A4/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/nodejs/</loc>
     <lastmod>2022-12-29T10:11:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/sql/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/sql%E8%AF%AD%E6%B3%95/</loc>
     <lastmod>2022-09-05T21:33:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/sql%E8%AF%AD%E6%B3%95/</loc>
-    <lastmod>2022-09-05T21:33:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/css/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/html/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</loc>
     <lastmod>2022-09-04T21:24:41+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/js/</loc>
-    <lastmod>2022-09-04T21:24:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/react/</loc>
-    <lastmod>2022-09-04T21:24:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</loc>
-    <lastmod>2022-09-04T21:24:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%8D%E8%83%BD%E4%BF%AE%E6%94%B9%E7%9A%84%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/</loc>
     <lastmod>2022-09-04T12:37:25+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/consumer/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/consumer/</loc>
     <lastmod>2022-09-04T12:35:59+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2022-09-04T10:30:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</loc>
-    <lastmod>2022-09-02T22:14:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/%E6%80%A7%E8%83%BD/</loc>
-    <lastmod>2022-09-02T22:14:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/javascript/promise%E5%AE%9E%E7%8E%B0/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2022-09-02T21:59:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2022-09-02T21:59:01+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/array/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/array/</loc>
     <lastmod>2022-09-01T20:21:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/base/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/base/</loc>
     <lastmod>2022-09-01T20:20:27+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/proxy/</loc>
-    <lastmod>2022-09-01T00:00:37+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/h5%E6%B5%81%E7%A8%8B%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2022-06-28T11:24:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/clone%E6%AD%A3%E5%88%99/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/</loc>
     <lastmod>2022-06-27T19:35:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</loc>
     <lastmod>2022-06-27T19:13:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/map%E7%B1%BB%E5%9E%8B/</loc>
-    <lastmod>2022-06-16T23:20:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/useref-vs-usestate/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/useref-vs-usestate/</loc>
     <lastmod>2022-06-15T22:53:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2022-06-15T10:50:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
-    <lastmod>2022-06-15T10:50:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/cdn%E6%98%AF%E4%BB%80%E4%B9%88/</loc>
-    <lastmod>2022-06-13T11:54:42+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/bindapplycall%E5%8C%BA%E5%88%AB/</loc>
-    <lastmod>2022-06-13T11:41:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2022-06-13T11:38:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</loc>
+  </url><url>
+    <loc>https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</loc>
     <lastmod>2022-06-12T17:31:57+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/host/</loc>
+  </url><url>
+    <loc>https://huing.github.io/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/archives/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://huing.github.io/search/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
-  
-  <url>
-    <loc>https://huing.github.io/post/isvalidelement/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://huing.github.io/tags/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
 </urlset>

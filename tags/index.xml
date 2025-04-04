@@ -1,11 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on huing的博客</title>
     <link>https://huing.github.io/tags/</link>
     <description>Recent content in Tags on huing的博客</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.133.1</generator>
     <language>zh-cn</language>
+    <lastBuildDate>Thu, 03 Apr 2025 14:02:41 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>互联网</title>
+      <link>https://huing.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</link>
+      <pubDate>Thu, 03 Apr 2025 14:02:41 +0800</pubDate>
+      <guid>https://huing.github.io/tags/%E4%BA%92%E8%81%94%E7%BD%91/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://huing.github.io/tags/javascript/</link>
+      <pubDate>Thu, 03 Apr 2025 13:50:59 +0800</pubDate>
+      <guid>https://huing.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React</title>
+      <link>https://huing.github.io/tags/react/</link>
+      <pubDate>Fri, 28 Mar 2025 07:57:28 +0800</pubDate>
+      <guid>https://huing.github.io/tags/react/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>https://huing.github.io/tags/vue/</link>
+      <pubDate>Tue, 25 Mar 2025 09:35:37 +0800</pubDate>
+      <guid>https://huing.github.io/tags/vue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>https://huing.github.io/tags/html/</link>
+      <pubDate>Sun, 23 Mar 2025 11:53:04 +0800</pubDate>
+      <guid>https://huing.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://huing.github.io/tags/llm/</link>
+      <pubDate>Thu, 06 Feb 2025 15:38:52 +0800</pubDate>
+      <guid>https://huing.github.io/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://huing.github.io/tags/typescript/</link>
+      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
+      <guid>https://huing.github.io/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>小程序</title>
+      <link>https://huing.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Tue, 03 Sep 2024 07:34:42 +0800</pubDate>
+      <guid>https://huing.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>React-Native</title>
+      <link>https://huing.github.io/tags/react-native/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:27 +0800</pubDate>
+      <guid>https://huing.github.io/tags/react-native/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>性能</title>
+      <link>https://huing.github.io/tags/%E6%80%A7%E8%83%BD/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:40 +0800</pubDate>
+      <guid>https://huing.github.io/tags/%E6%80%A7%E8%83%BD/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>工程化</title>
+      <link>https://huing.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+      <pubDate>Tue, 03 Sep 2024 07:18:00 +0800</pubDate>
+      <guid>https://huing.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>https://huing.github.io/tags/css/</link>
+      <pubDate>Tue, 03 Sep 2024 06:55:26 +0800</pubDate>
+      <guid>https://huing.github.io/tags/css/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

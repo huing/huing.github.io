@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>小程序 on huing的博客</title>
+    <link>https://huing.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link>
+    <description>Recent content in 小程序 on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:34:42 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>跨端解决方案</title>
+      <link>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:34:42 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebView</title>
+      <link>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/webview/</link>
+      <pubDate>Tue, 03 Sep 2024 06:53:19 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/webview/</guid>
+      <description>WebView 是 Android 和 iOS 平台上的原生组件，用于显示网页内容。
+WebView 是移动应用开发中的一个重要组件，它能够在原生应用中嵌入网页内容。简单来说，它就像是一个迷你的浏览器，被嵌入在移动应用程序中。
+WebView 的主要特点 内嵌浏览器功能
+可以加载和显示网页 支持基本的网页浏览功能（前进、后退、刷新等） 支持 JavaScript 执行 混合开发支持
+支持原生代码和网页代码的交互 可以实现混合应用（Hybrid App）开发 便于快速开发和维护 常见应用场景
+在 App 中显示 HTML 内容 构建混合应用 显示富文本内容 加载在线帮助文档 优势与限制 优势 开发效率高 内容易于更新 跨平台兼容性好 减少应用体积 限制 性能相比原生界面略差 内存占用较大 可能存在安全隐患 平台差异 Android WebView 基于 Chromium 引擎 可通过 WebSettings 进行详细配置 支持与 JavaScript 双向交互 iOS WKWebView 基于 WebKit 引擎 性能优于旧版 UIWebView 提供现代化的网页处理能力 混合应用（Hybrid App）详解 什么是混合应用？ 混合应用（Hybrid App）是一种结合了原生应用（Native App）和 Web 应用优点的开发方式。它的核心架构是：
+原生应用外壳（Native Shell） 内嵌的 WebView 组件 Web 页面内容 工作原理 架构层面</description>
+    </item>
+  </channel>
+</rss>

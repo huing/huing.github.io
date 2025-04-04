@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JavaScript | huing的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="huing的个人博客">
+<meta name="author" content="huing">
+<link rel="canonical" href="https://huing.github.io/tags/javascript/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fbdbe883ca626e8b61876263e9d63faf275b95fd7f85b6d38fd7f4c863d14329.css" integrity="sha256-&#43;9vog8pibothh2Jj6dY/rydblf1/hbbTj9f0yGPRQyk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://huing.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://huing.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://huing.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://huing.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://huing.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://huing.github.io/tags/javascript/index.xml">
+<link rel="alternate" hreflang="en" href="https://huing.github.io/tags/javascript/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://huing.github.io/tags/javascript/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="JavaScript">
+  <meta property="og:description" content="huing的个人博客">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:description" content="huing的个人博客">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://huing.github.io/" accesskey="h" title="huing的博客 (Alt + H)">huing的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://huing.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://huing.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://huing.github.io/tags/">Tags</a></div>
+  <h1>
+    JavaScript
+    <a href="/tags/javascript/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Clone正则
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>基本语法 \w 匹配一个单字字符 = [A-Za-z0-9_]
+? 匹配前面一个表达式 0 次或者 1 次。等价于 {0,1}
+如果紧跟在任何量词 *、 &#43;、? 或 {} 的后面，将会使量词变为非贪婪（匹配尽量少的字符）
+eg: /\d&#43;/.exec(&#39;abc123&#39;) 匹配 123
+eg: /\d&#43;?/.exec(&#39;abc123&#39;) 匹配 1
+&#43; 匹配前面一个表达式 1 次或者多次。等价于 {1,}
+* 匹配前一个表达式 0 次或多次。等价于 {0,}
+[^abc] = [^a-c] 反向字符集
+(?:x) 把 x 作为一个整体
+$ 匹配输入的结束。如果多行标志被设置为 true，那么也匹配换行符前的位置。 例如，/t$/ 并不会匹配 “eater” 中的 ’t’，但是会匹配 “eat” 中的 ’t’。
+exec 返回 const myRe = /d(b&#43;)d/g; const myArray = myRe.exec(&#34;cdbbdbsbz&#34;); [ &#34;dbbd&#34;, &#34;bb&#34;, index: 1, input: &#34;cdbbdbsbz&#34; ] // 匹配到的字符串和所有被记住的子字符串 克隆正则 const reFlags = /\w*$/; function cloneRegExp(regexp) { // reFlags....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-27 19:35:49 +0800 CST'>2022-06-27</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;253 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Clone正则" href="https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">数据类型及判断方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 typeof 0; // number typeof &#34;ss&#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint es6新增数据类型 typeof Symbol(&#34;a&#34;); // symbol es6新增数据类型 typeof function () {}; // function typeof null; // object 被认为是对象的占位符,但从技术上来说，它仍然是原始值 typeof []; // object typeof {}; // object instanceof 能判断对象类型 [] instanceof Array; //true [] instanceof Object; // true []....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-13 11:38:56 +0800 CST'>2022-06-13</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;197 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 数据类型及判断方法" href="https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="https://huing.github.io/tags/javascript/">
+      «&nbsp;Prev&nbsp;
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://huing.github.io/">huing的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

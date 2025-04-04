@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on huing的博客</title>
+    <link>https://huing.github.io/posts/</link>
+    <description>Recent content in Posts on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 03 Apr 2025 14:02:41 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>重排重绘</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E9%87%8D%E6%8E%92%E9%87%8D%E7%BB%98/</link>
+      <pubDate>Thu, 03 Apr 2025 14:02:41 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E9%87%8D%E6%8E%92%E9%87%8D%E7%BB%98/</guid>
+      <description>浏览器渲染过程 浏览器渲染页面的基本流程如下:
+解析 HTML 构建 DOM 树(DOM Tree) 解析 CSS 构建 CSSOM 树(CSS Object Model) 将 DOM 树和 CSSOM 树合并成渲染树(Render Tree) 布局(Layout):计算每个节点在屏幕中的确切位置和大小 绘制(Paint):将渲染树的每个节点转换成屏幕上的实际像素 重排(Reflow) 什么是重排 重排是指当 DOM 的变化影响了元素的几何信息(位置和尺寸)时，浏览器需要重新计算元素的几何属性，并重新排列它们的位置。这个过程也被称为回流。
+触发重排的操作 DOM 元素的增加、删除或位置改变 DOM 元素的尺寸改变（包括外边距、内边距、边框厚度、宽度、高度等） 页面渲染初始化 浏览器窗口尺寸改变 元素字体大小变化 激活 CSS 伪类（例如：:hover） 查询某些属性或调用某些方法： clientWidth、clientHeight、clientTop、clientLeft offsetWidth、offsetHeight、offsetTop、offsetLeft scrollWidth、scrollHeight、scrollTop、scrollLeft getComputedStyle() getBoundingClientRect() 重绘(Repaint) 什么是重绘 重绘是指当元素的外观发生改变，但没有改变布局时，浏览器会重新绘制元素。重绘的代价较重排小。
+触发重绘的操作 修改背景色、文字颜色、边框颜色等 visibility outline box-shadow border-radius 性能优化建议 批量修改 DOM // 不推荐 const el = document.getElementById(&amp;#34;test&amp;#34;); el.style.padding = &amp;#34;5px&amp;#34;; el.style.borderLeft = &amp;#34;1px&amp;#34;; el.style.borderRight = &amp;#34;2px&amp;#34;; // 推荐 const el = document.</description>
+    </item>
+    <item>
+      <title>预加载和onload</title>
+      <link>https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/</link>
+      <pubDate>Thu, 03 Apr 2025 13:50:59 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/</guid>
+      <description>预加载 和 window.onload 的区别 使用 预加载关键资源 &amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/styles/main.css&amp;#34; as=&amp;#34;style&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/script/main.js&amp;#34; as=&amp;#34;script&amp;#34;&amp;gt; 图片预加载 const img = new Image(); img.src = &amp;#34;图片URL&amp;#34;; // 提前加载图片到缓存 脚本预加载 使用 async 属性：并行请求脚本，尽快解析和执行 使用 defer 属性：在文档解析后、DOMContentLoaded 事件前执行 DOMContentLoaded 事件 DOMContentLoaded 事件在 DOM 树构建完成后立即触发,此时:
+HTML 已经被完全加载和解析 DOM 树已经构建完成 外部资源(如图片、样式表等)可能还未完全加载 必须使用 addEventListener 来监听该事件 示例代码:
+document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function () { // DOM 已准备就绪,可以安全地操作 DOM 元素 console.log(&amp;#34;DOM 已加载完成&amp;#34;); }); window.onload 事件 window.onload 事件会在页面完全加载后触发,包括:
+DOM 树构建完成 所有外部资源加载完成(图片、样式表、脚本等) 所有 iframe 加载完成 示例代码:</description>
+    </item>
+    <item>
+      <title>浏览器的渲染过程</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Thu, 03 Apr 2025 10:11:08 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E6%B8%B2%E6%9F%93%E8%BF%87%E7%A8%8B/</guid>
+      <description>浏览器的渲染过程 浏览器渲染网页是一个复杂的过程，主要包含以下几个关键步骤：
+1. 浏览器的主要组件 浏览器由以下核心组件构成：
+用户界面 - 包括地址栏、前进/后退按钮、书签菜单等 浏览器引擎 - 在用户界面和渲染引擎之间传送指令 渲染引擎 - 负责显示请求的内容 网络组件 - 处理网络请求 UI 后端 - 用于绘制基本的窗口小部件 JavaScript 解释器 - 用于解析和执行 JavaScript 代码 数据存储 - 包括 Cookie、LocalStorage 等机制 2. 渲染过程的主要步骤 2.1 解析 HTML 浏览器开始解析 HTML 文档 构建 DOM（文档对象模型）树 DOM 树反映了 HTML 文档的层级结构 2.2 获取外部资源 解析过程中遇到外部资源（CSS、JavaScript、图片等）时会发起请求 CSS 文件是渲染阻塞资源 JavaScript 可能是解析阻塞资源 2.3 构建 CSSOM 解析 CSS 文件 构建 CSSOM（CSS 对象模型）树 CSSOM 树包含页面中的所有样式信息 2.4 执行 JavaScript 解析和执行 JavaScript 代码 可能会修改 DOM 和 CSSOM JavaScript 执行会阻塞 DOM 构建 2.</description>
+    </item>
+    <item>
+      <title>浏览器的缓存机制</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</link>
+      <pubDate>Thu, 03 Apr 2025 10:10:53 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/</guid>
+      <description>浏览器的缓存机制 浏览器缓存是一种在本地存储资源副本的机制,可以显著提高网站的访问速度,减少服务器负载和带宽消耗。
+1. 缓存类型 1.1 私有缓存 存储在用户浏览器中的缓存 只能被单个用户使用 通常存储个性化内容 1.2 共享缓存 可以被多个用户共享的缓存 包括代理缓存和托管缓存(如 CDN) 通常用于存储公共资源 2. HTTP 缓存控制头部 2.1 强缓存 强缓存允许客户端直接从本地缓存中获取资源,无需向服务器发起请求。主要通过以下头部控制:
+Expires (HTTP/1.0)
+指定资源的过期时间(绝对时间) 受限于客户端与服务器时间不同步的问题 Cache-Control (HTTP/1.1)
+max-age: 指定资源有效期 no-cache: 强制验证缓存 no-store: 禁止缓存 private/public: 指定缓存作用域 2.2 协商缓存 当强缓存失效时,浏览器需要与服务器协商验证资源是否更新。主要有两种方式:
+Last-Modified/If-Modified-Since
+基于资源的最后修改时间 精确度受限于时间戳 ETag/If-None-Match
+基于资源的指纹标识 更精确的验证机制 优先级高于 Last-Modified 3. 启发式缓存 当服务器响应没有明确指定缓存策略时,浏览器会采用启发式缓存:
+计算公式: (当前时间 - Last-Modified) * 0.1 在此期间浏览器会使用本地缓存 建议始终明确指定 Cache-Control 来避免启发式缓存 4. 最佳实践 静态资源策略
+使用长期的强缓存 文件名包含内容哈希 当内容更新时更改文件名 HTML 文档策略
+使用 no-cache 或较短的 max-age 配合 ETag 进行协商缓存 API 响应策略</description>
+    </item>
+    <item>
+      <title>事件循环</title>
+      <link>https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Thu, 03 Apr 2025 07:43:15 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+      <description>什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.</description>
+    </item>
+    <item>
+      <title>React的diff算法</title>
+      <link>https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 28 Mar 2025 07:57:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</guid>
+      <description>什么是虚拟 dom Virtual DOM 则是一种由 Javascript 类库基于浏览器 API 实现的概念
+虚拟 dom 就是用 js 对象来描述 dom 结构。
+diff 算法 仅右移 const oldVdom = { type: &amp;#39;div&amp;#39;, props: { children: [] } children: [ { type: &amp;#39;p&amp;#39;, props: {} children: [] }, { type: &amp;#39;p&amp;#39;, props: {} } ] } const newVdom = { type: &amp;#39;div&amp;#39;, props: {} children: [ { type: &amp;#39;p&amp;#39;, props: {} }, { type: &amp;#39;p&amp;#39;, props: {} } ] } function diff(oldVdom, newVdom) { if (oldVdom.</description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>https://huing.github.io/posts/vue/</link>
+      <pubDate>Tue, 25 Mar 2025 09:35:37 +0800</pubDate>
+      <guid>https://huing.github.io/posts/vue/</guid>
+      <description>vue-router 路由守卫 路由原理 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新
+vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么
+架构设计 Vuex 基于模块化设计，使用 mutations、actions、modules 等概念 Pinia 采用更简单的 Store 设计，没有 mutations，直接使用 actions 进行状态修改 Pinia 的 Store 可以直接定义，不需要像 Vuex 那样创建复杂的模块树 TypeScript 支持 Pinia 是用 TypeScript 编写的，提供了更好的类型推导和类型安全 Vuex 对 TypeScript 的支持相对较弱，需要额外的类型声明 开发体验 Pinia 支持多个 Store，可以相互独立 Pinia 的 devtools 调试体验更好 Pinia 代码更简洁，不需要写 mutations Pinia 支持自动代码分割（code splitting） 性能 Pinia 体积更小，打包后约 1KB Pinia 没有嵌套模块，扁平化设计使得性能更好 Vue 版本支持 Pinia 同时支持 Vue 2 和 Vue 3 Vuex 4 只支持 Vue 3，Vuex 3 只支持 Vue 2 // Vuex 示例 const store = new Vuex.</description>
+    </item>
+    <item>
+      <title>Stack</title>
+      <link>https://huing.github.io/posts/javascript/stack/</link>
+      <pubDate>Mon, 24 Mar 2025 14:11:14 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/stack/</guid>
+      <description>Queue 先进先出 class Queue { constructor() { this.items = []; // 用于存储队列元素的数组 } // 入队方法 - 在队列尾部添加元素 enqueue(element) { this.items.push(element); } // 出队方法 - 移除并返回队列头部的元素 dequeue() { if (this.isEmpty()) { return &amp;#34;队列为空&amp;#34;; } return this.items.shift(); } // 查看队列头部的元素 peek() { if (this.isEmpty()) { return &amp;#34;队列为空&amp;#34;; } return this.items[0]; } // 检查队列是否为空 isEmpty() { return this.items.length === 0; } // 返回队列的大小 size() { return this.items.length; } // 清空队列 clear() { this.items = []; } // 打印队列内容 print() { console.</description>
+    </item>
+    <item>
+      <title>Canvas</title>
+      <link>https://huing.github.io/posts/html/canvas/</link>
+      <pubDate>Sun, 23 Mar 2025 11:53:04 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/canvas/</guid>
+      <description>Canvas 基础概念 Canvas 是 HTML5 提供的用于在网页上绘制图形的元素。它可以用于绘制图表、制作图片合成或者实现基础的动画效果。
+基本用法 创建 Canvas 元素 获取绘图上下文(Context) 使用 Canvas API 进行绘制 常见绘图操作 绘制形状(矩形、圆形、路径等) 添加颜色和样式 绘制文本 图片操作 变换(平移、旋转、缩放) Canvas API 实例 1. 基础图形绘制 // 获取Canvas上下文 const canvas = document.getElementById(&amp;#34;myCanvas&amp;#34;); const ctx = canvas.getContext(&amp;#34;2d&amp;#34;); // 绘制矩形 ctx.fillStyle = &amp;#34;red&amp;#34;; // 设置填充颜色 ctx.fillRect(10, 10, 100, 50); // x, y, width, height // 绘制圆形 ctx.beginPath(); ctx.arc(100, 100, 50, 0, Math.PI * 2); // x, y, 半径, 起始角度, 结束角度 ctx.fillStyle = &amp;#34;blue&amp;#34;; ctx.</description>
+    </item>
+    <item>
+      <title>EventBus</title>
+      <link>https://huing.github.io/posts/javascript/eventbus/</link>
+      <pubDate>Wed, 19 Mar 2025 09:34:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/eventbus/</guid>
+      <description>实现一个 EventBus 发布/订阅设计模式 EventBus 是 一个事件总线，它允许多个组件之间进行通信。 在 javascript 中，我们可以使用一个类来表示 EventBus。
+class EventBus { constructor() { this.events = {}; } on(eventName, callback) { if (!this.events[eventName]) { this.events[eventName] = []; } this.events[eventName].push(callback); } off(eventName, callback) { if (!this.events[eventName]) { return; } if (callback) { this.events[eventName] = this.events[eventName].filter( (cb) =&amp;gt; cb !== callback ); } else { delete this.events[eventName]; } } emit(eventName, ...args) { if (!this.events[eventName]) { return; } this.events[eventName].forEach((callback) =&amp;gt; { callback(...args); }); } once(eventName, callback) { const onceCallback = (.</description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://huing.github.io/posts/llm/ai/</link>
+      <pubDate>Thu, 06 Feb 2025 15:38:52 +0800</pubDate>
+      <guid>https://huing.github.io/posts/llm/ai/</guid>
+      <description>异常值（Outliers）
+噪声（Noise）
+MCP 设置 node=20
+nvm use 20 npx -y 把 npm 源设为 npm
+nrm ls nrm use npm export GITHUB_PERSONAL_ACCESS_TOKEN=&amp;#34;&amp;#34; echo &amp;#39;{&amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;:&amp;#34;tools/call&amp;#34;, &amp;#34;params&amp;#34;:{&amp;#34;name&amp;#34;:&amp;#34;search_repositories&amp;#34;, &amp;#34;arguments&amp;#34;: { &amp;#34;query&amp;#34;: &amp;#34;user:huing&amp;#34; }}, &amp;#34;id&amp;#34;: 123}&amp;#39; | npx -y @modelcontextprotocol/server-github </description>
+    </item>
+    <item>
+      <title>typescript</title>
+      <link>https://huing.github.io/posts/typescript/</link>
+      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
+      <guid>https://huing.github.io/posts/typescript/</guid>
+      <description>基础类型 布尔值（boolean） 可选类型 true/false
+let booleanExample: boolean = false; 数字（number） 可选类型 number
+let numberExample: number = 6; 字符串（string） 可选类型 string
+let stringExample: string = &amp;#34;Demo&amp;#34;; let stringTemplate: string = `template${Demo}`; void void 表示没有任何类型
+function sayHi(): void { console.log(&amp;#34;Hi!&amp;#34;); } let nothing: void = undefined; let unusable: void = null; // 不能将类型“null”分配给类型“void” let num: void = 1; // Error: 不能将类型“number”分配给类型“void” null 和 undefined let u: undefined = undefined; let n: null = null; 默认情况下 null 和 undefined 是所有类型的子类型。 就是说你可以把 null 和 undefined 赋值给 number 类型的变量。 然而，当你指定了 strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们各自。 许在某处你想传入一个 string 或 null 或 undefined，可以使用联合类型 string | null | undefined</description>
+    </item>
+    <item>
+      <title>如何把xmind转成md</title>
+      <link>https://huing.github.io/posts/%E5%A6%82%E4%BD%95%E6%8A%8Axmind%E8%BD%AC%E6%88%90md/</link>
+      <pubDate>Wed, 04 Dec 2024 16:14:19 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%A6%82%E4%BD%95%E6%8A%8Axmind%E8%BD%AC%E6%88%90md/</guid>
+      <description>创建 index.cjs 文件 const fs = require(&amp;#34;fs&amp;#34;); const path = require(&amp;#34;path&amp;#34;); /** * 递归遍历节点 */ function jsonToMarkdown(topic, level = 1) { if (!topic) return &amp;#34;&amp;#34;; let markdown = &amp;#34;&amp;#34;; // 添加标题 markdown += `${&amp;#34;#&amp;#34;.repeat(level)} ${topic.title}\n\n`; // 添加笔记 if (topic.notes?.plain.content) { markdown += `&amp;gt; ${topic.notes.plain.content}\n\n`; } // 添加标签 if (topic.labels &amp;amp;&amp;amp; topic.labels.length &amp;gt; 0) { markdown += `**Labels:** ${topic.labels.join(&amp;#34;, &amp;#34;)}\n\n`; } // 添加样式（简化处理） if (topic.style?.properties[&amp;#34;fo:font-style&amp;#34;] === &amp;#34;italic&amp;#34;) { markdown = markdown.replace(topic.title, `*${topic.</description>
+    </item>
+    <item>
+      <title>WebApi</title>
+      <link>https://huing.github.io/posts/html/webapi/</link>
+      <pubDate>Wed, 30 Oct 2024 13:30:51 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/webapi/</guid>
+      <description>IntersectionObserver const imageObserver = new IntersectionObserver((entries, observer) =&amp;gt; { entries.forEach((entry) =&amp;gt; { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; // 加载真实图片 observer.unobserve(img); // 停止观察该图片 } }); }); // 获取所有带有 data-src 属性的图片 document.querySelectorAll(&amp;#34;img[data-src]&amp;#34;).forEach((img) =&amp;gt; { imageObserver.observe(img); }); MutationObserver MutationObserver 用于监视 DOM 树的变化，可以监听元素的属性变化、子节点的增删改、文本内容的修改等。
+// 创建一个观察器实例 const observer = new MutationObserver((mutations) =&amp;gt; { mutations.forEach((mutation) =&amp;gt; { // mutation.type 可能是 &amp;#39;childList&amp;#39;、&amp;#39;attributes&amp;#39; 或 &amp;#39;characterData&amp;#39; console.log(&amp;#34;DOM 发生变化:&amp;#34;, mutation.type); if (mutation.type === &amp;#34;childList&amp;#34;) { console.</description>
+    </item>
+    <item>
+      <title>isValidElement</title>
+      <link>https://huing.github.io/posts/react/isvalidelement/</link>
+      <pubDate>Fri, 06 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/isvalidelement/</guid>
+      <description>React.Children.map(children, (child, index) =&amp;gt; { if (!React.isValidElement(child)) return null; return React.cloneElement(child, { ...child.props, onClick: () =&amp;gt; {}, }); }); </description>
+    </item>
+    <item>
+      <title>跨端解决方案</title>
+      <link>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:34:42 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E8%B7%A8%E7%AB%AF%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>调试</title>
+      <link>https://huing.github.io/posts/react-native/</link>
+      <pubDate>Tue, 03 Sep 2024 07:31:27 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react-native/</guid>
+      <description>chrome devtools
+android simulator
+ios simulator
+hybrid 是啥
+weex</description>
+    </item>
+    <item>
+      <title>渲染</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%98%AF%E5%95%A5/</link>
+      <pubDate>Tue, 03 Sep 2024 07:27:41 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E4%B8%8D%E7%9F%A5%E9%81%93%E6%98%AF%E5%95%A5/</guid>
+      <description>side rendering
+ssr ssr 是什么
+ssg
+esr
+rsr
+docker lpass jenkins node cdn 静态托管
+nextjs(react)
+nuxtjs(vue)
+bff 网关
+k8s v8s
+服务器，镜像，容器
+webpack5 module federation 模块联邦，webpack5 的一个新特性，可实现跨应用共享代码
+MicroApp 、single-spa、qiankuan
+无服务器（Serverless）
+RPC 远程过程调用（英语：Remote Procedure Call，RPC）是一个计算机通信协议。该协议允许运行于一台计算机的程序调用另一个地址空间（通常为一个开放网络的一台计算机）的子程序，而程序员就像调用本地程序一样，无需额外地为这个交互作用编程（无需关注细节）。RPC 是一种服务器-客户端（Client/Server）模式，经典实现是一个通过发送请求-接受回应进行信息交互的系统
+云计算的三种模式 云计算模式所具备的 5 个基本特征（按需自助服务、广泛的网络访问、资源共享、快速的可伸缩性和可度量的服务）、3 种服务模式 SaaS（软件即服务）、PaaS（平台即服务）和 IaaS（基础设施即服务）和 4 种部署方式（私有云、社区云、公有云和混合云），而云服务则是在这个云平台上发布出来的供用户使用的产品服务
+IaaS（Infrastructure as a server） 基础设施即服务
+PaaS（Platform as a Server） 平台即服务
+SaaS（Software as a Server） 软件即服务
+区别和关系 云计算(Cloud Computing) 是一种概念和技术，提供按需的计算资源和服务。 云服务(Cloud Service) 是云计算的具体实现形式，包括 IaaS、PaaS 和 SaaS 等不同类型的云服务。 云函数(Cloud Function) 是一种特定的云服务类型，属于&amp;quot;无服务器计算&amp;quot;(Serverless) 模型，适用于事件驱动的任务。 云计算（概念和技术模型） ├── 云服务（具体实现形式） │ ├── IaaS │ ├── PaaS │ └── SaaS └── 云函数（特定服务类型） └── Serverless 的一种实现</description>
+    </item>
+    <item>
+      <title>骨架屏</title>
+      <link>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:40 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>性能指标</title>
+      <link>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:29 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</guid>
+      <description>RAIL 模型
+Lighthouse 指标
+DevTools
+PWA
+Service Worker
+考察
+白屏影响用户率
+js 错误影响用户率
+LCP Largest Contentful Paint 最大内容绘制
+CLS Cumulative Layout Shift 累积布局偏移
+TTI Time To Interactive 页面加载开始到页面处于完全可交互状态所花费的时间
+FCP First Contentful Paint 首次有内容渲染
+不考察
+FP First Paint 首次渲染
+FMP First Meaningful Paint 首次绘制有意义内容的时间
+INP Interaction to Next Paint
+与下一次绘制的交互 INP 会在页面生命周期内观察用户与网页进行的所有点击、点按和键盘互动的延迟时间，并报告最长持续时间。INP 较低意味着页面始终能够快速响应大多数用户互动</description>
+    </item>
+    <item>
+      <title>测试</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:18:00 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95/</guid>
+      <description>单元测试
+集成测试
+E2E 测试
+jest
+enzyme
+puppeteer</description>
+    </item>
+    <item>
+      <title>React-Router</title>
+      <link>https://huing.github.io/posts/react/react-router/</link>
+      <pubDate>Tue, 03 Sep 2024 07:12:07 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react-router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化构建</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:38 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</guid>
+      <description>npm script
+ci cd</description>
+    </item>
+    <item>
+      <title>模块化打包</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:23 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</guid>
+      <description>构建工具模块化打包
+webpack
+rollup
+parcel</description>
+    </item>
+    <item>
+      <title>基本命令</title>
+      <link>https://huing.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Tue, 03 Sep 2024 07:03:20 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/</guid>
+      <description>git log &amp;ndash;pretty=oneline &amp;ndash;graph
+git reflog 记录命令历史
+查看项目邮箱，用户名
+git config user.name git config user.email git checkout
+git checkout --readme.text 丢弃工作区修改 git checkout -b dev 创建并切换到dev分支 git checkout -b dev origin/dev 创建远程origin的dev分支到本地 git branch
+git branch --set-upstream-to=origin/dev dev 链接远程分支 git branch -a 查看所有分支 git branch -v 查看所有本地分支及其最后一次提交 git branch -r 查看所有远程分支 git branch --merged 查看已合并到当前分支的分支列表 git branch --no-merged 显示还未合并到当前分支的分支列表 git branch -d dev 删除分支 git merge dev 合并分支
+git merge --no-ff dev 在 dev 分支上生成一个新节点 git merge --no-ff -m &amp;#34;merge with no-ff&amp;#34; dev git merge --squash dev (git commit) git stash 存储工作区内容</description>
+    </item>
+    <item>
+      <title>接口请求</title>
+      <link>https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</link>
+      <pubDate>Tue, 03 Sep 2024 07:01:20 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</guid>
+      <description>ajax
+fetch
+keep-alive
+navigator.setbean</description>
+    </item>
+    <item>
+      <title>DOM文档对象模型</title>
+      <link>https://huing.github.io/posts/html/dom%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Tue, 03 Sep 2024 07:00:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/dom%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</guid>
+      <description>DOM 是文档对象模型，是 HTML 和 XML 文档的编程接口。
+DOM 将文档解析为一个由节点和对象（包含属性和方法的对象）组成的结构化树。
+DOM 是 HTML 和 XML 文档的编程接口。</description>
+    </item>
+    <item>
+      <title>基本语法</title>
+      <link>https://huing.github.io/posts/css/</link>
+      <pubDate>Tue, 03 Sep 2024 06:55:26 +0800</pubDate>
+      <guid>https://huing.github.io/posts/css/</guid>
+      <description>line-height 如何继承 line-height 具体值 30px 子元素继承该值
+line-height 比例 1.5 子元素继承该比例
+line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值
+css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm pt: 点 px: 像素 相对长度单位 em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width rem: 根元素的字体大小 设置 html 字体的大小为百分比 用 js 动态设置 html 字体大小 浏览器默认字体大小 16px,最小 12px,css3 并未提及 字重
+100 - Thin 200 - Extra Light (Ultra Light) 300 - Light 400 - Normal 500 - Medium 600 - Semi Bold (Demi Bold) 700 - Bold 800 - Extra Bold (Ultra Bold) 900 - Black (Heavy)</description>
+    </item>
+    <item>
+      <title>WebView</title>
+      <link>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/webview/</link>
+      <pubDate>Tue, 03 Sep 2024 06:53:19 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B0%8F%E7%A8%8B%E5%BA%8F/webview/</guid>
+      <description>WebView 是 Android 和 iOS 平台上的原生组件，用于显示网页内容。
+WebView 是移动应用开发中的一个重要组件，它能够在原生应用中嵌入网页内容。简单来说，它就像是一个迷你的浏览器，被嵌入在移动应用程序中。
+WebView 的主要特点 内嵌浏览器功能
+可以加载和显示网页 支持基本的网页浏览功能（前进、后退、刷新等） 支持 JavaScript 执行 混合开发支持
+支持原生代码和网页代码的交互 可以实现混合应用（Hybrid App）开发 便于快速开发和维护 常见应用场景
+在 App 中显示 HTML 内容 构建混合应用 显示富文本内容 加载在线帮助文档 优势与限制 优势 开发效率高 内容易于更新 跨平台兼容性好 减少应用体积 限制 性能相比原生界面略差 内存占用较大 可能存在安全隐患 平台差异 Android WebView 基于 Chromium 引擎 可通过 WebSettings 进行详细配置 支持与 JavaScript 双向交互 iOS WKWebView 基于 WebKit 引擎 性能优于旧版 UIWebView 提供现代化的网页处理能力 混合应用（Hybrid App）详解 什么是混合应用？ 混合应用（Hybrid App）是一种结合了原生应用（Native App）和 Web 应用优点的开发方式。它的核心架构是：
+原生应用外壳（Native Shell） 内嵌的 WebView 组件 Web 页面内容 工作原理 架构层面</description>
+    </item>
+    <item>
+      <title>host</title>
+      <link>https://huing.github.io/posts/host/</link>
+      <pubDate>Tue, 03 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/host/</guid>
+      <description>标题 devServer.host: &amp;lsquo;0,0,0,0&amp;rsquo;
+可以访问所有的主机地址
+devServer.host: &amp;rsquo;localhost&#39;
+只能访问自己的</description>
+    </item>
+    <item>
+      <title>浏览器的工作原理</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/</guid>
+      <description>HeadlessBrowser Headless Browser(无头浏览器)是一种没有图形用户界面(GUI)的浏览器，可以在后台运行并通过程序代码控制。
+主要特点 无界面运行：在服务器等没有图形界面的环境中运行 完整功能：支持 JavaScript 执行、DOM 操作等完整的浏览器功能 自动化支持：可以通过代码完全控制浏览器行为 性能优势：相比传统浏览器占用更少的系统资源 应用场景 自动化测试
+端到端测试(E2E Testing) 界面功能测试 跨浏览器兼容性测试 网页爬虫
+抓取动态网页内容 模拟用户行为 处理需要 JavaScript 渲染的页面 网页截图与 PDF 生成
+自动化网页截图 生成网页 PDF 报告 页面内容导出 性能监控
+页面加载性能分析 资源使用情况监控 网络请求追踪 常用实现 Chrome Headless const puppeteer = require(&amp;#34;puppeteer&amp;#34;); (async () =&amp;gt; { const browser = await puppeteer.launch(); const page = await browser.newPage(); await page.goto(&amp;#34;https://example.com&amp;#34;); await page.screenshot({ path: &amp;#34;screenshot.png&amp;#34; }); await browser.close(); })(); Firefox Headless const firefox = require(&amp;#34;selenium-webdriver/firefox&amp;#34;); const options = new firefox.</description>
+    </item>
+    <item>
+      <title>网络是如何连接的</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</link>
+      <pubDate>Tue, 03 Sep 2024 06:45:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E7%BD%91%E7%BB%9C%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E7%9A%84/</guid>
+      <description>网络是如何连接的 浏览器处理流程 当我们在浏览器中输入一个 URL(如www.example.com)后,浏览器会经过以下步骤:
+解析 URL
+识别协议(http/https) 识别域名(example.com) 识别资源路径(/) DNS 解析过程
+首先检查浏览器 DNS 缓存 检查操作系统 DNS 缓存 检查路由器缓存 向 ISP 的 DNS 服务器发起递归查询 获取目标服务器的 IP 地址 建立连接
+与目标服务器建立 TCP 连接(三次握手) 如果是 HTTPS,还需要进行 TLS 握手 发送 HTTP 请求
+浏览器构建 HTTP 请求报文 通过网络发送到服务器 浏览器渲染过程
+解析 HTML 构建 DOM 树(DOM Tree) 解析 CSS 构建 CSSOM(CSS Object Model) 合并 DOM 和 CSSOM 构建渲染树(Render Tree) 布局(Layout):计算每个节点的几何信息 绘制(Painting):将渲染树绘制到屏幕上 DNS (Domain Name System) 原理 DNS 是一个分布式数据库,主要功能是将域名转换为 IP 地址。解析过程如下:</description>
+    </item>
+    <item>
+      <title>CDN原理</title>
+      <link>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</link>
+      <pubDate>Tue, 03 Sep 2024 06:43:54 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/cdn%E5%8E%9F%E7%90%86/</guid>
+      <description>内容分发网络 cdn Content Delivery Network cache-control</description>
+    </item>
+    <item>
+      <title>npm命令</title>
+      <link>https://huing.github.io/posts/nodejs/</link>
+      <pubDate>Thu, 29 Dec 2022 10:11:31 +0800</pubDate>
+      <guid>https://huing.github.io/posts/nodejs/</guid>
+      <description>文件读写 fs
+路径查找 path
+网络 http
+包管理 npm yarn npx pnpm package.json 配置 入口文件字段 main: CommonJS 规范的入口文件
+Node.js 默认使用的入口点 通常指向 dist/index.js 或 lib/index.js 使用 require() 导入时使用此入口 type 的两个类型
+module: ES Module 规范的入口文件
+现代打包工具（webpack、rollup 等）优先使用 通常指向 .mjs 或含 ES modules 的 .js 文件 使用 import 语句导入时使用此入口 支持 tree-shaking umd: Universal Module Definition 入口文件
+兼容 AMD、CommonJS 和全局变量方式 适用于浏览器直接通过 &amp;lt;script&amp;gt; 标签引用 通常指向打包后的单一文件，如 dist/index.umd.js 主要区别说明：
+main 是最传统的 CommonJS 格式入口，主要用于 Node.js 环境。 module 是现代 ES Module 格式入口，支持静态导入导出，便于打包工具进行 tree-shaking 优化。 umd 是通用格式，主要用于浏览器环境，可以同时支持多种模块系统。 这三种格式的存在使得同一个包可以在不同环境下都能正常使用，开发者可以根据具体使用场景选择最适合的版本。</description>
+    </item>
+    <item>
+      <title>Sql语法</title>
+      <link>https://huing.github.io/posts/sql%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Mon, 05 Sep 2022 21:33:26 +0800</pubDate>
+      <guid>https://huing.github.io/posts/sql%E8%AF%AD%E6%B3%95/</guid>
+      <description>精确匹配 id SELECT * FROM menu WHERE id = 569; 模糊匹配 SELECT * FROM menu WHERE path LIKE &amp;#39;%teacher%&amp;#39;; 定义变量 SET @path = &amp;#39;teacher&amp;#39;; SELECT * FROM menu WHERE path LIKE CONCAT(&amp;#39;%&amp;#39;, @path, &amp;#39;%&amp;#39;); 连表查询 SELECT a.id,a.NAME,b.num FROM classes a LEFT JOIN classes_detail b ON a.id=b.id WHERE a.id=2541; IS NULL SELECT * FROM classes WHERE person_avg IS NULL; 把查询到的结果插入表中 INSERT INTO menu SELECT * FROM menu_copy WHERE is_deleted = 0 GROUP BY name; 找到所有的菜单并插入菜单表 INSERT INTO menu ( SELECT*FROM menu_copy WHERE parent_id=0 AND is_deleted=0 UNION ALL SELECT*FROM menu_copy WHERE parent_id&amp;lt;&amp;gt; 0 AND is_deleted=0 GROUP BY NAME); 删除 name = 监控中心 并且 id !</description>
+    </item>
+    <item>
+      <title>语义化标签</title>
+      <link>https://huing.github.io/posts/html/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
+      <description>有利 seo
+方便其他设备解析
+便于维护提高可读性
+section, article, main, p,
+time,
+title,header,nav,
+aside, footer,
+WebAssembly: WebAssembly 是一种新的编码方式，可以在现代的 Web 浏览器中运行——它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如 C/C++、C# 和 Rust 等语言提供编译目标，以便它们可以在 Web 上运行</description>
+    </item>
+    <item>
+      <title>对象</title>
+      <link>https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sun, 04 Sep 2022 12:37:25 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/</guid>
+      <description>Map 类型 Map // ✅ Initialize Map from Array // 👇️ const map1: Map&amp;lt;string, string&amp;gt; const map1: Map&amp;lt;string, string&amp;gt; = new Map([ [&amp;#34;name&amp;#34;, &amp;#34;Tom&amp;#34;], [&amp;#34;country&amp;#34;, &amp;#34;Chile&amp;#34;], ]); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &amp;#34;Tom&amp;#34;, country: &amp;#34;Chile&amp;#34; }; const map2 = new Map&amp;lt;string, string&amp;gt;(Object.entries(obj)); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map2); objects vs maps 意外的键</description>
+    </item>
+    <item>
+      <title>Consumer</title>
+      <link>https://huing.github.io/posts/react/consumer/</link>
+      <pubDate>Sun, 04 Sep 2022 12:35:59 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/consumer/</guid>
+      <description>export const themes = { light: { color: &amp;#34;#000000&amp;#34;, background: &amp;#34;#eeeeee&amp;#34;, }, dark: { color: &amp;#34;#ffffff&amp;#34;, background: &amp;#34;#222222&amp;#34;, }, }; export const ThemeContext = createContext({ theme: themes.dark, toggleTheme: () =&amp;gt; { // }, }); const Button = () =&amp;gt; { // 消费 consumers return ( &amp;lt;ThemeContext.Consumer&amp;gt; {({ theme, toggleTheme }) =&amp;gt; ( &amp;lt;button onClick={toggleTheme} style={{ background: theme.background, color: theme.color, width: 100, height: 60, }} &amp;gt; click &amp;lt;/button&amp;gt; )} &amp;lt;/ThemeContext.Consumer&amp;gt; ); }; const ThemedButton = () =&amp;gt; { return &amp;lt;Button /&amp;gt;; }; const App = () =&amp;gt; { const [theme, setTheme] = useState(themes.</description>
+    </item>
+    <item>
+      <title>Ref实现父组件调用子组件方法</title>
+      <link>https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同：
+当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性用于自定义 class 组件时，ref 对象接收组件的挂载实例作为其 current 属性。 你不能在函数组件上使用 ref 属性，因为他们没有实例。 构造组件 createRef 仅能用在 ClassComponent
+class CustomInput extends React.Component { constructor(props) { super(props); // 为 DOM 元素添加 ref this.textInput = React.createRef(); this.doSomething = this.doSomething.bind(this); } doSomething() { // this.textInput.current.focus() } render() { return &amp;lt;input type=&amp;#34;text&amp;#34; ref={this.textInput} /&amp;gt;; } } class ParentInput extends React.Component { constructor(props) { super(props); // 为 class 组件添加 Ref this.</description>
+    </item>
+    <item>
+      <title>Promise实现</title>
+      <link>https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/</guid>
+      <description>promise 实现 class Commitment { static PENDING = &amp;#34;待定&amp;#34;; static FULFILLED = &amp;#34;成功&amp;#34;; static REJECTED = &amp;#34;拒绝&amp;#34;; private status: &amp;#34;PENDING&amp;#34; | &amp;#34;FULFILLED&amp;#34; | &amp;#34;REJECTED&amp;#34;; private result: any; constructor(func: (resolve: (value: any) =&amp;gt; void, reject: (reason?: any) =&amp;gt; void) =&amp;gt; void) { this.status = &amp;#34;PENDING&amp;#34;; this.result = undefined; try { func(this.resolve.bind(this), this.reject.bind(this)); } catch (e) { this.reject(e); } } resolve(value: any) { if (this.status === &amp;#34;PENDING&amp;#34;) { this.status = &amp;#34;FULFILLED&amp;#34;; this.result = value; } } reject(reason?</description>
+    </item>
+    <item>
+      <title>原型链理解</title>
+      <link>https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</guid>
+      <description>基于原型链的继承 继承属性 // 让我们从一个函数里创建一个对象 o，它自身拥有属性 a 和 b 的： let f = function () { this.a = 1; this.b = 2; }; /_这么写也一样 function f() { this.a = 1; this.b = 2; } _/ let o = new f(); // {a: 1, b: 2}
+// 在 f 函数的原型上定义属性 f.prototype.b = 3; f.prototype.c = 4;
+// 不要在 f 函数的原型上直接定义 f.prototype = {b:3,c:4};这样会直接打破原型链 // 综上，整个原型链如下： // {a:1, b:2} &amp;mdash;&amp;gt; {b:3, c:4} &amp;mdash;&amp;gt; Object.</description>
+    </item>
+    <item>
+      <title>Array</title>
+      <link>https://huing.github.io/posts/javascript/array/</link>
+      <pubDate>Thu, 01 Sep 2022 20:21:47 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/array/</guid>
+      <description>Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，并返回该数组的引用，同时改变原数组 const sourceArray = [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;]; const reverseArray = sourceArray.reverse(); sourceArray === reverseArray; // true shift() 删除数组第一个元素，并返回删除的元素值 sort() splice() 删除或新增元素，返回修改后的数组，改变原数组 unshift() 添加元素到数组的头部 返回 length 属性值 访问方法 返回新数组 concat() 将数组和/或值连接成新数组，对于对象引用的值修改会修改原数组 const arr = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;]; const al = arr.concat(1, [2, 3]); console.log(al); // [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, 1, 2, 3] includes() join() slice() [begin, end) 对于对象引用的值修改会修改原数组 toString() {}.toString() // 报错 没有原型链了吧 [].</description>
+    </item>
+    <item>
+      <title>Base</title>
+      <link>https://huing.github.io/posts/javascript/base/</link>
+      <pubDate>Thu, 01 Sep 2022 20:20:27 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/base/</guid>
+      <description>浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&amp;#34; navigator.language; // &amp;#34;zh-CN&amp;#34; navigator.languages; // [&amp;#34;zh-CN&amp;#34;, &amp;#34;zh&amp;#34;, &amp;#34;fr-CA&amp;#34;, &amp;#34;fr&amp;#34;, &amp;#34;fr-CH&amp;#34;, &amp;#34;fr-FR&amp;#34;, &amp;#34;en&amp;#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&amp;#34;Lion&amp;#34;, , &amp;#34;Angel&amp;#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals</description>
+    </item>
+    <item>
+      <title>Clone正则</title>
+      <link>https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/</link>
+      <pubDate>Mon, 27 Jun 2022 19:35:49 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/</guid>
+      <description>基本语法 \w 匹配一个单字字符 = [A-Za-z0-9_]
+? 匹配前面一个表达式 0 次或者 1 次。等价于 {0,1}
+如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪（匹配尽量少的字符）
+eg: /\d+/.exec(&#39;abc123&#39;) 匹配 123
+eg: /\d+?/.exec(&#39;abc123&#39;) 匹配 1
++ 匹配前面一个表达式 1 次或者多次。等价于 {1,}
+* 匹配前一个表达式 0 次或多次。等价于 {0,}
+[^abc] = [^a-c] 反向字符集
+(?:x) 把 x 作为一个整体
+$ 匹配输入的结束。如果多行标志被设置为 true，那么也匹配换行符前的位置。 例如，/t$/ 并不会匹配 &amp;ldquo;eater&amp;rdquo; 中的 &amp;rsquo;t&amp;rsquo;，但是会匹配 &amp;ldquo;eat&amp;rdquo; 中的 &amp;rsquo;t&amp;rsquo;。
+exec 返回 const myRe = /d(b+)d/g; const myArray = myRe.exec(&amp;#34;cdbbdbsbz&amp;#34;); [ &amp;#34;dbbd&amp;#34;, &amp;#34;bb&amp;#34;, index: 1, input: &amp;#34;cdbbdbsbz&amp;#34; ] // 匹配到的字符串和所有被记住的子字符串 克隆正则 const reFlags = /\w*$/; function cloneRegExp(regexp) { // reFlags.</description>
+    </item>
+    <item>
+      <title>nextjs预渲染理解</title>
+      <link>https://huing.github.io/posts/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 27 Jun 2022 19:13:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/nextjs%E9%A2%84%E6%B8%B2%E6%9F%93%E7%90%86%E8%A7%A3/</guid>
+      <description>静态生成 构建时 （build time） 生成 html
+在每个页面请求时重用
+可以被 cdn 缓存
+服务器端渲染 在地址栏输入 url，发送 get 请求，生成 html
+页面内容会随着每个请求变化
+cdn 无法缓存</description>
+    </item>
+    <item>
+      <title>useRef vs useState</title>
+      <link>https://huing.github.io/posts/react/useref-vs-usestate/</link>
+      <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/useref-vs-usestate/</guid>
+      <description> 原文地址 https://blog.logrocket.com/usestate-vs-useref/
+useHooks 实现 https://usehooks.com/
+useRef
+const inputRef = useRef(); useState
+const [count, setCount] = useState(0); let variable
+let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状态更新组件重新渲染 (Every state change re-renders the App component),子组件也会触发更新 useRef 返回对象，包含属性 current,存真实的值，值更新不会触发组件更新 let 定义的变量在每次 render 时被覆盖，最终只有初始值 总结：
+在渲染周期（render cycles）和 ui 更新（UI updates）期间 两者都保存更新的值，useState 重新渲染 useRef 的 current 属性是可变的，useState 的 state 需要 setState 更新赋值 两者都被认为是数据 hook,useRef 可以直接访问 react 组件或者 dom 元素 </description>
+    </item>
+    <item>
+      <title>快捷键&amp;终端命令</title>
+      <link>https://huing.github.io/posts/%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 Jun 2022 10:50:52 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%BB%88%E7%AB%AF%E5%91%BD%E4%BB%A4/</guid>
+      <description>iterm 左右切换 command + 左右键 new tab command + t close tab command + w 分屏左右切换 command + option + 左右键 分屏新建标签页 command + d 关闭 iterm command + q chrome 打开无痕模式 incognito command + shift + n 关闭标签页 command + w 切换标签页 command + option + 左右键 vscode 打开外部终端 shift + command + c 切换当前文件 command + option + 左右键 退出当前编辑器 command + w 向上下重设终端大小 control + command + 上下键 快捷键 切换窗口 control + 左右键 切换 app command + tab 四指拖动 四指聚拢 显示或隐藏聚焦 command + 空格 在访达窗口聚焦 command + option + 空格 [man 命令的名称] 可以查看命令的详细用法</description>
+    </item>
+    <item>
+      <title>数据类型及判断方法</title>
+      <link>https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 13 Jun 2022 11:38:56 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</guid>
+      <description>js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint es6新增数据类型 typeof Symbol(&amp;#34;a&amp;#34;); // symbol es6新增数据类型 typeof function () {}; // function typeof null; // object 被认为是对象的占位符,但从技术上来说，它仍然是原始值 typeof []; // object typeof {}; // object instanceof 能判断对象类型 [] instanceof Array; //true [] instanceof Object; // true [].</description>
+    </item>
+    <item>
+      <title>React工程化</title>
+      <link>https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
+      <description>useEffect https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/
+https://react.iamkasong.com/hooks/useref.html#commit%E9%98%B6%E6%AE%B5
+React 工程化
+Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler
+Reconciler（协调器）—— 负责找出变化的组件
+Renderer（渲染器）—— 负责将变化的组件渲染到页面上
+虚拟 DOM 在 react 中的正式称呼 Fiber（纤程）
+Fiber 并不是计算机术语中的新名词，他的中文翻译叫做纤程，与进程（Process）、线程（Thread）、协程（Coroutine）同为程序执行过程。
+在很多文章中将纤程理解为协程的一种实现。在 JS 中，协程的实现便是 Generator。
+所以，我们可以将纤程(Fiber)、协程(Generator)理解为代数效应思想在 JS 中的体现。
+React Fiber 可以理解为：
+React 内部实现的一套状态更新机制。支持任务不同优先级，可中断与恢复，并且恢复后可以复用之前的中间状态。
+其中每个任务更新单元为 React Element 对应的 Fiber 节点。
+当我们用 canvas 绘制动画，每一帧绘制前都会调用 ctx.clearRect 清除上一帧的画面。
+如果当前帧画面计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。
+为了解决这个问题，我们可以在内存中绘制当前帧动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。
+这种在内存中构建并直接替换的技术叫做双缓存 (opens new window)。
+React 使用“双缓存”来完成 Fiber 树的构建与替换——对应着 DOM 树的创建与更新。</description>
+    </item>
+  </channel>
+</rss>

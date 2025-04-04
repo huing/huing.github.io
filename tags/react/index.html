@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>React | huing的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="huing的个人博客">
+<meta name="author" content="huing">
+<link rel="canonical" href="https://huing.github.io/tags/react/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fbdbe883ca626e8b61876263e9d63faf275b95fd7f85b6d38fd7f4c863d14329.css" integrity="sha256-&#43;9vog8pibothh2Jj6dY/rydblf1/hbbTj9f0yGPRQyk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://huing.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://huing.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://huing.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://huing.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://huing.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://huing.github.io/tags/react/index.xml">
+<link rel="alternate" hreflang="en" href="https://huing.github.io/tags/react/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://huing.github.io/tags/react/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="React">
+  <meta property="og:description" content="huing的个人博客">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React">
+<meta name="twitter:description" content="huing的个人博客">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://huing.github.io/" accesskey="h" title="huing的博客 (Alt + H)">huing的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://huing.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://huing.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://huing.github.io/tags/">Tags</a></div>
+  <h1>
+    React
+    <a href="/tags/react/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">React的diff算法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>什么是虚拟 dom Virtual DOM 则是一种由 Javascript 类库基于浏览器 API 实现的概念
+虚拟 dom 就是用 js 对象来描述 dom 结构。
+diff 算法 仅右移 const oldVdom = { type: &#39;div&#39;, props: { children: [] } children: [ { type: &#39;p&#39;, props: {} children: [] }, { type: &#39;p&#39;, props: {} } ] } const newVdom = { type: &#39;div&#39;, props: {} children: [ { type: &#39;p&#39;, props: {} }, { type: &#39;p&#39;, props: {} } ] } function diff(oldVdom, newVdom) { if (oldVdom....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-28 07:57:28 +0800 CST'>2025-03-28</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;105 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to React的diff算法" href="https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">isValidElement
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>React.Children.map(children, (child, index) =&gt; { if (!React.isValidElement(child)) return null; return React.cloneElement(child, { ...child.props, onClick: () =&gt; {}, }); }); </p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-06 06:49:36 +0800 CST'>2024-09-06</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;19 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to isValidElement" href="https://huing.github.io/posts/react/isvalidelement/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">React-Router
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-03 07:12:07 +0800 CST'>2024-09-03</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to React-Router" href="https://huing.github.io/posts/react/react-router/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Consumer
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>export const themes = { light: { color: &#34;#000000&#34;, background: &#34;#eeeeee&#34;, }, dark: { color: &#34;#ffffff&#34;, background: &#34;#222222&#34;, }, }; export const ThemeContext = createContext({ theme: themes.dark, toggleTheme: () =&gt; { // }, }); const Button = () =&gt; { // 消费 consumers return ( &lt;ThemeContext.Consumer&gt; {({ theme, toggleTheme }) =&gt; ( &lt;button onClick={toggleTheme} style={{ background: theme.background, color: theme.color, width: 100, height: 60, }} &gt; click &lt;/button&gt; )} &lt;/ThemeContext.Consumer&gt; ); }; const ThemedButton = () =&gt; { return &lt;Button /&gt;; }; const App = () =&gt; { const [theme, setTheme] = useState(themes....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-04 12:35:59 +0800 CST'>2022-09-04</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;121 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Consumer" href="https://huing.github.io/posts/react/consumer/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Ref实现父组件调用子组件方法
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同：
+当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性用于自定义 class 组件时，ref 对象接收组件的挂载实例作为其 current 属性。 你不能在函数组件上使用 ref 属性，因为他们没有实例。 构造组件 createRef 仅能用在 ClassComponent
+class CustomInput extends React.Component { constructor(props) { super(props); // 为 DOM 元素添加 ref this.textInput = React.createRef(); this.doSomething = this.doSomething.bind(this); } doSomething() { // this.textInput.current.focus() } render() { return &lt;input type=&#34;text&#34; ref={this.textInput} /&gt;; } } class ParentInput extends React.Component { constructor(props) { super(props); // 为 class 组件添加 Ref this....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-04 10:30:23 +0800 CST'>2022-09-04</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;187 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Ref实现父组件调用子组件方法" href="https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">useRef vs useState
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p> 原文地址 https://blog.logrocket.com/usestate-vs-useref/
+useHooks 实现 https://usehooks.com/
+useRef
+const inputRef = useRef(); useState
+const [count, setCount] = useState(0); let variable
+let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状态更新组件重新渲染 (Every state change re-renders the App component),子组件也会触发更新 useRef 返回对象，包含属性 current,存真实的值，值更新不会触发组件更新 let 定义的变量在每次 render 时被覆盖，最终只有初始值 总结：
+在渲染周期（render cycles）和 ui 更新（UI updates）期间 两者都保存更新的值，useState 重新渲染 useRef 的 current 属性是可变的，useState 的 state 需要 setState 更新赋值 两者都被认为是数据 hook,useRef 可以直接访问 react 组件或者 dom 元素 </p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-15 22:53:05 +0800 CST'>2022-06-15</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;66 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to useRef vs useState" href="https://huing.github.io/posts/react/useref-vs-usestate/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">React工程化
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>useEffect https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/
+https://react.iamkasong.com/hooks/useref.html#commit%E9%98%B6%E6%AE%B5
+React 工程化
+Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler
+Reconciler（协调器）—— 负责找出变化的组件
+Renderer（渲染器）—— 负责将变化的组件渲染到页面上
+虚拟 DOM 在 react 中的正式称呼 Fiber（纤程）
+Fiber 并不是计算机术语中的新名词，他的中文翻译叫做纤程，与进程（Process）、线程（Thread）、协程（Coroutine）同为程序执行过程。
+在很多文章中将纤程理解为协程的一种实现。在 JS 中，协程的实现便是 Generator。
+所以，我们可以将纤程(Fiber)、协程(Generator)理解为代数效应思想在 JS 中的体现。
+React Fiber 可以理解为：
+React 内部实现的一套状态更新机制。支持任务不同优先级，可中断与恢复，并且恢复后可以复用之前的中间状态。
+其中每个任务更新单元为 React Element 对应的 Fiber 节点。
+当我们用 canvas 绘制动画，每一帧绘制前都会调用 ctx.clearRect 清除上一帧的画面。
+如果当前帧画面计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。
+为了解决这个问题，我们可以在内存中绘制当前帧动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。
+这种在内存中构建并直接替换的技术叫做双缓存 (opens new window)。
+React 使用“双缓存”来完成 Fiber 树的构建与替换——对应着 DOM 树的创建与更新。</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-06-12 17:31:57 +0800 CST'>2022-06-12</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;55 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to React工程化" href="https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://huing.github.io/">huing的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

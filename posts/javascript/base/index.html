@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Base | huing的博客</title>
+<meta name="keywords" content="JavaScript">
+<meta name="description" content="浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&#34;Lion&#34;, , &#34;Angel&#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals">
+<meta name="author" content="huing">
+<link rel="canonical" href="https://huing.github.io/posts/javascript/base/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fbdbe883ca626e8b61876263e9d63faf275b95fd7f85b6d38fd7f4c863d14329.css" integrity="sha256-&#43;9vog8pibothh2Jj6dY/rydblf1/hbbTj9f0yGPRQyk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://huing.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://huing.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://huing.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://huing.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://huing.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://huing.github.io/posts/javascript/base/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://huing.github.io/posts/javascript/base/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="Base">
+  <meta property="og:description" content="浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&#34;Lion&#34;, , &#34;Angel&#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-09-01T20:20:27+08:00">
+    <meta property="article:modified_time" content="2022-09-01T20:20:27+08:00">
+    <meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Base">
+<meta name="twitter:description" content="浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&#34;Lion&#34;, , &#34;Angel&#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://huing.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Base",
+      "item": "https://huing.github.io/posts/javascript/base/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Base",
+  "name": "Base",
+  "description": "浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // \u0026#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36\u0026#34; navigator.language; // \u0026#34;zh-CN\u0026#34; navigator.languages; // [\u0026#34;zh-CN\u0026#34;, \u0026#34;zh\u0026#34;, \u0026#34;fr-CA\u0026#34;, \u0026#34;fr\u0026#34;, \u0026#34;fr-CH\u0026#34;, \u0026#34;fr-FR\u0026#34;, \u0026#34;en\u0026#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals\nvar fish = [\u0026#34;Lion\u0026#34;, , \u0026#34;Angel\u0026#34;]; // fish[1] = undefined 布尔字面量 Boobean literals\n浮点数字面量 Floating-point literals\n整数 Integers\n对象字面量 Object literals",
+  "keywords": [
+    "JavaScript"
+  ],
+  "articleBody": "浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36\" navigator.language; // \"zh-CN\" navigator.languages; // [\"zh-CN\", \"zh\", \"fr-CA\", \"fr\", \"fr-CH\", \"fr-FR\", \"en\"] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals\nvar fish = [\"Lion\", , \"Angel\"]; // fish[1] = undefined 布尔字面量 Boobean literals\n浮点数字面量 Floating-point literals\n整数 Integers\n对象字面量 Object literals\nRegExp literals\n字符串字面量 String literals\n模板字面量 Template literals\nBOM 浏览器对象模型 DOM 虚拟对象模型 parse stringify parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。 JSON.parse() 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象 JSON.stringify() 方法是将一个 JavaScript 值(对象或者数组)转换为一个 JSON 字符串 console.log( new Date(), (new Date()).toString(), (new Date()).valueOf(), Date.now(), Date.parse(new Date()) ) Wed Aug 28 2019 14:35:22 GMT+0800 (中国标准时间) \"Wed Aug 28 2019 14:35:22 GMT+0800 (中国标准时间)\" 1566974122905 1566974122905 1566974122000 js 中 === vs == 严格相等 === 宽松相等 == Object.is(val1, val2) 父组件调用子组件方法，子组件向父组件传值方法 子组件向父组件传值方法 把子组件的值当成参数，传递到父组件的作用域 父组件调用子组件方法 propshttp://taobaofed.org/blog/2016/11/17/react-components-communication/ Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。 const {Provider, Consumer} = React.createContext(defaultValue) \u003cProvider value={/* some value */}\u003e \u003cConsumer\u003e {value =\u003e /* render something based on the context value */} \u003c/Consumer\u003e React 重复渲染 SVG 无答案 React 是什么，特点 用于构建用户界面的 JavaScript 库 声明式设计 −React 采用声明范式，可以轻松描述应用。 高效 −React 通过对 DOM 的模拟，最大限度地减少与 DOM 的交互。 灵活 −React 可以与已知的库或框架很好地配合。 JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。 组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。 单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。 前端工程化 无解 虚拟 DOM 首先说说为什么要使用 Virturl DOM，因为操作真实 DOM 的耗费的性能代价太高，所以 react 内部使用 js 实现了一套 dom 结构，在每次操作在和真实 dom 之前，使用实现好的 diff 算法，对虚拟 dom 进行比较，递归找出有变化的 dom 节点，然后对其进行更新操作。为了实现虚拟 DOM，我们需要把每一种节点类型抽象成对象，每一种节点类型有自己的属性，也就是 prop，每次进行 diff 的时候，react 会先比较该节点类型，假如节点类型不一样，那么 react 会直接删除该节点，然后直接创建新的节点插入到其中，假如节点类型一样，那么会比较 prop 是否有更新，假如有 prop 不一样，那么 react 会判定该节点有更新，那么重渲染该节点，然后在对其子节点进行比较，一层一层往下，直到没有子节点。 基于 diff 算法的同级对比，它主要分为四种类型的对比，分别为: 新建 create： 新的 vd 中有这个节点，旧的没有 删除 remove： 新的 vd 中没有这个节点，旧的有 替换 replace： 新的 vd 的 tagName 和旧的 tagName 不同 更新 update： 除了上面三点外的不同，具体是比较 attributes 先，然后再比较 children 为什么要写 super(props) 为什么要写 jsx 为什么要打包 函数组件和 class 组件区别 new URL() this 指向 bind, apply, call 区别 const me = { a: 123 }; const he = { b: 456 }; function x() { console.log(this, arguments, this.a); } bind，返回函数的 copy 使用时要重新调用一次 参数形式， (this, arg1, arg2)\nx.bind(me, 2, 3).bind(he)(); // bind只生效一次！ // {a: 123} {'0': 2,'1': 3} 123 apply，返回函数的调用的结果 参数形式， (this, [arg1, arg2])\nx.apply(me, [2, 3]); // {a: 123} {'0': 2,'1': 3} 123 call，返回函数的调用的结果 参数形式， (this, arg1, arg2)\nx.call(me, 2, 3); // {a: 123} {'0': 2,'1': 3} 123 es6+ 变量提升 时间冒泡捕获 作用域 原型 闭包 闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其他作用域中被调用时也能保持对这些变量的访问权限。换句话说，闭包让你可以从内部函数访问外部函数的作用域。\n闭包的基本示例 function outer() { const message = \"Hello\"; function inner() { console.log(message); // 可以访问 outer 函数中的变量 } return inner; } const fn = outer(); fn(); // 输出: \"Hello\" 闭包的主要应用场景 数据私有化 function counter() { let count = 0; return { increment() { count++; return count; }, getCount() { return count; }, }; } const myCounter = counter(); console.log(myCounter.increment()); // 1 console.log(myCounter.increment()); // 2 console.log(myCounter.getCount()); // 2 函数工厂 function multiply(x) { return function (y) { return x * y; }; } const multiplyByTwo = multiply(2); console.log(multiplyByTwo(4)); // 8 模块化模式 const module = (function () { let privateVariable = 0; function privateMethod() { return privateVariable; } return { publicMethod: function () { privateVariable++; return privateMethod(); }, }; })(); 事件处理和回调 // 防抖：事件触发后延迟执行，若在延迟期间重复触发则重置延迟 function debounce(fn, delay) { let timer; return function (...args) { clearTimeout(timer); timer = setTimeout(() =\u003e fn.apply(this, args), delay); }; } // 节流：事件触发后在一段时间内只执行一次 function throttle(fn, interval) { let lastTime = 0; return function (...args) { const now = Date.now(); if (now - lastTime \u003e= interval) { fn.apply(this, args); lastTime = now; } }; } 柯里化（Currying） – function.length\nconsole.log(Function.length); // 1 console.log((() =\u003e {}).length); // 0 console.log(((a) =\u003e {}).length); // 1 console.log(((a, b) =\u003e {}).length); // 2，依此类推 console.log(((...args) =\u003e {}).length); // 0，剩余参数不计算在内 console.log(((a, b = 1, c) =\u003e {}).length); // 1，只计算第一个具有默认值的参数之前的参数 – 实现\nfunction curry(fn) { return function curried(...args) { if (args.length \u003e= fn.length) { return fn.apply(this, args); } return function (...moreArgs) { return curried.apply(this, args.concat(moreArgs)); }; }; } function add(a, b, c) { return a + b + c; } curry(add)(1)(2)(3); /* * 柯里化 相加 * */ function add(...argus) { // arguments是个对象 // let args = Array.prototype.slice.call(arguments); const args = argus; const inner = function (...innerArgs) { args.push(...innerArgs); return inner; }; inner.toString = function () { return args.reduce((acc, cur) =\u003e acc + cur, 0); }; inner.value = function () { return args.reduce((acc, cur) =\u003e acc + cur, 0); }; return inner; } // const result = add(1)(2)(3)(4)(5); const result = add(1, 2, 3, 4)(5); result.toString(); result.value(); 使用闭包需要注意的点 内存管理：闭包会保持对外部变量的引用，可能导致内存无法及时释放 this 指向：在闭包中使用 this 时需要特别注意其指向 性能考虑：过度使用闭包可能会影响性能 闭包是 JavaScript 中非常强大的特性，合理使用可以实现很多优雅的编程模式和解决方案。但同时也需要注意内存管理等问题，避免造成内存泄漏。\n普通函数 vs 箭头函数 const funA = () =\u003e { // this 指向 funA 的调用 // 没有 arguments // 不能new // 没有原型链 }; function funB(params) { // this 指向 函数内部 // 有 arguments; } this 指向 var test = \"王五\"; const outerFun = () =\u003e { this.test = \"张三\"; return () =\u003e { console.log(this.test); }; }; var obj = { test: \"李四\", innerFun: outerFun(), }; obj.innerFun(); var test = \"王五\"; function outFun() { this.test = \"张三\"; return function () { console.log(this.test); }; } var obj = { test: \"李四\", inFun: outFun(), }; obj.inFun(); var test = \"王五\"; var obj = { test: \"李四\", inFun() { console.log(this.test); }, }; obj.inFun(); var test = \"王五\"; var obj = { test: \"李四\", inFun: () =\u003e { console.log(this.test); }, }; obj.inFun(); let test = \"王五\"; let obj = { test: \"李四\", inFun: () =\u003e { console.log(this.test); }, }; obj.inFun(); ",
+  "wordCount" : "847",
+  "inLanguage": "en",
+  "datePublished": "2022-09-01T20:20:27+08:00",
+  "dateModified": "2022-09-01T20:20:27+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "huing"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://huing.github.io/posts/javascript/base/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "huing的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://huing.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://huing.github.io/" accesskey="h" title="huing的博客 (Alt + H)">huing的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://huing.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://huing.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://huing.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Base
+    </h1>
+    <div class="post-meta"><span title='2022-09-01 20:20:27 +0800 CST'>2022-09-01</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;847 words&nbsp;·&nbsp;huing
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#this-指向">this 指向</a></li>
+        <li><a href="#bind-apply-call-区别">bind, apply, call 区别</a></li>
+        <li><a href="#es6">es6+</a></li>
+        <li><a href="#变量提升">变量提升</a></li>
+        <li><a href="#时间冒泡捕获">时间冒泡捕获</a></li>
+        <li><a href="#作用域">作用域</a></li>
+        <li><a href="#原型">原型</a></li>
+        <li><a href="#闭包">闭包</a></li>
+        <li><a href="#普通函数-vs-箭头函数">普通函数 vs 箭头函数</a></li>
+        <li><a href="#this-指向-1">this 指向</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h4 id="浅拷贝方法">浅拷贝方法<a hidden class="anchor" aria-hidden="true" href="#浅拷贝方法">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">slice</span>()
+</span></span><span style="display:flex;"><span>Object.<span style="color:#a6e22e">assign</span>({}, <span style="color:#a6e22e">a</span>)
+</span></span><span style="display:flex;"><span>...<span style="color:#a6e22e">rest</span>
+</span></span></code></pre></div><h4 id="获取浏览器信息-navigator">获取浏览器信息 navigator<a hidden class="anchor" aria-hidden="true" href="#获取浏览器信息-navigator">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">userAgent</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">language</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// &#34;zh-CN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">languages</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;]
+</span></span></span></code></pre></div><h4 id="settimeout-实际延时比设定值更久的原因">setTimeOut 实际延时比设定值更久的原因<a hidden class="anchor" aria-hidden="true" href="#settimeout-实际延时比设定值更久的原因">#</a></h4>
+<ul>
+<li>最小延迟时间</li>
+<li>时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。</li>
+</ul>
+<h4 id="字面量-literals">字面量 Literals<a hidden class="anchor" aria-hidden="true" href="#字面量-literals">#</a></h4>
+<ul>
+<li>
+<p>数组字面量 Array literals</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">fish</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Lion&#34;</span>, , <span style="color:#e6db74">&#34;Angel&#34;</span>]; <span style="color:#75715e">// fish[1] = undefined
+</span></span></span></code></pre></div></li>
+<li>
+<p>布尔字面量 Boobean literals</p>
+</li>
+<li>
+<p>浮点数字面量 Floating-point literals</p>
+</li>
+<li>
+<p>整数 Integers</p>
+</li>
+<li>
+<p>对象字面量 Object literals</p>
+</li>
+<li>
+<p>RegExp literals</p>
+</li>
+<li>
+<p>字符串字面量 String literals</p>
+</li>
+<li>
+<p>模板字面量 Template literals</p>
+</li>
+</ul>
+<h4 id="bom-浏览器对象模型">BOM 浏览器对象模型<a hidden class="anchor" aria-hidden="true" href="#bom-浏览器对象模型">#</a></h4>
+<h4 id="dom-虚拟对象模型">DOM 虚拟对象模型<a hidden class="anchor" aria-hidden="true" href="#dom-虚拟对象模型">#</a></h4>
+<ul>
+<li>parse stringify</li>
+<li>parse() 方法可解析一个日期时间字符串，并返回 1970/1/1 午夜距离该日期时间的毫秒数。</li>
+<li>JSON.parse() 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象</li>
+<li>JSON.stringify() 方法是将一个 JavaScript 值(对象或者数组)转换为一个 JSON 字符串</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> Date(),
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">new</span> Date()).<span style="color:#a6e22e">toString</span>(),
+</span></span><span style="display:flex;"><span>    (<span style="color:#66d9ef">new</span> Date()).<span style="color:#a6e22e">valueOf</span>(),
+</span></span><span style="display:flex;"><span>    Date.<span style="color:#a6e22e">now</span>(),
+</span></span><span style="display:flex;"><span>    Date.<span style="color:#a6e22e">parse</span>(<span style="color:#66d9ef">new</span> Date())
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">Wed</span> <span style="color:#a6e22e">Aug</span> <span style="color:#ae81ff">28</span> <span style="color:#ae81ff">2019</span> <span style="color:#ae81ff">14</span><span style="color:#f92672">:</span><span style="color:#ae81ff">35</span><span style="color:#f92672">:</span><span style="color:#ae81ff">22</span> <span style="color:#a6e22e">GMT</span><span style="color:#f92672">+</span><span style="color:#ae81ff">0800</span> (<span style="color:#a6e22e">中国标准时间</span>) <span style="color:#e6db74">&#34;Wed Aug 28 2019 14:35:22 GMT+0800 (中国标准时间)&#34;</span> <span style="color:#ae81ff">1566974122905</span> <span style="color:#ae81ff">1566974122905</span> <span style="color:#ae81ff">1566974122000</span>
+</span></span></code></pre></div><h4 id="js-中--vs-">js 中 === vs ==<a hidden class="anchor" aria-hidden="true" href="#js-中--vs-">#</a></h4>
+<ul>
+<li>严格相等 ===</li>
+<li>宽松相等 ==</li>
+<li>Object.is(val1, val2)
+<img alt="equal" loading="lazy" src="../../public/pCyqkLc.png"></li>
+</ul>
+<h4 id="父组件调用子组件方法子组件向父组件传值方法">父组件调用子组件方法，子组件向父组件传值方法<a hidden class="anchor" aria-hidden="true" href="#父组件调用子组件方法子组件向父组件传值方法">#</a></h4>
+<ul>
+<li>子组件向父组件传值方法
+<ul>
+<li>把子组件的值当成参数，传递到父组件的作用域</li>
+</ul>
+</li>
+<li>父组件调用子组件方法</li>
+<li>props<a href="http://taobaofed.org/blog/2016/11/17/react-components-communication/">http://taobaofed.org/blog/2016/11/17/react-components-communication/</a></li>
+<li>Context 通过组件树提供了一个传递数据的方法，从而避免了在每一个层级手动的传递 props 属性。</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">Provider</span>, <span style="color:#a6e22e">Consumer</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">React</span>.<span style="color:#a6e22e">createContext</span>(<span style="color:#a6e22e">defaultValue</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Provider</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span>{<span style="color:#75715e">/* some value */</span>}<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Consumer</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  {<span style="color:#a6e22e">value</span> =&gt; <span style="color:#75715e">/* render something based on the context value */</span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/Consumer&gt;</span>
+</span></span></code></pre></div><h4 id="react-重复渲染-svg">React 重复渲染 SVG<a hidden class="anchor" aria-hidden="true" href="#react-重复渲染-svg">#</a></h4>
+<ul>
+<li>无答案</li>
+</ul>
+<h4 id="react-是什么特点">React 是什么，特点<a hidden class="anchor" aria-hidden="true" href="#react-是什么特点">#</a></h4>
+<ul>
+<li>用于构建用户界面的 JavaScript 库</li>
+</ul>
+<ol>
+<li>声明式设计 −React 采用声明范式，可以轻松描述应用。</li>
+<li>高效 −React 通过对 DOM 的模拟，最大限度地减少与 DOM 的交互。</li>
+<li>灵活 −React 可以与已知的库或框架很好地配合。</li>
+<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ol>
+<h4 id="前端工程化">前端工程化<a hidden class="anchor" aria-hidden="true" href="#前端工程化">#</a></h4>
+<ul>
+<li>无解</li>
+</ul>
+<h4 id="虚拟-dom">虚拟 DOM<a hidden class="anchor" aria-hidden="true" href="#虚拟-dom">#</a></h4>
+<ul>
+<li>首先说说为什么要使用 Virturl DOM，因为操作真实 DOM 的耗费的性能代价太高，所以 react 内部使用 js 实现了一套 dom 结构，在每次操作在和真实 dom 之前，使用实现好的 diff 算法，对虚拟 dom 进行比较，递归找出有变化的 dom 节点，然后对其进行更新操作。为了实现虚拟 DOM，我们需要把每一种节点类型抽象成对象，每一种节点类型有自己的属性，也就是 prop，每次进行 diff 的时候，react 会先比较该节点类型，假如节点类型不一样，那么 react 会直接删除该节点，然后直接创建新的节点插入到其中，假如节点类型一样，那么会比较 prop 是否有更新，假如有 prop 不一样，那么 react 会判定该节点有更新，那么重渲染该节点，然后在对其子节点进行比较，一层一层往下，直到没有子节点。
+基于 diff 算法的同级对比，它主要分为四种类型的对比，分别为:
+<ol>
+<li>新建 create： 新的 vd 中有这个节点，旧的没有</li>
+<li>删除 remove： 新的 vd 中没有这个节点，旧的有</li>
+<li>替换 replace： 新的 vd 的 tagName 和旧的 tagName 不同</li>
+<li>更新 update： 除了上面三点外的不同，具体是比较 attributes 先，然后再比较 children</li>
+</ol>
+</li>
+</ul>
+<h4 id="为什么要写-superprops">为什么要写 super(props)<a hidden class="anchor" aria-hidden="true" href="#为什么要写-superprops">#</a></h4>
+<h4 id="为什么要写-jsx">为什么要写 jsx<a hidden class="anchor" aria-hidden="true" href="#为什么要写-jsx">#</a></h4>
+<h4 id="为什么要打包">为什么要打包<a hidden class="anchor" aria-hidden="true" href="#为什么要打包">#</a></h4>
+<h4 id="函数组件和-class-组件区别">函数组件和 class 组件区别<a hidden class="anchor" aria-hidden="true" href="#函数组件和-class-组件区别">#</a></h4>
+<h4 id="new-url">new URL()<a hidden class="anchor" aria-hidden="true" href="#new-url">#</a></h4>
+<h3 id="this-指向">this 指向<a hidden class="anchor" aria-hidden="true" href="#this-指向">#</a></h3>
+<h3 id="bind-apply-call-区别">bind, apply, call 区别<a hidden class="anchor" aria-hidden="true" href="#bind-apply-call-区别">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">me</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">a</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">123</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">he</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">b</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">456</span> };
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">x</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">a</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>bind，返回函数的 copy
+<strong>使用时要重新调用一次</strong>
+参数形式， (this, arg1, arg2)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">me</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>).<span style="color:#a6e22e">bind</span>(<span style="color:#a6e22e">he</span>)(); <span style="color:#75715e">// bind只生效一次！
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123
+</span></span></span></code></pre></div><p>apply，返回函数的调用的结果
+参数形式， (this, [arg1, arg2])</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#a6e22e">me</span>, [<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123
+</span></span></span></code></pre></div><p>call，返回函数的调用的结果
+参数形式， (this, arg1, arg2)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">x</span>.<span style="color:#a6e22e">call</span>(<span style="color:#a6e22e">me</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// {a: 123} {&#39;0&#39;: 2,&#39;1&#39;: 3} 123
+</span></span></span></code></pre></div><h3 id="es6">es6+<a hidden class="anchor" aria-hidden="true" href="#es6">#</a></h3>
+<h3 id="变量提升">变量提升<a hidden class="anchor" aria-hidden="true" href="#变量提升">#</a></h3>
+<h3 id="时间冒泡捕获">时间冒泡捕获<a hidden class="anchor" aria-hidden="true" href="#时间冒泡捕获">#</a></h3>
+<h3 id="作用域">作用域<a hidden class="anchor" aria-hidden="true" href="#作用域">#</a></h3>
+<h3 id="原型">原型<a hidden class="anchor" aria-hidden="true" href="#原型">#</a></h3>
+<h3 id="闭包">闭包<a hidden class="anchor" aria-hidden="true" href="#闭包">#</a></h3>
+<p>闭包（Closure）是 JavaScript 中一个重要的概念，指的是一个函数可以访问其外部作用域中的变量，即使在该函数在其他作用域中被调用时也能保持对这些变量的访问权限。换句话说，闭包让你可以从内部函数访问外部函数的作用域。</p>
+<h4 id="闭包的基本示例">闭包的基本示例<a hidden class="anchor" aria-hidden="true" href="#闭包的基本示例">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outer</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inner</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">message</span>); <span style="color:#75715e">// 可以访问 outer 函数中的变量
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">inner</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fn</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">outer</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fn</span>(); <span style="color:#75715e">// 输出: &#34;Hello&#34;
+</span></span></span></code></pre></div><h4 id="闭包的主要应用场景">闭包的主要应用场景<a hidden class="anchor" aria-hidden="true" href="#闭包的主要应用场景">#</a></h4>
+<ol>
+<li><strong>数据私有化</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">counter</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">increment</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">getCount</span>() {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myCounter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">counter</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myCounter</span>.<span style="color:#a6e22e">increment</span>()); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myCounter</span>.<span style="color:#a6e22e">increment</span>()); <span style="color:#75715e">// 2
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">myCounter</span>.<span style="color:#a6e22e">getCount</span>()); <span style="color:#75715e">// 2
+</span></span></span></code></pre></div><ol start="2">
+<li><strong>函数工厂</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">multiply</span>(<span style="color:#a6e22e">x</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">y</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">y</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">multiplyByTwo</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">multiply</span>(<span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">multiplyByTwo</span>(<span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// 8
+</span></span></span></code></pre></div><ol start="3">
+<li><strong>模块化模式</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">module</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">privateVariable</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">privateMethod</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">privateVariable</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">publicMethod</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">privateVariable</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">privateMethod</span>();
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre></div><ol start="4">
+<li><strong>事件处理和回调</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 防抖：事件触发后延迟执行，若在延迟期间重复触发则重置延迟
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">debounce</span>(<span style="color:#a6e22e">fn</span>, <span style="color:#a6e22e">delay</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">timer</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> (...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">clearTimeout</span>(<span style="color:#a6e22e">timer</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">timer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setTimeout</span>(() =&gt; <span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>), <span style="color:#a6e22e">delay</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 节流：事件触发后在一段时间内只执行一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">throttle</span>(<span style="color:#a6e22e">fn</span>, <span style="color:#a6e22e">interval</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lastTime</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> (...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">now</span> <span style="color:#f92672">=</span> Date.<span style="color:#a6e22e">now</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">now</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">lastTime</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">interval</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">lastTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">now</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ol start="5">
+<li><strong>柯里化（Currying）</strong></li>
+</ol>
+<p>&ndash; function.length</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(Function.<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>((() =&gt; {}).<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(((<span style="color:#a6e22e">a</span>) =&gt; {}).<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; {}).<span style="color:#a6e22e">length</span>); <span style="color:#75715e">// 2，依此类推
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(((...<span style="color:#a6e22e">args</span>) =&gt; {}).<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 0，剩余参数不计算在内
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(((<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, <span style="color:#a6e22e">c</span>) =&gt; {}).<span style="color:#a6e22e">length</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 1，只计算第一个具有默认值的参数之前的参数
+</span></span></span></code></pre></div><p>&ndash; 实现</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">curry</span>(<span style="color:#a6e22e">fn</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">curried</span>(...<span style="color:#a6e22e">args</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">length</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fn</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> (...<span style="color:#a6e22e">moreArgs</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">curried</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">moreArgs</span>));
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>, <span style="color:#a6e22e">c</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">c</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">curry</span>(<span style="color:#a6e22e">add</span>)(<span style="color:#ae81ff">1</span>)(<span style="color:#ae81ff">2</span>)(<span style="color:#ae81ff">3</span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * 柯里化 相加
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> * */</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">add</span>(...<span style="color:#a6e22e">argus</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// arguments是个对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// let args = Array.prototype.slice.call(arguments);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">args</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">argus</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">inner</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> (...<span style="color:#a6e22e">innerArgs</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">push</span>(...<span style="color:#a6e22e">innerArgs</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">inner</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner</span>.<span style="color:#a6e22e">toString</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">cur</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cur</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inner</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">args</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">cur</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">cur</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">inner</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// const result = add(1)(2)(3)(4)(5);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">result</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>)(<span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">toString</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">result</span>.<span style="color:#a6e22e">value</span>();
+</span></span></code></pre></div><h4 id="使用闭包需要注意的点">使用闭包需要注意的点<a hidden class="anchor" aria-hidden="true" href="#使用闭包需要注意的点">#</a></h4>
+<ol>
+<li><strong>内存管理</strong>：闭包会保持对外部变量的引用，可能导致内存无法及时释放</li>
+<li><strong>this 指向</strong>：在闭包中使用 this 时需要特别注意其指向</li>
+<li><strong>性能考虑</strong>：过度使用闭包可能会影响性能</li>
+</ol>
+<p>闭包是 JavaScript 中非常强大的特性，合理使用可以实现很多优雅的编程模式和解决方案。但同时也需要注意内存管理等问题，避免造成内存泄漏。</p>
+<h3 id="普通函数-vs-箭头函数">普通函数 vs 箭头函数<a hidden class="anchor" aria-hidden="true" href="#普通函数-vs-箭头函数">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">funA</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// this 指向 funA 的调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 没有 arguments
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 不能new
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 没有原型链
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">funB</span>(<span style="color:#a6e22e">params</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// this 指向 函数内部
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// 有 arguments;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="this-指向-1">this 指向<a hidden class="anchor" aria-hidden="true" href="#this-指向-1">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;王五&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outerFun</span> <span style="color:#f92672">=</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;张三&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;李四&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">innerFun</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">outerFun</span>(),
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">innerFun</span>();
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;王五&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outFun</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;张三&#34;</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span>);
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;李四&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inFun</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">outFun</span>(),
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">inFun</span>();
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;王五&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;李四&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inFun</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span>);
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">inFun</span>();
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;王五&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;李四&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inFun</span><span style="color:#f92672">:</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span>);
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">inFun</span>();
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">test</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;王五&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">test</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;李四&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">inFun</span><span style="color:#f92672">:</span> () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">test</span>);
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">inFun</span>();
+</span></span></code></pre></div>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://huing.github.io/tags/javascript/">JavaScript</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://huing.github.io/posts/javascript/array/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Array</span>
+  </a>
+  <a class="next" href="https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Clone正则</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on x"
+            href="https://x.com/intent/tweet/?text=Base&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f&amp;hashtags=JavaScript">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f&amp;title=Base&amp;summary=Base&amp;source=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f&title=Base">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on whatsapp"
+            href="https://api.whatsapp.com/send?text=Base%20-%20https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on telegram"
+            href="https://telegram.me/share/url?text=Base&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Base on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Base&u=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2fbase%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://huing.github.io/">huing的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TypeScript on huing的博客</title>
+    <link>https://huing.github.io/tags/typescript/</link>
+    <description>Recent content in TypeScript on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Dec 2024 16:50:50 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typescript</title>
+      <link>https://huing.github.io/posts/typescript/</link>
+      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
+      <guid>https://huing.github.io/posts/typescript/</guid>
+      <description>基础类型 布尔值（boolean） 可选类型 true/false
+let booleanExample: boolean = false; 数字（number） 可选类型 number
+let numberExample: number = 6; 字符串（string） 可选类型 string
+let stringExample: string = &amp;#34;Demo&amp;#34;; let stringTemplate: string = `template${Demo}`; void void 表示没有任何类型
+function sayHi(): void { console.log(&amp;#34;Hi!&amp;#34;); } let nothing: void = undefined; let unusable: void = null; // 不能将类型“null”分配给类型“void” let num: void = 1; // Error: 不能将类型“number”分配给类型“void” null 和 undefined let u: undefined = undefined; let n: null = null; 默认情况下 null 和 undefined 是所有类型的子类型。 就是说你可以把 null 和 undefined 赋值给 number 类型的变量。 然而，当你指定了 strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们各自。 许在某处你想传入一个 string 或 null 或 undefined，可以使用联合类型 string | null | undefined</description>
+    </item>
+  </channel>
+</rss>

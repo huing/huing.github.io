@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CSS on huing的博客</title>
+    <link>https://huing.github.io/tags/css/</link>
+    <description>Recent content in CSS on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 06:55:26 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>基本语法</title>
+      <link>https://huing.github.io/posts/css/</link>
+      <pubDate>Tue, 03 Sep 2024 06:55:26 +0800</pubDate>
+      <guid>https://huing.github.io/posts/css/</guid>
+      <description>line-height 如何继承 line-height 具体值 30px 子元素继承该值
+line-height 比例 1.5 子元素继承该比例
+line-height 百分比 200% 子元素继承 父元素 font-size * 200% 的值
+css 值与单位 绝对长度单位 与任何东西都没有关系 cm mm pt: 点 px: 像素 相对长度单位 em: 在 font-size 中使用是相对于父元素的字体大小，在其他属性中使用是相对于自身的字体大小，如 width rem: 根元素的字体大小 设置 html 字体的大小为百分比 用 js 动态设置 html 字体大小 浏览器默认字体大小 16px,最小 12px,css3 并未提及 字重
+100 - Thin 200 - Extra Light (Ultra Light) 300 - Light 400 - Normal 500 - Medium 600 - Semi Bold (Demi Bold) 700 - Bold 800 - Extra Bold (Ultra Bold) 900 - Black (Heavy)</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>JavaScript | huing的博客</title>
+<meta name="keywords" content="">
+<meta name="description" content="huing的个人博客">
+<meta name="author" content="huing">
+<link rel="canonical" href="https://huing.github.io/tags/javascript/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fbdbe883ca626e8b61876263e9d63faf275b95fd7f85b6d38fd7f4c863d14329.css" integrity="sha256-&#43;9vog8pibothh2Jj6dY/rydblf1/hbbTj9f0yGPRQyk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://huing.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://huing.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://huing.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://huing.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://huing.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://huing.github.io/tags/javascript/index.xml">
+<link rel="alternate" hreflang="en" href="https://huing.github.io/tags/javascript/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://huing.github.io/tags/javascript/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="JavaScript">
+  <meta property="og:description" content="huing的个人博客">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:description" content="huing的个人博客">
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://huing.github.io/" accesskey="h" title="huing的博客 (Alt + H)">huing的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://huing.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header"><div class="breadcrumbs"><a href="https://huing.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://huing.github.io/tags/">Tags</a></div>
+  <h1>
+    JavaScript
+    <a href="/tags/javascript/index.xml" title="RSS" aria-label="RSS">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">预加载和onload
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>预加载 和 window.onload 的区别 使用 预加载关键资源 &lt;link rel=&#34;preload&#34; href=&#34;/styles/main.css&#34; as=&#34;style&#34;&gt; &lt;link rel=&#34;preload&#34; href=&#34;/script/main.js&#34; as=&#34;script&#34;&gt; 图片预加载 const img = new Image(); img.src = &#34;图片URL&#34;; // 提前加载图片到缓存 脚本预加载 使用 async 属性：并行请求脚本，尽快解析和执行 使用 defer 属性：在文档解析后、DOMContentLoaded 事件前执行 DOMContentLoaded 事件 DOMContentLoaded 事件在 DOM 树构建完成后立即触发,此时:
+HTML 已经被完全加载和解析 DOM 树已经构建完成 外部资源(如图片、样式表等)可能还未完全加载 必须使用 addEventListener 来监听该事件 示例代码:
+document.addEventListener(&#34;DOMContentLoaded&#34;, function () { // DOM 已准备就绪,可以安全地操作 DOM 元素 console.log(&#34;DOM 已加载完成&#34;); }); window.onload 事件 window.onload 事件会在页面完全加载后触发,包括:
+DOM 树构建完成 所有外部资源加载完成(图片、样式表、脚本等) 所有 iframe 加载完成 示例代码:...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-03 13:50:59 +0800 CST'>2025-04-03</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;310 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 预加载和onload" href="https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">事件循环
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-03 07:43:15 +0800 CST'>2025-04-03</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;160 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 事件循环" href="https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Stack
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Queue 先进先出 class Queue { constructor() { this.items = []; // 用于存储队列元素的数组 } // 入队方法 - 在队列尾部添加元素 enqueue(element) { this.items.push(element); } // 出队方法 - 移除并返回队列头部的元素 dequeue() { if (this.isEmpty()) { return &#34;队列为空&#34;; } return this.items.shift(); } // 查看队列头部的元素 peek() { if (this.isEmpty()) { return &#34;队列为空&#34;; } return this.items[0]; } // 检查队列是否为空 isEmpty() { return this.items.length === 0; } // 返回队列的大小 size() { return this.items.length; } // 清空队列 clear() { this.items = []; } // 打印队列内容 print() { console....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-24 14:11:14 +0800 CST'>2025-03-24</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;263 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Stack" href="https://huing.github.io/posts/javascript/stack/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">EventBus
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>实现一个 EventBus 发布/订阅设计模式 EventBus 是 一个事件总线，它允许多个组件之间进行通信。 在 javascript 中，我们可以使用一个类来表示 EventBus。
+class EventBus { constructor() { this.events = {}; } on(eventName, callback) { if (!this.events[eventName]) { this.events[eventName] = []; } this.events[eventName].push(callback); } off(eventName, callback) { if (!this.events[eventName]) { return; } if (callback) { this.events[eventName] = this.events[eventName].filter( (cb) =&gt; cb !== callback ); } else { delete this.events[eventName]; } } emit(eventName, ...args) { if (!this.events[eventName]) { return; } this.events[eventName].forEach((callback) =&gt; { callback(...args); }); } once(eventName, callback) { const onceCallback = (....</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-03-19 09:34:28 +0800 CST'>2025-03-19</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;89 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to EventBus" href="https://huing.github.io/posts/javascript/eventbus/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">接口请求
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>ajax
+fetch
+keep-alive
+navigator.setbean</p>
+  </div>
+  <footer class="entry-footer"><span title='2024-09-03 07:01:20 +0800 CST'>2024-09-03</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;4 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 接口请求" href="https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">对象
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Map 类型 Map // ✅ Initialize Map from Array // 👇️ const map1: Map&lt;string, string&gt; const map1: Map&lt;string, string&gt; = new Map([ [&#34;name&#34;, &#34;Tom&#34;], [&#34;country&#34;, &#34;Chile&#34;], ]); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &#34;Tom&#34;, country: &#34;Chile&#34; }; const map2 = new Map&lt;string, string&gt;(Object.entries(obj)); // 👇️ {&#39;name&#39; =&gt; &#39;Tom&#39;, &#39;country&#39; =&gt; &#39;Chile&#39;} console.log(map2); objects vs maps 意外的键...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-04 12:37:25 +0800 CST'>2022-09-04</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;498 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 对象" href="https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Promise实现
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>promise 实现 class Commitment { static PENDING = &#34;待定&#34;; static FULFILLED = &#34;成功&#34;; static REJECTED = &#34;拒绝&#34;; private status: &#34;PENDING&#34; | &#34;FULFILLED&#34; | &#34;REJECTED&#34;; private result: any; constructor(func: (resolve: (value: any) =&gt; void, reject: (reason?: any) =&gt; void) =&gt; void) { this.status = &#34;PENDING&#34;; this.result = undefined; try { func(this.resolve.bind(this), this.reject.bind(this)); } catch (e) { this.reject(e); } } resolve(value: any) { if (this.status === &#34;PENDING&#34;) { this.status = &#34;FULFILLED&#34;; this.result = value; } } reject(reason?...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-02 21:59:01 +0800 CST'>2022-09-02</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;387 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Promise实现" href="https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">原型链理解
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>基于原型链的继承 继承属性 // 让我们从一个函数里创建一个对象 o，它自身拥有属性 a 和 b 的： let f = function () { this.a = 1; this.b = 2; }; /_这么写也一样 function f() { this.a = 1; this.b = 2; } _/ let o = new f(); // {a: 1, b: 2}
+// 在 f 函数的原型上定义属性 f.prototype.b = 3; f.prototype.c = 4;
+// 不要在 f 函数的原型上直接定义 f.prototype = {b:3,c:4};这样会直接打破原型链 // 综上，整个原型链如下： // {a:1, b:2} —&gt; {b:3, c:4} —&gt; Object....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-02 21:59:01 +0800 CST'>2022-09-02</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;203 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to 原型链理解" href="https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Array
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，并返回该数组的引用，同时改变原数组 const sourceArray = [&#34;one&#34;, &#34;two&#34;, &#34;three&#34;]; const reverseArray = sourceArray.reverse(); sourceArray === reverseArray; // true shift() 删除数组第一个元素，并返回删除的元素值 sort() splice() 删除或新增元素，返回修改后的数组，改变原数组 unshift() 添加元素到数组的头部 返回 length 属性值 访问方法 返回新数组 concat() 将数组和/或值连接成新数组，对于对象引用的值修改会修改原数组 const arr = [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;]; const al = arr.concat(1, [2, 3]); console.log(al); // [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, 1, 2, 3] includes() join() slice() [begin, end) 对于对象引用的值修改会修改原数组 toString() {}.toString() // 报错 没有原型链了吧 []....</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-01 20:21:47 +0800 CST'>2022-09-01</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;181 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Array" href="https://huing.github.io/posts/javascript/array/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Base
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&#34; navigator.language; // &#34;zh-CN&#34; navigator.languages; // [&#34;zh-CN&#34;, &#34;zh&#34;, &#34;fr-CA&#34;, &#34;fr&#34;, &#34;fr-CH&#34;, &#34;fr-FR&#34;, &#34;en&#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&#34;Lion&#34;, , &#34;Angel&#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-09-01 20:20:27 +0800 CST'>2022-09-01</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;847 words&nbsp;·&nbsp;huing</footer>
+  <a class="entry-link" aria-label="post link to Base" href="https://huing.github.io/posts/javascript/base/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://huing.github.io/tags/javascript/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://huing.github.io/">huing的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

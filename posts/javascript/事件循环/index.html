@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>事件循环 | huing的博客</title>
+<meta name="keywords" content="JavaScript">
+<meta name="description" content="什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.">
+<meta name="author" content="huing">
+<link rel="canonical" href="https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.fbdbe883ca626e8b61876263e9d63faf275b95fd7f85b6d38fd7f4c863d14329.css" integrity="sha256-&#43;9vog8pibothh2Jj6dY/rydblf1/hbbTj9f0yGPRQyk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://huing.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://huing.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://huing.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://huing.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://huing.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+  
+
+<meta property="og:url" content="https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/">
+  <meta property="og:site_name" content="huing的博客">
+  <meta property="og:title" content="事件循环">
+  <meta property="og:description" content="什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-03T07:43:15+08:00">
+    <meta property="article:modified_time" content="2025-04-03T07:43:15+08:00">
+    <meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="事件循环">
+<meta name="twitter:description" content="什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://huing.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "事件循环",
+      "item": "https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "事件循环",
+  "name": "事件循环",
+  "description": "什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。\n线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。\n进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。\n核心概念 调用栈(Call Stack)\nJavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)\n存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)\n存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：\nV8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：\nscript(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.",
+  "keywords": [
+    "JavaScript"
+  ],
+  "articleBody": "什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。\n线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。\n进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。\n核心概念 调用栈(Call Stack)\nJavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)\n存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)\n存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：\nV8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：\nscript(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.js 环境) requestAnimationFrame (浏览器环境) I/O 操作 UI 渲染 DOM 事件 微任务(MicroTask) 微任务是一种需要异步执行的任务，它的执行时机是在当前宏任务结束之后，下一个宏任务开始之前。\nPromise.then/catch/finally process.nextTick(Node.js 环境) MutationObserver 回调 queueMicrotask() 执行优先级 同步代码优先执行 执行当前的宏任务 执行当前宏任务产生的所有微任务 如果微任务执行过程中产生新的微任务，继续执行完所有微任务 当前宏任务结束，微任务队列清空 开始下一个宏任务 每个宏任务之间可能会进行 UI 渲染 示例代码 执行第一个宏任务：script(整体代码) 执行过程中同步代码直接执行 遇到微任务添加到微任务队列 遇到宏任务添加到宏任务队列 当前宏任务执行完毕后，立即执行所有微任务 微任务执行完毕后，开始下一个宏任务 // 这是第一个宏任务：script(整体代码) console.log(\"script start\"); // 同步代码 setTimeout(() =\u003e { console.log(\"setTimeout\"); // 宏任务 }, 0); Promise.resolve() .then(() =\u003e { console.log(\"promise1\"); // 微任务 }) .then(() =\u003e { console.log(\"promise2\"); // 微任务 }); console.log(\"script end\"); // 同步代码 注意事项 JavaScript 是单线程语言，但浏览器是多线程的 事件循环确保了异步操作不会阻塞主线程 微任务优先级高于宏任务 过多的同步操作或长时间运行的任务会阻塞 UI 渲染 Node.js 的事件循环与浏览器有所不同 为什么需要区分宏任务和微任务？ 这是 JavaScript 在语言设计上对实时性和效率的权衡：\n当宏任务执行时间过长时，会影响后续任务的执行 某些任务需要在下一轮事件循环之前完成，以提高实时性 微任务提供了一种在当前宏任务结束之前执行异步代码的机制 有助于控制代码执行顺序，优化性能 ",
+  "wordCount" : "160",
+  "inLanguage": "en",
+  "datePublished": "2025-04-03T07:43:15+08:00",
+  "dateModified": "2025-04-03T07:43:15+08:00",
+  "author":{
+    "@type": "Person",
+    "name": "huing"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "huing的博客",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://huing.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://huing.github.io/" accesskey="h" title="huing的博客 (Alt + H)">huing的博客</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://huing.github.io/" title="首页">
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/search/" title="搜索">
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://huing.github.io/about/" title="关于">
+                    <span>关于</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="https://huing.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://huing.github.io/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      事件循环
+    </h1>
+    <div class="post-meta"><span title='2025-04-03 07:43:15 +0800 CST'>2025-04-03</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;160 words&nbsp;·&nbsp;huing
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#什么是进程什么是线程">什么是进程，什么是线程</a>
+      <ul>
+        <li><a href="#进程特点">进程特点</a></li>
+        <li><a href="#线程特点">线程特点</a></li>
+        <li><a href="#进程与线程的关系">进程与线程的关系</a></li>
+      </ul>
+    </li>
+    <li><a href="#事件循环-event-loop">事件循环 Event Loop</a>
+      <ul>
+        <li><a href="#核心概念">核心概念</a></li>
+        <li><a href="#事件循环的执行流程">事件循环的执行流程</a></li>
+        <li><a href="#任务类型">任务类型</a></li>
+        <li><a href="#执行优先级">执行优先级</a></li>
+        <li><a href="#示例代码">示例代码</a></li>
+        <li><a href="#注意事项">注意事项</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h2 id="什么是进程什么是线程">什么是进程，什么是线程<a hidden class="anchor" aria-hidden="true" href="#什么是进程什么是线程">#</a></h2>
+<p>进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。</p>
+<p>线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。</p>
+<h3 id="进程特点">进程特点<a hidden class="anchor" aria-hidden="true" href="#进程特点">#</a></h3>
+<ul>
+<li>独立的内存空间：每个进程都有自己独立的内存空间，互不干扰</li>
+<li>拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等</li>
+<li>相互独立：一个进程的崩溃通常不会影响其他进程</li>
+<li>通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等</li>
+<li>创建和销毁开销大：需要分配和回收系统资源</li>
+</ul>
+<h3 id="线程特点">线程特点<a hidden class="anchor" aria-hidden="true" href="#线程特点">#</a></h3>
+<ul>
+<li>共享所属进程的内存空间：同一进程内的线程共享进程的内存空间</li>
+<li>共享进程资源：共享进程的代码段、数据段等资源</li>
+<li>执行开销小：创建和切换线程的成本远低于进程</li>
+<li>通信方便：线程间可以直接读写进程的共享数据</li>
+<li>相互影响：一个线程崩溃可能导致整个进程崩溃</li>
+</ul>
+<h3 id="进程与线程的关系">进程与线程的关系<a hidden class="anchor" aria-hidden="true" href="#进程与线程的关系">#</a></h3>
+<ul>
+<li>一个进程至少包含一个线程（主线程）</li>
+<li>线程是进程中的实际执行单位</li>
+<li>同一进程中的线程共享进程的资源</li>
+<li>进程是资源分配的最小单位，线程是 CPU 调度的最小单位</li>
+</ul>
+<h2 id="事件循环-event-loop">事件循环 Event Loop<a hidden class="anchor" aria-hidden="true" href="#事件循环-event-loop">#</a></h2>
+<p>事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。</p>
+<h3 id="核心概念">核心概念<a hidden class="anchor" aria-hidden="true" href="#核心概念">#</a></h3>
+<ol>
+<li>
+<p><strong>调用栈(Call Stack)</strong></p>
+<ul>
+<li>JavaScript 代码执行的地方</li>
+<li>函数调用形成栈帧</li>
+<li>遵循后进先出(LIFO)原则</li>
+<li>同一时间只能执行一个任务</li>
+</ul>
+</li>
+<li>
+<p><strong>堆(Heap)</strong></p>
+<ul>
+<li>存储对象的内存区域</li>
+<li>代码运行时分配的内存空间</li>
+<li>由垃圾回收器管理</li>
+</ul>
+</li>
+<li>
+<p><strong>任务队列(Task Queue)</strong></p>
+<ul>
+<li>存储待执行的回调函数</li>
+<li>遵循先进先出(FIFO)原则</li>
+<li>分为宏任务队列和微任务队列</li>
+</ul>
+</li>
+</ol>
+<h3 id="事件循环的执行流程">事件循环的执行流程<a hidden class="anchor" aria-hidden="true" href="#事件循环的执行流程">#</a></h3>
+<ol>
+<li>执行同步代码，同步代码进入调用栈立即执行</li>
+<li>遇到异步任务时，将其交给相应的 Web API 处理</li>
+<li>Web API 处理完成后，将回调函数放入任务队列</li>
+<li>当调用栈为空时，事件循环检查任务队列</li>
+<li>将任务队列中的任务按顺序放入调用栈执行</li>
+<li>重复以上步骤</li>
+</ol>
+<h3 id="任务类型">任务类型<a hidden class="anchor" aria-hidden="true" href="#任务类型">#</a></h3>
+<h4 id="宏任务macrotask">宏任务(MacroTask)<a hidden class="anchor" aria-hidden="true" href="#宏任务macrotask">#</a></h4>
+<p>宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：</p>
+<ul>
+<li>V8 引擎会建立新的执行栈来存储任务</li>
+<li>执行不同的函数调用时栈会随之变化</li>
+<li>当该宏任务执行结束时，会清空当前的栈</li>
+</ul>
+<p>常见的宏任务包括：</p>
+<ul>
+<li>script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务</li>
+<li>事件回调</li>
+<li>setTimeout/setInterval 回调</li>
+<li>setImmediate(Node.js 环境)</li>
+<li>requestAnimationFrame (浏览器环境)</li>
+<li>I/O 操作</li>
+<li>UI 渲染</li>
+<li>DOM 事件</li>
+</ul>
+<h4 id="微任务microtask">微任务(MicroTask)<a hidden class="anchor" aria-hidden="true" href="#微任务microtask">#</a></h4>
+<p>微任务是一种需要异步执行的任务，它的执行时机是在当前宏任务结束之后，下一个宏任务开始之前。</p>
+<ul>
+<li>Promise.then/catch/finally</li>
+<li>process.nextTick(Node.js 环境)</li>
+<li>MutationObserver 回调</li>
+<li>queueMicrotask()</li>
+</ul>
+<h3 id="执行优先级">执行优先级<a hidden class="anchor" aria-hidden="true" href="#执行优先级">#</a></h3>
+<ol>
+<li>同步代码优先执行</li>
+<li>执行当前的宏任务</li>
+<li>执行当前宏任务产生的所有微任务</li>
+<li>如果微任务执行过程中产生新的微任务，继续执行完所有微任务</li>
+<li>当前宏任务结束，微任务队列清空</li>
+<li>开始下一个宏任务</li>
+<li>每个宏任务之间可能会进行 UI 渲染</li>
+</ol>
+<h3 id="示例代码">示例代码<a hidden class="anchor" aria-hidden="true" href="#示例代码">#</a></h3>
+<ol>
+<li>执行第一个宏任务：script(整体代码)</li>
+<li>执行过程中同步代码直接执行</li>
+<li>遇到微任务添加到微任务队列</li>
+<li>遇到宏任务添加到宏任务队列</li>
+<li>当前宏任务执行完毕后，立即执行所有微任务</li>
+<li>微任务执行完毕后，开始下一个宏任务</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// 这是第一个宏任务：script(整体代码)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;script start&#34;</span>); <span style="color:#75715e">// 同步代码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">setTimeout</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;setTimeout&#34;</span>); <span style="color:#75715e">// 宏任务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Promise.<span style="color:#a6e22e">resolve</span>()
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;promise1&#34;</span>); <span style="color:#75715e">// 微任务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  })
+</span></span><span style="display:flex;"><span>  .<span style="color:#a6e22e">then</span>(() =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;promise2&#34;</span>); <span style="color:#75715e">// 微任务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;script end&#34;</span>); <span style="color:#75715e">// 同步代码
+</span></span></span></code></pre></div><h3 id="注意事项">注意事项<a hidden class="anchor" aria-hidden="true" href="#注意事项">#</a></h3>
+<ul>
+<li>JavaScript 是单线程语言，但浏览器是多线程的</li>
+<li>事件循环确保了异步操作不会阻塞主线程</li>
+<li>微任务优先级高于宏任务</li>
+<li>过多的同步操作或长时间运行的任务会阻塞 UI 渲染</li>
+<li>Node.js 的事件循环与浏览器有所不同</li>
+</ul>
+<h4 id="为什么需要区分宏任务和微任务">为什么需要区分宏任务和微任务？<a hidden class="anchor" aria-hidden="true" href="#为什么需要区分宏任务和微任务">#</a></h4>
+<p>这是 JavaScript 在语言设计上对实时性和效率的权衡：</p>
+<ul>
+<li>当宏任务执行时间过长时，会影响后续任务的执行</li>
+<li>某些任务需要在下一轮事件循环之前完成，以提高实时性</li>
+<li>微任务提供了一种在当前宏任务结束之前执行异步代码的机制</li>
+<li>有助于控制代码执行顺序，优化性能</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://huing.github.io/tags/javascript/">JavaScript</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="https://huing.github.io/posts/%E4%BA%92%E8%81%94%E7%BD%91/%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>浏览器的缓存机制</span>
+  </a>
+  <a class="next" href="https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/">
+    <span class="title">Next »</span>
+    <br>
+    <span>React的diff算法</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on x"
+            href="https://x.com/intent/tweet/?text=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f&amp;hashtags=JavaScript">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f&amp;title=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af&amp;summary=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af&amp;source=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on reddit"
+            href="https://reddit.com/submit?url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f&title=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on whatsapp"
+            href="https://api.whatsapp.com/send?text=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af%20-%20https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on telegram"
+            href="https://telegram.me/share/url?text=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af&amp;url=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share 事件循环 on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=%e4%ba%8b%e4%bb%b6%e5%be%aa%e7%8e%af&u=https%3a%2f%2fhuing.github.io%2fposts%2fjavascript%2f%25E4%25BA%258B%25E4%25BB%25B6%25E5%25BE%25AA%25E7%258E%25AF%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://huing.github.io/">huing的博客</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

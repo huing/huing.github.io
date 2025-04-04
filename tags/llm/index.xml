@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM on huing的博客</title>
+    <link>https://huing.github.io/tags/llm/</link>
+    <description>Recent content in LLM on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 06 Feb 2025 15:38:52 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://huing.github.io/posts/llm/ai/</link>
+      <pubDate>Thu, 06 Feb 2025 15:38:52 +0800</pubDate>
+      <guid>https://huing.github.io/posts/llm/ai/</guid>
+      <description>异常值（Outliers）
+噪声（Noise）
+MCP 设置 node=20
+nvm use 20 npx -y 把 npm 源设为 npm
+nrm ls nrm use npm export GITHUB_PERSONAL_ACCESS_TOKEN=&amp;#34;&amp;#34; echo &amp;#39;{&amp;#34;jsonrpc&amp;#34;: &amp;#34;2.0&amp;#34;, &amp;#34;method&amp;#34;:&amp;#34;tools/call&amp;#34;, &amp;#34;params&amp;#34;:{&amp;#34;name&amp;#34;:&amp;#34;search_repositories&amp;#34;, &amp;#34;arguments&amp;#34;: { &amp;#34;query&amp;#34;: &amp;#34;user:huing&amp;#34; }}, &amp;#34;id&amp;#34;: 123}&amp;#39; | npx -y @modelcontextprotocol/server-github </description>
+    </item>
+  </channel>
+</rss>

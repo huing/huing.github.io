@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>React on huing的博客</title>
+    <link>https://huing.github.io/tags/react/</link>
+    <description>Recent content in React on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 28 Mar 2025 07:57:28 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React的diff算法</title>
+      <link>https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Fri, 28 Mar 2025 07:57:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react%E7%9A%84diff%E7%AE%97%E6%B3%95/</guid>
+      <description>什么是虚拟 dom Virtual DOM 则是一种由 Javascript 类库基于浏览器 API 实现的概念
+虚拟 dom 就是用 js 对象来描述 dom 结构。
+diff 算法 仅右移 const oldVdom = { type: &amp;#39;div&amp;#39;, props: { children: [] } children: [ { type: &amp;#39;p&amp;#39;, props: {} children: [] }, { type: &amp;#39;p&amp;#39;, props: {} } ] } const newVdom = { type: &amp;#39;div&amp;#39;, props: {} children: [ { type: &amp;#39;p&amp;#39;, props: {} }, { type: &amp;#39;p&amp;#39;, props: {} } ] } function diff(oldVdom, newVdom) { if (oldVdom.</description>
+    </item>
+    <item>
+      <title>isValidElement</title>
+      <link>https://huing.github.io/posts/react/isvalidelement/</link>
+      <pubDate>Fri, 06 Sep 2024 06:49:36 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/isvalidelement/</guid>
+      <description>React.Children.map(children, (child, index) =&amp;gt; { if (!React.isValidElement(child)) return null; return React.cloneElement(child, { ...child.props, onClick: () =&amp;gt; {}, }); }); </description>
+    </item>
+    <item>
+      <title>React-Router</title>
+      <link>https://huing.github.io/posts/react/react-router/</link>
+      <pubDate>Tue, 03 Sep 2024 07:12:07 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react-router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Consumer</title>
+      <link>https://huing.github.io/posts/react/consumer/</link>
+      <pubDate>Sun, 04 Sep 2022 12:35:59 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/consumer/</guid>
+      <description>export const themes = { light: { color: &amp;#34;#000000&amp;#34;, background: &amp;#34;#eeeeee&amp;#34;, }, dark: { color: &amp;#34;#ffffff&amp;#34;, background: &amp;#34;#222222&amp;#34;, }, }; export const ThemeContext = createContext({ theme: themes.dark, toggleTheme: () =&amp;gt; { // }, }); const Button = () =&amp;gt; { // 消费 consumers return ( &amp;lt;ThemeContext.Consumer&amp;gt; {({ theme, toggleTheme }) =&amp;gt; ( &amp;lt;button onClick={toggleTheme} style={{ background: theme.background, color: theme.color, width: 100, height: 60, }} &amp;gt; click &amp;lt;/button&amp;gt; )} &amp;lt;/ThemeContext.Consumer&amp;gt; ); }; const ThemedButton = () =&amp;gt; { return &amp;lt;Button /&amp;gt;; }; const App = () =&amp;gt; { const [theme, setTheme] = useState(themes.</description>
+    </item>
+    <item>
+      <title>Ref实现父组件调用子组件方法</title>
+      <link>https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 04 Sep 2022 10:30:23 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/ref%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>Ref 实现父组件调用子组件方法 ref 的值根据节点的类型而有所不同：
+当 ref 属性用于 HTML 元素时，构造函数中使用 React.createRef() 创建的 ref 接收底层 DOM 元素作为其 current 属性。 当 ref 属性用于自定义 class 组件时，ref 对象接收组件的挂载实例作为其 current 属性。 你不能在函数组件上使用 ref 属性，因为他们没有实例。 构造组件 createRef 仅能用在 ClassComponent
+class CustomInput extends React.Component { constructor(props) { super(props); // 为 DOM 元素添加 ref this.textInput = React.createRef(); this.doSomething = this.doSomething.bind(this); } doSomething() { // this.textInput.current.focus() } render() { return &amp;lt;input type=&amp;#34;text&amp;#34; ref={this.textInput} /&amp;gt;; } } class ParentInput extends React.Component { constructor(props) { super(props); // 为 class 组件添加 Ref this.</description>
+    </item>
+    <item>
+      <title>useRef vs useState</title>
+      <link>https://huing.github.io/posts/react/useref-vs-usestate/</link>
+      <pubDate>Wed, 15 Jun 2022 22:53:05 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/useref-vs-usestate/</guid>
+      <description> 原文地址 https://blog.logrocket.com/usestate-vs-useref/
+useHooks 实现 https://usehooks.com/
+useRef
+const inputRef = useRef(); useState
+const [count, setCount] = useState(0); let variable
+let prevCount; useState 返回数组，第一个真实的状态(the actual state)，第二个状态更新函数(the state updater function) 状态更新组件重新渲染 (Every state change re-renders the App component),子组件也会触发更新 useRef 返回对象，包含属性 current,存真实的值，值更新不会触发组件更新 let 定义的变量在每次 render 时被覆盖，最终只有初始值 总结：
+在渲染周期（render cycles）和 ui 更新（UI updates）期间 两者都保存更新的值，useState 重新渲染 useRef 的 current 属性是可变的，useState 的 state 需要 setState 更新赋值 两者都被认为是数据 hook,useRef 可以直接访问 react 组件或者 dom 元素 </description>
+    </item>
+    <item>
+      <title>React工程化</title>
+      <link>https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+      <pubDate>Sun, 12 Jun 2022 17:31:57 +0800</pubDate>
+      <guid>https://huing.github.io/posts/react/react%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
+      <description>useEffect https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/
+https://react.iamkasong.com/hooks/useref.html#commit%E9%98%B6%E6%AE%B5
+React 工程化
+Scheduler（调度器）—— 调度任务的优先级，高优任务优先进入 Reconciler
+Reconciler（协调器）—— 负责找出变化的组件
+Renderer（渲染器）—— 负责将变化的组件渲染到页面上
+虚拟 DOM 在 react 中的正式称呼 Fiber（纤程）
+Fiber 并不是计算机术语中的新名词，他的中文翻译叫做纤程，与进程（Process）、线程（Thread）、协程（Coroutine）同为程序执行过程。
+在很多文章中将纤程理解为协程的一种实现。在 JS 中，协程的实现便是 Generator。
+所以，我们可以将纤程(Fiber)、协程(Generator)理解为代数效应思想在 JS 中的体现。
+React Fiber 可以理解为：
+React 内部实现的一套状态更新机制。支持任务不同优先级，可中断与恢复，并且恢复后可以复用之前的中间状态。
+其中每个任务更新单元为 React Element 对应的 Fiber 节点。
+当我们用 canvas 绘制动画，每一帧绘制前都会调用 ctx.clearRect 清除上一帧的画面。
+如果当前帧画面计算量比较大，导致清除上一帧画面到绘制当前帧画面之间有较长间隙，就会出现白屏。
+为了解决这个问题，我们可以在内存中绘制当前帧动画，绘制完毕后直接用当前帧替换上一帧画面，由于省去了两帧替换间的计算时间，不会出现从白屏到出现画面的闪烁情况。
+这种在内存中构建并直接替换的技术叫做双缓存 (opens new window)。
+React 使用“双缓存”来完成 Fiber 树的构建与替换——对应着 DOM 树的创建与更新。</description>
+    </item>
+  </channel>
+</rss>

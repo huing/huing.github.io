@@ -1,68 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on huing的博客</title>
     <link>https://huing.github.io/categories/</link>
     <description>Recent content in Categories on huing的博客</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- 0.133.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Dec 2024 16:50:50 +0800</lastBuildDate>
     <atom:link href="https://huing.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ts</title>
-      <link>https://huing.github.io/categories/ts/</link>
-      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
-      <guid>https://huing.github.io/categories/ts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Typescript</title>
-      <link>https://huing.github.io/categories/typescript/</link>
-      <pubDate>Mon, 23 Dec 2024 16:50:50 +0800</pubDate>
-      <guid>https://huing.github.io/categories/typescript/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sql</title>
-      <link>https://huing.github.io/categories/sql/</link>
-      <pubDate>Mon, 05 Sep 2022 21:33:26 +0800</pubDate>
-      <guid>https://huing.github.io/categories/sql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Css</title>
-      <link>https://huing.github.io/categories/css/</link>
-      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
-      <guid>https://huing.github.io/categories/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Js</title>
-      <link>https://huing.github.io/categories/js/</link>
-      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
-      <guid>https://huing.github.io/categories/js/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>React</title>
-      <link>https://huing.github.io/categories/react/</link>
-      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
-      <guid>https://huing.github.io/categories/react/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>性能</title>
-      <link>https://huing.github.io/categories/%E6%80%A7%E8%83%BD/</link>
-      <pubDate>Fri, 02 Sep 2022 22:14:54 +0800</pubDate>
-      <guid>https://huing.github.io/categories/%E6%80%A7%E8%83%BD/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>命令行</title>
-      <link>https://huing.github.io/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/</link>
-      <pubDate>Wed, 15 Jun 2022 10:50:52 +0800</pubDate>
-      <guid>https://huing.github.io/categories/%E5%91%BD%E4%BB%A4%E8%A1%8C/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

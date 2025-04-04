@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HTML on huing的博客</title>
+    <link>https://huing.github.io/tags/html/</link>
+    <description>Recent content in HTML on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 23 Mar 2025 11:53:04 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Canvas</title>
+      <link>https://huing.github.io/posts/html/canvas/</link>
+      <pubDate>Sun, 23 Mar 2025 11:53:04 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/canvas/</guid>
+      <description>Canvas 基础概念 Canvas 是 HTML5 提供的用于在网页上绘制图形的元素。它可以用于绘制图表、制作图片合成或者实现基础的动画效果。
+基本用法 创建 Canvas 元素 获取绘图上下文(Context) 使用 Canvas API 进行绘制 常见绘图操作 绘制形状(矩形、圆形、路径等) 添加颜色和样式 绘制文本 图片操作 变换(平移、旋转、缩放) Canvas API 实例 1. 基础图形绘制 // 获取Canvas上下文 const canvas = document.getElementById(&amp;#34;myCanvas&amp;#34;); const ctx = canvas.getContext(&amp;#34;2d&amp;#34;); // 绘制矩形 ctx.fillStyle = &amp;#34;red&amp;#34;; // 设置填充颜色 ctx.fillRect(10, 10, 100, 50); // x, y, width, height // 绘制圆形 ctx.beginPath(); ctx.arc(100, 100, 50, 0, Math.PI * 2); // x, y, 半径, 起始角度, 结束角度 ctx.fillStyle = &amp;#34;blue&amp;#34;; ctx.</description>
+    </item>
+    <item>
+      <title>WebApi</title>
+      <link>https://huing.github.io/posts/html/webapi/</link>
+      <pubDate>Wed, 30 Oct 2024 13:30:51 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/webapi/</guid>
+      <description>IntersectionObserver const imageObserver = new IntersectionObserver((entries, observer) =&amp;gt; { entries.forEach((entry) =&amp;gt; { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; // 加载真实图片 observer.unobserve(img); // 停止观察该图片 } }); }); // 获取所有带有 data-src 属性的图片 document.querySelectorAll(&amp;#34;img[data-src]&amp;#34;).forEach((img) =&amp;gt; { imageObserver.observe(img); }); MutationObserver MutationObserver 用于监视 DOM 树的变化，可以监听元素的属性变化、子节点的增删改、文本内容的修改等。
+// 创建一个观察器实例 const observer = new MutationObserver((mutations) =&amp;gt; { mutations.forEach((mutation) =&amp;gt; { // mutation.type 可能是 &amp;#39;childList&amp;#39;、&amp;#39;attributes&amp;#39; 或 &amp;#39;characterData&amp;#39; console.log(&amp;#34;DOM 发生变化:&amp;#34;, mutation.type); if (mutation.type === &amp;#34;childList&amp;#34;) { console.</description>
+    </item>
+    <item>
+      <title>DOM文档对象模型</title>
+      <link>https://huing.github.io/posts/html/dom%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Tue, 03 Sep 2024 07:00:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/dom%E6%96%87%E6%A1%A3%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</guid>
+      <description>DOM 是文档对象模型，是 HTML 和 XML 文档的编程接口。
+DOM 将文档解析为一个由节点和对象（包含属性和方法的对象）组成的结构化树。
+DOM 是 HTML 和 XML 文档的编程接口。</description>
+    </item>
+    <item>
+      <title>语义化标签</title>
+      <link>https://huing.github.io/posts/html/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Sun, 04 Sep 2022 21:24:41 +0800</pubDate>
+      <guid>https://huing.github.io/posts/html/%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE/</guid>
+      <description>有利 seo
+方便其他设备解析
+便于维护提高可读性
+section, article, main, p,
+time,
+title,header,nav,
+aside, footer,
+WebAssembly: WebAssembly 是一种新的编码方式，可以在现代的 Web 浏览器中运行——它是一种低级的类汇编语言，具有紧凑的二进制格式，可以接近原生的性能运行，并为诸如 C/C++、C# 和 Rust 等语言提供编译目标，以便它们可以在 Web 上运行</description>
+    </item>
+  </channel>
+</rss>

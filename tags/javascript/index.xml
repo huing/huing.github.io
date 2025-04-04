@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on huing的博客</title>
+    <link>https://huing.github.io/tags/javascript/</link>
+    <description>Recent content in JavaScript on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 03 Apr 2025 13:50:59 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>预加载和onload</title>
+      <link>https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/</link>
+      <pubDate>Thu, 03 Apr 2025 13:50:59 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E9%A2%84%E5%8A%A0%E8%BD%BD%E5%92%8Conload/</guid>
+      <description>预加载 和 window.onload 的区别 使用 预加载关键资源 &amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/styles/main.css&amp;#34; as=&amp;#34;style&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;preload&amp;#34; href=&amp;#34;/script/main.js&amp;#34; as=&amp;#34;script&amp;#34;&amp;gt; 图片预加载 const img = new Image(); img.src = &amp;#34;图片URL&amp;#34;; // 提前加载图片到缓存 脚本预加载 使用 async 属性：并行请求脚本，尽快解析和执行 使用 defer 属性：在文档解析后、DOMContentLoaded 事件前执行 DOMContentLoaded 事件 DOMContentLoaded 事件在 DOM 树构建完成后立即触发,此时:
+HTML 已经被完全加载和解析 DOM 树已经构建完成 外部资源(如图片、样式表等)可能还未完全加载 必须使用 addEventListener 来监听该事件 示例代码:
+document.addEventListener(&amp;#34;DOMContentLoaded&amp;#34;, function () { // DOM 已准备就绪,可以安全地操作 DOM 元素 console.log(&amp;#34;DOM 已加载完成&amp;#34;); }); window.onload 事件 window.onload 事件会在页面完全加载后触发,包括:
+DOM 树构建完成 所有外部资源加载完成(图片、样式表、脚本等) 所有 iframe 加载完成 示例代码:</description>
+    </item>
+    <item>
+      <title>事件循环</title>
+      <link>https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</link>
+      <pubDate>Thu, 03 Apr 2025 07:43:15 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/</guid>
+      <description>什么是进程，什么是线程 进程（Process）是计算机中的程序关于某数据集合上的一次运行活动，是系统进行资源分配和调度的基本单位。简单来说，进程就是程序的一次执行实例。当你运行一个程序时，操作系统会为该程序创建一个进程。
+线程（Thread）是操作系统能够进行运算调度的最小单位，被包含在进程之中。一个进程可以包含多个线程。线程是程序执行流的最小单元，负责实际的计算工作。
+进程特点 独立的内存空间：每个进程都有自己独立的内存空间，互不干扰 拥有系统资源：进程拥有独立的系统资源，如文件句柄、网络连接等 相互独立：一个进程的崩溃通常不会影响其他进程 通信成本高：进程间通信(IPC)需要特殊的机制，如管道、消息队列等 创建和销毁开销大：需要分配和回收系统资源 线程特点 共享所属进程的内存空间：同一进程内的线程共享进程的内存空间 共享进程资源：共享进程的代码段、数据段等资源 执行开销小：创建和切换线程的成本远低于进程 通信方便：线程间可以直接读写进程的共享数据 相互影响：一个线程崩溃可能导致整个进程崩溃 进程与线程的关系 一个进程至少包含一个线程（主线程） 线程是进程中的实际执行单位 同一进程中的线程共享进程的资源 进程是资源分配的最小单位，线程是 CPU 调度的最小单位 事件循环 Event Loop 事件循环是 JavaScript 实现异步的核心机制。JavaScript 是单线程的语言，但通过事件循环实现了非阻塞的异步执行模型。
+核心概念 调用栈(Call Stack)
+JavaScript 代码执行的地方 函数调用形成栈帧 遵循后进先出(LIFO)原则 同一时间只能执行一个任务 堆(Heap)
+存储对象的内存区域 代码运行时分配的内存空间 由垃圾回收器管理 任务队列(Task Queue)
+存储待执行的回调函数 遵循先进先出(FIFO)原则 分为宏任务队列和微任务队列 事件循环的执行流程 执行同步代码，同步代码进入调用栈立即执行 遇到异步任务时，将其交给相应的 Web API 处理 Web API 处理完成后，将回调函数放入任务队列 当调用栈为空时，事件循环检查任务队列 将任务队列中的任务按顺序放入调用栈执行 重复以上步骤 任务类型 宏任务(MacroTask) 宏任务是由标准 JavaScript 引擎机制提供的任务，它们会被放入消息队列中等待主线程执行。当一个宏任务执行时：
+V8 引擎会建立新的执行栈来存储任务 执行不同的函数调用时栈会随之变化 当该宏任务执行结束时，会清空当前的栈 常见的宏任务包括：
+script(整体代码): JavaScript 脚本的初始化执行属于第一个宏任务 事件回调 setTimeout/setInterval 回调 setImmediate(Node.</description>
+    </item>
+    <item>
+      <title>Stack</title>
+      <link>https://huing.github.io/posts/javascript/stack/</link>
+      <pubDate>Mon, 24 Mar 2025 14:11:14 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/stack/</guid>
+      <description>Queue 先进先出 class Queue { constructor() { this.items = []; // 用于存储队列元素的数组 } // 入队方法 - 在队列尾部添加元素 enqueue(element) { this.items.push(element); } // 出队方法 - 移除并返回队列头部的元素 dequeue() { if (this.isEmpty()) { return &amp;#34;队列为空&amp;#34;; } return this.items.shift(); } // 查看队列头部的元素 peek() { if (this.isEmpty()) { return &amp;#34;队列为空&amp;#34;; } return this.items[0]; } // 检查队列是否为空 isEmpty() { return this.items.length === 0; } // 返回队列的大小 size() { return this.items.length; } // 清空队列 clear() { this.items = []; } // 打印队列内容 print() { console.</description>
+    </item>
+    <item>
+      <title>EventBus</title>
+      <link>https://huing.github.io/posts/javascript/eventbus/</link>
+      <pubDate>Wed, 19 Mar 2025 09:34:28 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/eventbus/</guid>
+      <description>实现一个 EventBus 发布/订阅设计模式 EventBus 是 一个事件总线，它允许多个组件之间进行通信。 在 javascript 中，我们可以使用一个类来表示 EventBus。
+class EventBus { constructor() { this.events = {}; } on(eventName, callback) { if (!this.events[eventName]) { this.events[eventName] = []; } this.events[eventName].push(callback); } off(eventName, callback) { if (!this.events[eventName]) { return; } if (callback) { this.events[eventName] = this.events[eventName].filter( (cb) =&amp;gt; cb !== callback ); } else { delete this.events[eventName]; } } emit(eventName, ...args) { if (!this.events[eventName]) { return; } this.events[eventName].forEach((callback) =&amp;gt; { callback(...args); }); } once(eventName, callback) { const onceCallback = (.</description>
+    </item>
+    <item>
+      <title>接口请求</title>
+      <link>https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</link>
+      <pubDate>Tue, 03 Sep 2024 07:01:20 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E6%8E%A5%E5%8F%A3%E8%AF%B7%E6%B1%82/</guid>
+      <description>ajax
+fetch
+keep-alive
+navigator.setbean</description>
+    </item>
+    <item>
+      <title>对象</title>
+      <link>https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sun, 04 Sep 2022 12:37:25 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E5%AF%B9%E8%B1%A1/</guid>
+      <description>Map 类型 Map // ✅ Initialize Map from Array // 👇️ const map1: Map&amp;lt;string, string&amp;gt; const map1: Map&amp;lt;string, string&amp;gt; = new Map([ [&amp;#34;name&amp;#34;, &amp;#34;Tom&amp;#34;], [&amp;#34;country&amp;#34;, &amp;#34;Chile&amp;#34;], ]); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map1); // ✅ Initialize Map from Object const obj = { name: &amp;#34;Tom&amp;#34;, country: &amp;#34;Chile&amp;#34; }; const map2 = new Map&amp;lt;string, string&amp;gt;(Object.entries(obj)); // 👇️ {&amp;#39;name&amp;#39; =&amp;gt; &amp;#39;Tom&amp;#39;, &amp;#39;country&amp;#39; =&amp;gt; &amp;#39;Chile&amp;#39;} console.log(map2); objects vs maps 意外的键</description>
+    </item>
+    <item>
+      <title>Promise实现</title>
+      <link>https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/promise%E5%AE%9E%E7%8E%B0/</guid>
+      <description>promise 实现 class Commitment { static PENDING = &amp;#34;待定&amp;#34;; static FULFILLED = &amp;#34;成功&amp;#34;; static REJECTED = &amp;#34;拒绝&amp;#34;; private status: &amp;#34;PENDING&amp;#34; | &amp;#34;FULFILLED&amp;#34; | &amp;#34;REJECTED&amp;#34;; private result: any; constructor(func: (resolve: (value: any) =&amp;gt; void, reject: (reason?: any) =&amp;gt; void) =&amp;gt; void) { this.status = &amp;#34;PENDING&amp;#34;; this.result = undefined; try { func(this.resolve.bind(this), this.reject.bind(this)); } catch (e) { this.reject(e); } } resolve(value: any) { if (this.status === &amp;#34;PENDING&amp;#34;) { this.status = &amp;#34;FULFILLED&amp;#34;; this.result = value; } } reject(reason?</description>
+    </item>
+    <item>
+      <title>原型链理解</title>
+      <link>https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Fri, 02 Sep 2022 21:59:01 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%90%86%E8%A7%A3/</guid>
+      <description>基于原型链的继承 继承属性 // 让我们从一个函数里创建一个对象 o，它自身拥有属性 a 和 b 的： let f = function () { this.a = 1; this.b = 2; }; /_这么写也一样 function f() { this.a = 1; this.b = 2; } _/ let o = new f(); // {a: 1, b: 2}
+// 在 f 函数的原型上定义属性 f.prototype.b = 3; f.prototype.c = 4;
+// 不要在 f 函数的原型上直接定义 f.prototype = {b:3,c:4};这样会直接打破原型链 // 综上，整个原型链如下： // {a:1, b:2} &amp;mdash;&amp;gt; {b:3, c:4} &amp;mdash;&amp;gt; Object.</description>
+    </item>
+    <item>
+      <title>Array</title>
+      <link>https://huing.github.io/posts/javascript/array/</link>
+      <pubDate>Thu, 01 Sep 2022 20:21:47 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/array/</guid>
+      <description>Array 方法 修改器方法 改变自身的值 push() 将一个或多个元素添加到数组的末尾，并返回该数组的新长度 pop() 从一个数组中删除并返回删除的元素值 reverse() 颠倒数组中的元素，并返回该数组的引用，同时改变原数组 const sourceArray = [&amp;#34;one&amp;#34;, &amp;#34;two&amp;#34;, &amp;#34;three&amp;#34;]; const reverseArray = sourceArray.reverse(); sourceArray === reverseArray; // true shift() 删除数组第一个元素，并返回删除的元素值 sort() splice() 删除或新增元素，返回修改后的数组，改变原数组 unshift() 添加元素到数组的头部 返回 length 属性值 访问方法 返回新数组 concat() 将数组和/或值连接成新数组，对于对象引用的值修改会修改原数组 const arr = [&amp;#34;a&amp;#34;, &amp;#34;b&amp;#34;, &amp;#34;c&amp;#34;]; const al = arr.concat(1, [2, 3]); console.log(al); // [&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, 1, 2, 3] includes() join() slice() [begin, end) 对于对象引用的值修改会修改原数组 toString() {}.toString() // 报错 没有原型链了吧 [].</description>
+    </item>
+    <item>
+      <title>Base</title>
+      <link>https://huing.github.io/posts/javascript/base/</link>
+      <pubDate>Thu, 01 Sep 2022 20:20:27 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/base/</guid>
+      <description>浅拷贝方法 slice() Object.assign({}, a) ...rest 获取浏览器信息 navigator navigator.userAgent; // &amp;#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36&amp;#34; navigator.language; // &amp;#34;zh-CN&amp;#34; navigator.languages; // [&amp;#34;zh-CN&amp;#34;, &amp;#34;zh&amp;#34;, &amp;#34;fr-CA&amp;#34;, &amp;#34;fr&amp;#34;, &amp;#34;fr-CH&amp;#34;, &amp;#34;fr-FR&amp;#34;, &amp;#34;en&amp;#34;] setTimeOut 实际延时比设定值更久的原因 最小延迟时间 时间误差 函数嵌套延迟 4ms 回调函数阻塞导致函数 setTimeout 接受两个参数：待加入队列的消息和一个时间值（可选，默认为 0）。这个时间值代表了消息被际加入到队列的最小延迟时间。如果队列中没有其它消息并且栈为空，在这段延迟时间过去之后，消息会被马上处理。但是，如果有其它消息，setTimeout 消息必须等待其它消息处理完。因此第二个参数仅仅表示最少延迟时间，而非确切的等待时间。 字面量 Literals 数组字面量 Array literals
+var fish = [&amp;#34;Lion&amp;#34;, , &amp;#34;Angel&amp;#34;]; // fish[1] = undefined 布尔字面量 Boobean literals
+浮点数字面量 Floating-point literals
+整数 Integers
+对象字面量 Object literals</description>
+    </item>
+    <item>
+      <title>Clone正则</title>
+      <link>https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/</link>
+      <pubDate>Mon, 27 Jun 2022 19:35:49 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/clone%E6%AD%A3%E5%88%99/</guid>
+      <description>基本语法 \w 匹配一个单字字符 = [A-Za-z0-9_]
+? 匹配前面一个表达式 0 次或者 1 次。等价于 {0,1}
+如果紧跟在任何量词 *、 +、? 或 {} 的后面，将会使量词变为非贪婪（匹配尽量少的字符）
+eg: /\d+/.exec(&#39;abc123&#39;) 匹配 123
+eg: /\d+?/.exec(&#39;abc123&#39;) 匹配 1
++ 匹配前面一个表达式 1 次或者多次。等价于 {1,}
+* 匹配前一个表达式 0 次或多次。等价于 {0,}
+[^abc] = [^a-c] 反向字符集
+(?:x) 把 x 作为一个整体
+$ 匹配输入的结束。如果多行标志被设置为 true，那么也匹配换行符前的位置。 例如，/t$/ 并不会匹配 &amp;ldquo;eater&amp;rdquo; 中的 &amp;rsquo;t&amp;rsquo;，但是会匹配 &amp;ldquo;eat&amp;rdquo; 中的 &amp;rsquo;t&amp;rsquo;。
+exec 返回 const myRe = /d(b+)d/g; const myArray = myRe.exec(&amp;#34;cdbbdbsbz&amp;#34;); [ &amp;#34;dbbd&amp;#34;, &amp;#34;bb&amp;#34;, index: 1, input: &amp;#34;cdbbdbsbz&amp;#34; ] // 匹配到的字符串和所有被记住的子字符串 克隆正则 const reFlags = /\w*$/; function cloneRegExp(regexp) { // reFlags.</description>
+    </item>
+    <item>
+      <title>数据类型及判断方法</title>
+      <link>https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 13 Jun 2022 11:38:56 +0800</pubDate>
+      <guid>https://huing.github.io/posts/javascript/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%8F%8A%E5%88%A4%E6%96%AD%E6%96%B9%E6%B3%95/</guid>
+      <description>js 8 种数据类型 undefined null string number boolean symbol bigint object array function regexp date 数据类型判断方法 typeof 可以判断值类型，函数 typeof 0; // number typeof &amp;#34;ss&amp;#34;; // string typeof undefined; // undefined typeof true; // boolean typeof 2n; // bigint es6新增数据类型 typeof Symbol(&amp;#34;a&amp;#34;); // symbol es6新增数据类型 typeof function () {}; // function typeof null; // object 被认为是对象的占位符,但从技术上来说，它仍然是原始值 typeof []; // object typeof {}; // object instanceof 能判断对象类型 [] instanceof Array; //true [] instanceof Object; // true [].</description>
+    </item>
+  </channel>
+</rss>

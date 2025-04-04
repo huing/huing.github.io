@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>工程化 on huing的博客</title>
+    <link>https://huing.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+    <description>Recent content in 工程化 on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:18:00 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>测试</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Tue, 03 Sep 2024 07:18:00 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%B5%8B%E8%AF%95/</guid>
+      <description>单元测试
+集成测试
+E2E 测试
+jest
+enzyme
+puppeteer</description>
+    </item>
+    <item>
+      <title>自动化构建</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:38 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%9E%84%E5%BB%BA/</guid>
+      <description>npm script
+ci cd</description>
+    </item>
+    <item>
+      <title>模块化打包</title>
+      <link>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</link>
+      <pubDate>Tue, 03 Sep 2024 07:07:23 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E5%B7%A5%E7%A8%8B%E5%8C%96/%E6%A8%A1%E5%9D%97%E5%8C%96%E6%89%93%E5%8C%85/</guid>
+      <description>构建工具模块化打包
+webpack
+rollup
+parcel</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>性能 on huing的博客</title>
+    <link>https://huing.github.io/tags/%E6%80%A7%E8%83%BD/</link>
+    <description>Recent content in 性能 on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 03 Sep 2024 07:24:40 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/%E6%80%A7%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>骨架屏</title>
+      <link>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:40 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E9%AA%A8%E6%9E%B6%E5%B1%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>性能指标</title>
+      <link>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</link>
+      <pubDate>Tue, 03 Sep 2024 07:24:29 +0800</pubDate>
+      <guid>https://huing.github.io/posts/%E6%80%A7%E8%83%BD/%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</guid>
+      <description>RAIL 模型
+Lighthouse 指标
+DevTools
+PWA
+Service Worker
+考察
+白屏影响用户率
+js 错误影响用户率
+LCP Largest Contentful Paint 最大内容绘制
+CLS Cumulative Layout Shift 累积布局偏移
+TTI Time To Interactive 页面加载开始到页面处于完全可交互状态所花费的时间
+FCP First Contentful Paint 首次有内容渲染
+不考察
+FP First Paint 首次渲染
+FMP First Meaningful Paint 首次绘制有意义内容的时间
+INP Interaction to Next Paint
+与下一次绘制的交互 INP 会在页面生命周期内观察用户与网页进行的所有点击、点按和键盘互动的延迟时间，并报告最长持续时间。INP 较低意味着页面始终能够快速响应大多数用户互动</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vue on huing的博客</title>
+    <link>https://huing.github.io/tags/vue/</link>
+    <description>Recent content in Vue on huing的博客</description>
+    <generator>Hugo -- 0.133.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 25 Mar 2025 09:35:37 +0800</lastBuildDate>
+    <atom:link href="https://huing.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue</title>
+      <link>https://huing.github.io/posts/vue/</link>
+      <pubDate>Tue, 25 Mar 2025 09:35:37 +0800</pubDate>
+      <guid>https://huing.github.io/posts/vue/</guid>
+      <description>vue-router 路由守卫 路由原理 beforeEnter(to, from, next) {} vue 响应式数据 原理 数组更新
+vuex 和 pinia 响应式数据原理区别 vuex 和 pinia 区别是什么
+架构设计 Vuex 基于模块化设计，使用 mutations、actions、modules 等概念 Pinia 采用更简单的 Store 设计，没有 mutations，直接使用 actions 进行状态修改 Pinia 的 Store 可以直接定义，不需要像 Vuex 那样创建复杂的模块树 TypeScript 支持 Pinia 是用 TypeScript 编写的，提供了更好的类型推导和类型安全 Vuex 对 TypeScript 的支持相对较弱，需要额外的类型声明 开发体验 Pinia 支持多个 Store，可以相互独立 Pinia 的 devtools 调试体验更好 Pinia 代码更简洁，不需要写 mutations Pinia 支持自动代码分割（code splitting） 性能 Pinia 体积更小，打包后约 1KB Pinia 没有嵌套模块，扁平化设计使得性能更好 Vue 版本支持 Pinia 同时支持 Vue 2 和 Vue 3 Vuex 4 只支持 Vue 3，Vuex 3 只支持 Vue 2 // Vuex 示例 const store = new Vuex.</description>
+    </item>
+  </channel>
+</rss>
